@@ -1,58 +1,65 @@
 # AA_Logbook_Export
 Exports American Airlines logbook data to a more useable format.
 
-Before you download your schedule:
-    1. Install Firefox web browser. Due to other browser’s security settings, only Firefox will do a local transform. The others require that you be using a webpage from a web server to do this kind of thing. I might get to that later.
-    2. Copy the file "TASC Logbook To csv.xsl" to a folder where you will be keeping your downloaded logbook.XML.
+## Before you download your schedule:
+1. Install Firefox web browser. Due to other browser’s security settings, only Firefox will do a local transform. The others require that you be using a webpage from a web server to do this kind of thing. I might get to that later.
+2. Copy the file "TASC_Logbook_To_csv.xsl" to a folder where you will be keeping your downloaded logbook.XML.
 
 
 
 
 
-To download your logbook in XML format:
+## To download your logbook in XML format:
 
-    1. Go to the APA website -  alliedpilots.org
-    2. Go to PBS Awards + 3XP.
-    3. Go to the Sabre - link in the top right corner.
-    4. Under the Sabre link, go to Logbook.
-    5. Click the harddrive icon with a bent arrow coming out of the top to export. Choose XML file format. Make sure you save the file to the same folder as your copy of “TASC Logbook To csv.xsl”
-    6. Open the downloaded XML file with a text editor. On Windows I recommend NotePad++, a free text editor.	
-    7. Add the line <?xml-stylesheet type = "text/xsl" href = "TASC Logbook To csv.xsl"?> so that the first two lines look like:
-		
-		<?xml version="1.0" encoding="utf-8"?>
-		<?xml-stylesheet type = "text/xsl" href = "TASC Logbook To csv.xsl"?>
-       
-    8. Change the Crystal report tag (usually line 3) from this:
-           
-		<CrystalReport xmlns="urn:crystal-reports:schemas:report-detail" 			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:crystal-	reports:schemas:report-detail 	http://www.businessobjects.com/products/xml/CR2008Schema.xsd">
-       
-    9. to this:
-       
-           <CrystalReport>
+1. Go to the [APA website](https://www.alliedpilots.org)
+2. Go to PBS Awards + 3XP.
+3. Go to the Sabre - link in the top right corner.
+4. Under the Sabre link, go to Logbook.
+5. Click the harddrive icon with a bent arrow coming out of the top to export. Choose XML file format. Make sure you save the file to the same folder as your copy of “TASC_Logbook_To_csv.xsl”
+6. Open the downloaded XML file with a text editor. On Windows I recommend NotePad++, a free text editor.	
+7. Add the line 
+   ```xml
+   <?xml-stylesheet type = "text/xsl" href = "TASC_Logbook_To_csv.xsl"?>
+   ```  
+   so that the first two lines look like:
+   ```xml
+   <?xml version="1.0" encoding="utf-8"?>
+   <?xml-stylesheet type = "text/xsl" href = "TASC_Logbook_To_csv.xsl"?>
+   ```
+8. Change the Crystal report tag (usually line 3) from this:
+   ```xml     
+   <CrystalReport xmlns="urn:crystal-reports:schemas:report-detail" 			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:crystal-	reports:schemas:report-detail 	http://www.businessobjects.com/products/xml/CR2008Schema.xsd">
+   ``` 
+9. to this:
+   ```xml
+   <CrystalReport>
+   ```
+   For some reason the extra attributes in the <CrystalReport> tag cause the page do not render. I don’t know why.
 
-For some reason the extra attributes cause the page do not render. I don’t know why.
 
+When you are done, the first three lines should look like this:
 
-When you are done, the first three line should look like this:
-
+```xml
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type = "text/xsl" href = "TASC Logbook To csv.xsl"?>
+<?xml-stylesheet type = "text/xsl" href = "TASC_Logbook_To_csv.xsl"?>
 <CrystalReport>
+```
 
 Save the changes, and open your downloaded logbook.XML file in Firefox.
 
 You should see something like this:
 
+![example of web page table](Logbook_Screenshot.png)
 
 At the bottom of the page is a link to convert and save your logbook in CSV format, suitable for importing into any spreadsheet program.
 Alternatively, if you copy the table from the webpage, you can paste it into Google Sheets.
 
 Notes:
-    • There is still some work to be done with the duration fields, Splitting the info in the Sequence Number field, and working out a better arrival time field.
-    • Some of the other export formats I tried (PDF, CSV) gave me incorrect data, like a 2+30 leg to Miami when the flight actually took close to 5 hours. I have not found any errors in the XML format export, except for a missing equipment code on one model of the 321. The ETOPS ones I think. Doing some spot checking would be a good idea.
-    • Windows uses a different hidden character from the one used in webpages to signify the end of a line. Using a slightly more advanced text editor – like Notepad++ will help keep you from mixing line endings if you edit the XML file on a windows machine. Plus NotePad++ is just better than the Notepad that comes with windows.
-    • I lifted the CSV code from the internet, many thanks to the guy who figured that one out.
+- There is still some work to be done with the duration fields, Splitting the info in the Sequence Number field, and working out a better arrival time field.
+- Some of the other export formats I tried (PDF, CSV) gave me incorrect data, like a 2+30 leg to Miami when the flight actually took close to 5 hours. I have not found any errors in the XML format export, except for a missing equipment code on one model of the 321. The ETOPS ones I think. Doing some spot checking would be a good idea.
+- Windows uses a different hidden character from the one used in webpages to signify the end of a line. Using a slightly more advanced text editor – like Notepad++ will help keep you from mixing line endings if you edit the XML file on a windows machine. Plus NotePad++ is just better than the Notepad that comes with windows.
+- I lifted the CSV code from the internet, many thanks to the guy who figured that one out.
 
 Let me know how this works out for you, and feel free to share. If you make improvements, let me know so I can merge them in to the master copy.
 
-Chad Lowe – LAX Base – phxsawdust@gmail.com
+Chad Lowe – LAX Base
