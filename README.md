@@ -3,6 +3,7 @@ Exports American Airlines logbook data to a more useable format.
 
 ## Before you download your schedule:
 1. Install Firefox web browser. Due to other browser’s security settings, only Firefox will do a local transform. The others require that you be using a webpage from a web server to do this kind of thing. I might get to that later. 
+   
    See: [Can Chrome be made to perform an XSL transform on a local file?
 ](https://stackoverflow.com/questions/3828898/can-chrome-be-made-to-perform-an-xsl-transform-on-a-local-file?rq=1)
 2. Copy the file "TASC_Logbook_To_csv.xsl" to a folder where you will be keeping your downloaded logbook.XML.
@@ -16,7 +17,7 @@ Exports American Airlines logbook data to a more useable format.
 1. Go to the [APA website](https://www.alliedpilots.org)
 1. Click [3XP / PBS Awards / Scheduling](https://www.alliedpilots.org/Committees/Scheduling) under Quick Links
 2. Click [PBS Awards & 3XP](https://oac.alliedpilots.org/).
-3. Click on the [Sabre](https://tasc.alliedpilots.org/Sabre/SabreLogin.aspx) - link in the top right corner.
+3. Click on the [Sabre](https://tasc.alliedpilots.org/Sabre/SabreLogin.aspx) link in the top right corner.
 4. In Sabre, Under the `Go To` dropdown in the top right corner, select `Logbook`.
 5. Click the harddrive icon with a bent arrow coming out of the top to export. Choose XML file format. Make sure you save the file to the same folder as your copy of “TASC_Logbook_To_csv.xsl”
 6. Open the downloaded XML file with a text editor. On Windows I recommend NotePad++, a free text editor.	
