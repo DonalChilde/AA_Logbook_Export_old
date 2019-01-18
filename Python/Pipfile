@@ -1,0 +1,16 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+xmltodict = "*"
+
+[dev-packages]
+pylint = "*"
+pytest = "*"
+"autopep8" = "*"
+rope = "*"
+
+[requires]
+python_version = "3.7"
