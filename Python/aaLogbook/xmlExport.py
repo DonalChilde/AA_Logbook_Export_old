@@ -16,7 +16,7 @@ from dataclasses import dataclass, field
 from dataclasses_json import dataclass_json
 from typing import List
 from datetime import timedelta
- 
+import uuid
 
 
 #from sys import stdout
@@ -43,56 +43,144 @@ ns = {'crystal_reports': 'urn:crystal-reports:schemas:report-detail'}
 
 @dataclass_json
 @dataclass
-class LogbookElement:
+class Logbook(object):
+    uuid: uuid.UUID = field(default_factory=uuid.uuid4) #type: ignore
     aaNumber: str = ""
     sumOfActualBlock: str = ""
     sumOfLegGreater: str = ""
     sumOfFly: str = ""
     years: list = field(default_factory=list)
     
-
 @dataclass_json
 @dataclass
-class YearElement:
+class Year:
+    uuid: uuid.UUID = field(default_factory=uuid.uuid4) #type: ignore
     year: str = ""
     sumOfActualBlock: str = ""
     sumOfLegGreater: str = ""
     sumOfFly: str = ""
     months: list = field(default_factory=list)
-    
+
 
 @dataclass_json
 @dataclass
-class MonthElement:
+class Month:
+    uuid: uuid.UUID = field(default_factory=uuid.uuid4) #type: ignore
     monthYear: str = ""
     sumOfActualBlock: str = ""
     sumOfLegGreater: str = ""
     sumOfFly: str = ""
     trips: list = field(default_factory=list)
-    
+
+
+@dataclass_json
+@dataclass
+class Trip:
+    uuid: uuid.UUID = field(default_factory=uuid.uuid4) #type: ignore
+    sequenceInfo: str = ""
+    startDate: str = ""
+    sequenceNumber: str = ""
+    base: str = ""
+    equipmentType:str = ""
+    sumOfActualBlock: str = ""
+    sumOfLegGreater: str = ""
+    sumOfFly: str = ""
+    dutyPeriods: list = field(default_factory=list)
+
+
+@dataclass_json
+@dataclass
+class DutyPeriod:
+    uuid: uuid.UUID = field(default_factory=uuid.uuid4) #type: ignore
+    sumOfActualBlock: str = ""
+    sumOfLegGreater: str = ""
+    sumOfFly: str = ""
+    flights: list = field(default_factory=list)
+
+
+@dataclass_json
+@dataclass
+class Flight:
+    uuid: uuid.UUID = field(default_factory=uuid.uuid4) #type: ignore
+    flightNumber: str = ""
+    departureStation: str = ""
+    outDateTime: str = ""
+    arrivalStation: str = ""
+    fly: str = ""
+    legGreater: str = ""
+    eqModel: str = ""
+    eqNumber: str = ""
+    eqType: str = ""
+    eqCode: str = ""
+    groundTime: str = ""
+    overnightDuration: str = ""
+    fuelPerformance: str = ""
+    departurePerformance: str = ""
+    arrivalPerformance: str = ""
+    actualBlock: str = ""
+    position: str = ""
+    delayCode: str = ""
+    inDateTime: str = ""
+
+
+@dataclass_json
+@dataclass
+class LogbookElement:
+    uuid: uuid.UUID = field(default_factory=uuid.uuid4) #type: ignore
+    aaNumber: str = ""
+    sumOfActualBlock: str = ""
+    sumOfLegGreater: str = ""
+    sumOfFly: str = ""
+    years: list = field(default_factory=list)
+
+
+@dataclass_json
+@dataclass
+class YearElement:
+    uuid: uuid.UUID = field(default_factory=uuid.uuid4) #type: ignore
+    year: str = ""
+    sumOfActualBlock: str = ""
+    sumOfLegGreater: str = ""
+    sumOfFly: str = ""
+    months: list = field(default_factory=list)
+
+
+@dataclass_json
+@dataclass
+class MonthElement:
+    uuid: uuid.UUID = field(default_factory=uuid.uuid4) #type: ignore
+    monthYear: str = ""
+    sumOfActualBlock: str = ""
+    sumOfLegGreater: str = ""
+    sumOfFly: str = ""
+    trips: list = field(default_factory=list)
+
 
 @dataclass_json
 @dataclass
 class TripElement:
+    uuid: uuid.UUID = field(default_factory=uuid.uuid4) #type: ignore
     sequenceInfo: str = ""
     sumOfActualBlock: str = ""
     sumOfLegGreater: str = ""
     sumOfFly: str = ""
     dutyPeriods: list = field(default_factory=list)
-    
+
 
 @dataclass_json
 @dataclass
 class DutyPeriodElement:
+    uuid: uuid.UUID = field(default_factory=uuid.uuid4) #type: ignore
     sumOfActualBlock: str = ""
     sumOfLegGreater: str = ""
     sumOfFly: str = ""
     flights: list = field(default_factory=list)
-    
+
 
 @dataclass_json
 @dataclass
 class FlightElement:
+    uuid: uuid.UUID = field(default_factory=uuid.uuid4) #type: ignore
     flightNumber: str = ""
     departureStation: str = ""
     outDateTime: str = ""
@@ -132,7 +220,7 @@ def parseXML(path):
 
         for item in root.findall("crystal_reports:Group", ns):
             # pylint: disable=E1101
-            logbook.years.append(handleYear(item)) 
+            logbook.years.append(handleYear(item))
         return logbook
 
 
@@ -150,7 +238,7 @@ def handleYear(yearElement):
 
     for item in yearElement.findall("crystal_reports:Group", ns):
         # pylint: disable=E1101
-        year.months.append(handleMonth(item))  
+        year.months.append(handleMonth(item))
     validateYear(year, yearElement)
 
     return year
@@ -170,7 +258,7 @@ def handleMonth(monthElement):
 
     for item in monthElement.findall("crystal_reports:Group", ns):
         # pylint: disable=E1101
-        month.trips.append(handleTrip(item))  
+        month.trips.append(handleTrip(item))
     validateMonth(month, monthElement)
     return month
 
@@ -190,7 +278,7 @@ def handleTrip(tripElement):
     for item in tripElement.findall("crystal_reports:Group", ns):
         # pylint: disable=E1101
         trip.dutyPeriods.append(handleDutyPeriod(item)
-                                )  
+                                )
     validateTrip(trip, tripElement)
     return trip
 
@@ -207,7 +295,7 @@ def handleDutyPeriod(dutyPeriodElement):
 
     for item in dutyPeriodElement.findall("crystal_reports:Details", ns):
         # pylint: disable=E1101
-        dutyPeriod.flights.append(handleFlight(item))  
+        dutyPeriod.flights.append(handleFlight(item))
     # print(dutyPeriod)
     validateDutyPeriod(dutyPeriod, dutyPeriodElement)
     return dutyPeriod
@@ -279,6 +367,57 @@ def validateDutyPeriod(dutyPeriod, dutyPeriodElement):
 def validateFlight(flight, flightElement):
     pass
 
-def parseTimeDelta(durationString):
-    minutes, seconds = durationString.split('.')
-    return timedelta()
+
+def parse_HHdotMM_ToTimeDelta(durationString)-> timedelta:
+    hours, minutes = durationString.split('.')
+    hours, minutes = map(int, (hours, minutes))
+    return timedelta(hours=hours, minutes=minutes)
+
+
+def timeDeltaToIsoString(timeDelta: timedelta)-> str:
+    seconds = timeDelta.total_seconds()
+    minutes, seconds = divmod(seconds, 60)
+    hours, minutes = divmod(minutes, 60)
+    hours, minutes = map(int, (hours, minutes))
+    seconds = round(seconds)
+    isoString = f"PT{hours}H{minutes}M{seconds}S"
+    return isoString
+
+# def iso8601(timeDelta: timedelta):
+#     """
+#     from:
+#     https://stackoverflow.com/questions/27168175/convert-a-datetime-timedelta-into-iso-8601-duration-in-python
+#     """
+#     # split seconds to larger units
+#     seconds = timeDelta.total_seconds()
+#     minutes, seconds = divmod(seconds, 60)
+#     hours, minutes = divmod(minutes, 60)
+#     days, hours = divmod(hours, 24)
+#     days, hours, minutes = map(int, (days, hours, minutes))
+#     seconds = round(seconds, 6)
+
+#     ## build date
+#     date = ''
+#     if days:
+#         date = '%sD' % days
+
+#     ## build time
+#     time = u'T'
+#     # hours
+#     bigger_exists = date or hours
+#     if bigger_exists:
+#         time += '{:02}H'.format(hours)
+#     # minutes
+#     bigger_exists = bigger_exists or minutes
+#     if bigger_exists:
+#       time += '{:02}M'.format(minutes)
+#     # seconds
+#     if seconds.is_integer():
+#         seconds = '{:02}'.format(int(seconds))
+#     else:
+#         # 9 chars long w/leading 0, 6 digits after decimal
+#         seconds = '%09.6f' % seconds
+#     # remove trailing zeros
+#     seconds = seconds.rstrip('0')
+#     time += '{}S'.format(seconds)
+#     return u'P' + date + time
