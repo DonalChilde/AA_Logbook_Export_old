@@ -5,12 +5,14 @@ name = "pypi"
 
 [packages]
 xmltodict = "*"
+dataclasses-json = "*"
 
 [dev-packages]
 pylint = "*"
-pytest = "*"
 "autopep8" = "*"
 rope = "*"
+mypy = "*"
+pytest = "==4.0.2"
 
 [requires]
 python_version = "3.7"
