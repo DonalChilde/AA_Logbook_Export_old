@@ -41,20 +41,22 @@ logger.addHandler(log_handler)
 
 ns = {'crystal_reports': 'urn:crystal-reports:schemas:report-detail'}
 
+
 @dataclass_json
 @dataclass
 class Logbook(object):
-    uuid: uuid.UUID = field(default_factory=uuid.uuid4) #type: ignore
+    uuid: uuid.UUID = field(default_factory=uuid.uuid4)  # type: ignore
     aaNumber: str = ""
     sumOfActualBlock: str = ""
     sumOfLegGreater: str = ""
     sumOfFly: str = ""
     years: list = field(default_factory=list)
-    
+
+
 @dataclass_json
 @dataclass
 class Year:
-    uuid: uuid.UUID = field(default_factory=uuid.uuid4) #type: ignore
+    uuid: uuid.UUID = field(default_factory=uuid.uuid4)  # type: ignore
     year: str = ""
     sumOfActualBlock: str = ""
     sumOfLegGreater: str = ""
@@ -65,7 +67,7 @@ class Year:
 @dataclass_json
 @dataclass
 class Month:
-    uuid: uuid.UUID = field(default_factory=uuid.uuid4) #type: ignore
+    uuid: uuid.UUID = field(default_factory=uuid.uuid4)  # type: ignore
     monthYear: str = ""
     sumOfActualBlock: str = ""
     sumOfLegGreater: str = ""
@@ -76,12 +78,11 @@ class Month:
 @dataclass_json
 @dataclass
 class Trip:
-    uuid: uuid.UUID = field(default_factory=uuid.uuid4) #type: ignore
-    sequenceInfo: str = ""
+    uuid: uuid.UUID = field(default_factory=uuid.uuid4)  # type: ignore
     startDate: str = ""
     sequenceNumber: str = ""
     base: str = ""
-    equipmentType:str = ""
+    equipmentType: str = ""
     sumOfActualBlock: str = ""
     sumOfLegGreater: str = ""
     sumOfFly: str = ""
@@ -91,7 +92,7 @@ class Trip:
 @dataclass_json
 @dataclass
 class DutyPeriod:
-    uuid: uuid.UUID = field(default_factory=uuid.uuid4) #type: ignore
+    uuid: uuid.UUID = field(default_factory=uuid.uuid4)  # type: ignore
     sumOfActualBlock: str = ""
     sumOfLegGreater: str = ""
     sumOfFly: str = ""
@@ -101,7 +102,7 @@ class DutyPeriod:
 @dataclass_json
 @dataclass
 class Flight:
-    uuid: uuid.UUID = field(default_factory=uuid.uuid4) #type: ignore
+    uuid: uuid.UUID = field(default_factory=uuid.uuid4)  # type: ignore
     flightNumber: str = ""
     departureStation: str = ""
     outDateTime: str = ""
@@ -126,7 +127,7 @@ class Flight:
 @dataclass_json
 @dataclass
 class LogbookElement:
-    uuid: uuid.UUID = field(default_factory=uuid.uuid4) #type: ignore
+    uuid: uuid.UUID = field(default_factory=uuid.uuid4)  # type: ignore
     aaNumber: str = ""
     sumOfActualBlock: str = ""
     sumOfLegGreater: str = ""
@@ -137,7 +138,7 @@ class LogbookElement:
 @dataclass_json
 @dataclass
 class YearElement:
-    uuid: uuid.UUID = field(default_factory=uuid.uuid4) #type: ignore
+    uuid: uuid.UUID = field(default_factory=uuid.uuid4)  # type: ignore
     year: str = ""
     sumOfActualBlock: str = ""
     sumOfLegGreater: str = ""
@@ -148,7 +149,7 @@ class YearElement:
 @dataclass_json
 @dataclass
 class MonthElement:
-    uuid: uuid.UUID = field(default_factory=uuid.uuid4) #type: ignore
+    uuid: uuid.UUID = field(default_factory=uuid.uuid4)  # type: ignore
     monthYear: str = ""
     sumOfActualBlock: str = ""
     sumOfLegGreater: str = ""
@@ -159,7 +160,7 @@ class MonthElement:
 @dataclass_json
 @dataclass
 class TripElement:
-    uuid: uuid.UUID = field(default_factory=uuid.uuid4) #type: ignore
+    uuid: uuid.UUID = field(default_factory=uuid.uuid4)  # type: ignore
     sequenceInfo: str = ""
     sumOfActualBlock: str = ""
     sumOfLegGreater: str = ""
@@ -170,7 +171,7 @@ class TripElement:
 @dataclass_json
 @dataclass
 class DutyPeriodElement:
-    uuid: uuid.UUID = field(default_factory=uuid.uuid4) #type: ignore
+    uuid: uuid.UUID = field(default_factory=uuid.uuid4)  # type: ignore
     sumOfActualBlock: str = ""
     sumOfLegGreater: str = ""
     sumOfFly: str = ""
@@ -180,7 +181,7 @@ class DutyPeriodElement:
 @dataclass_json
 @dataclass
 class FlightElement:
-    uuid: uuid.UUID = field(default_factory=uuid.uuid4) #type: ignore
+    uuid: uuid.UUID = field(default_factory=uuid.uuid4)  # type: ignore
     flightNumber: str = ""
     departureStation: str = ""
     outDateTime: str = ""
