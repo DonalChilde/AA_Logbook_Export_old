@@ -44,88 +44,6 @@ ns = {'crystal_reports': 'urn:crystal-reports:schemas:report-detail'}
 
 @dataclass_json
 @dataclass
-class Logbook(object):
-    uuid: uuid.UUID = field(default_factory=uuid.uuid4)  # type: ignore
-    aaNumber: str = ""
-    sumOfActualBlock: str = ""
-    sumOfLegGreater: str = ""
-    sumOfFly: str = ""
-    years: list = field(default_factory=list)
-
-
-@dataclass_json
-@dataclass
-class Year:
-    uuid: uuid.UUID = field(default_factory=uuid.uuid4)  # type: ignore
-    year: str = ""
-    sumOfActualBlock: str = ""
-    sumOfLegGreater: str = ""
-    sumOfFly: str = ""
-    months: list = field(default_factory=list)
-
-
-@dataclass_json
-@dataclass
-class Month:
-    uuid: uuid.UUID = field(default_factory=uuid.uuid4)  # type: ignore
-    monthYear: str = ""
-    sumOfActualBlock: str = ""
-    sumOfLegGreater: str = ""
-    sumOfFly: str = ""
-    trips: list = field(default_factory=list)
-
-
-@dataclass_json
-@dataclass
-class Trip:
-    uuid: uuid.UUID = field(default_factory=uuid.uuid4)  # type: ignore
-    startDate: str = ""
-    sequenceNumber: str = ""
-    base: str = ""
-    equipmentType: str = ""
-    sumOfActualBlock: str = ""
-    sumOfLegGreater: str = ""
-    sumOfFly: str = ""
-    dutyPeriods: list = field(default_factory=list)
-
-
-@dataclass_json
-@dataclass
-class DutyPeriod:
-    uuid: uuid.UUID = field(default_factory=uuid.uuid4)  # type: ignore
-    sumOfActualBlock: str = ""
-    sumOfLegGreater: str = ""
-    sumOfFly: str = ""
-    flights: list = field(default_factory=list)
-
-
-@dataclass_json
-@dataclass
-class Flight:
-    uuid: uuid.UUID = field(default_factory=uuid.uuid4)  # type: ignore
-    flightNumber: str = ""
-    departureStation: str = ""
-    outDateTime: str = ""
-    arrivalStation: str = ""
-    fly: str = ""
-    legGreater: str = ""
-    eqModel: str = ""
-    eqNumber: str = ""
-    eqType: str = ""
-    eqCode: str = ""
-    groundTime: str = ""
-    overnightDuration: str = ""
-    fuelPerformance: str = ""
-    departurePerformance: str = ""
-    arrivalPerformance: str = ""
-    actualBlock: str = ""
-    position: str = ""
-    delayCode: str = ""
-    inDateTime: str = ""
-
-
-@dataclass_json
-@dataclass
 class LogbookElement:
     uuid: uuid.UUID = field(default_factory=uuid.uuid4)  # type: ignore
     aaNumber: str = ""
@@ -376,12 +294,31 @@ def parse_HHdotMM_ToTimeDelta(durationString)-> timedelta:
 
 
 def timeDeltaToIsoString(timeDelta: timedelta)-> str:
-    seconds = timeDelta.total_seconds()
-    minutes, seconds = divmod(seconds, 60)
+    int_seconds = 0
+    if timeDelta.days():  # type: ignore
+        int_seconds += (abs(timeDelta.days())*86400)  # type: ignore
+    if timeDelta.seconds():  # type: ignore
+        int_seconds = int_seconds + timedelta.seconds()  # type: ignore
+    minutes, seconds = divmod(int_seconds, 60)
     hours, minutes = divmod(minutes, 60)
-    hours, minutes = map(int, (hours, minutes))
-    seconds = round(seconds)
-    isoString = f"PT{hours}H{minutes}M{seconds}S"
+    days, hours = divmod(hours, 24)
+    microseconds = timeDelta.microseconds() # type: ignore
+    daystext, hourstext, minutestext, secondstext,microtext = ""
+    if days:
+        daystext = f"{days}D"
+    if hours:
+        hourstext = f"{hours}H"
+    if minutes:
+        minutestext = f"{minutes}M"
+    if microseconds:
+        if not seconds:
+            seconds = 0
+        microtext = f".{microseconds:06d}"  
+    if seconds or microseconds:
+        secondstext = f"{seconds}{microtext}S"
+    if not (hours or minutes or seconds or microseconds):
+        secondstext = f"{seconds}S"
+    isoString = f"P{daystext}T{hourstext}{minutestext}{secondstext}"
     return isoString
 
 # def iso8601(timeDelta: timedelta):

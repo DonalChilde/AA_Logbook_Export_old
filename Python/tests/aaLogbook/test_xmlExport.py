@@ -1,7 +1,7 @@
 """
 """
 
-from aaLogbook import xmlExport
+from aaLogbook import xmlTranslation
 from pathlib import Path
 from datetime import timedelta
 import json
@@ -14,16 +14,16 @@ def test_assertTrue():
 
 def test_loadXml():
     path=Path('Python/tests/resources/myCrystalReportViewer.xml')
-    parsedXML = xmlExport.parseXML(path)
+    parsedXML = xmlTranslation.parseXML(path)
     # pylint: disable=E1101
     print(parsedXML.to_json(indent=2))
     
 def test_stringTo_timedelta():
     string1 = '23.34'
-    td1 = xmlExport.parse_HHdotMM_ToTimeDelta(string1)
+    td1 = xmlTranslation.parse_HHdotMM_ToTimeDelta(string1)
     assert(td1==timedelta(hours=23,minutes=34))
     
-def test_timedeltaToIsoString():
-    td1 = timedelta(hours=23,minutes=34)
-    tdString = xmlExport.timeDeltaToIsoString(td1)
-    assert(tdString=="PT23H34M0S")
+# def test_timedeltaToIsoString():
+#     td1 = timedelta(hours=23,minutes=34)
+#     tdString = xmlTranslation.timeDeltaToIsoString(td1)
+#     assert(tdString=="PT23H34M0S")
