@@ -1,7 +1,7 @@
 """
 """
 
-from aaLogbook import xmlTranslation
+from aaLogbook import xmlTranslation, logbookDataClass
 from pathlib import Path
 from datetime import timedelta
 import json
@@ -12,12 +12,29 @@ from dataclasses_json import dataclass_json
 def test_assertTrue():
     assert True
 
-def test_loadXml():
+# def test_loadXml():
+#     path=Path('Python/tests/resources/myCrystalReportViewer.xml')
+#     parsedXML = xmlTranslation.parseXML(path)
+#     # pylint: disable=E1101
+#     print(parsedXML.to_json(indent=2))
+    
+def loadXml():
     path=Path('Python/tests/resources/myCrystalReportViewer.xml')
     parsedXML = xmlTranslation.parseXML(path)
-    # pylint: disable=E1101
-    print(parsedXML.to_json(indent=2))
-    
+    return parsedXML
+
+def translateParsedXml():
+    parsed = loadXml()
+    translated = logbookDataClass.buildLogbook(parsed)
+    return translated
+
+def test_printTranslatedToStdOut():
+    print(translateParsedXml().to_json(indent=2))
+
+def test_printParsedXmlToStdOut():
+    print(loadXml().to_json(indent=2))
+
+
 def test_stringTo_timedelta():
     string1 = '23.34'
     td1 = xmlTranslation.parse_HHdotMM_ToTimeDelta(string1)

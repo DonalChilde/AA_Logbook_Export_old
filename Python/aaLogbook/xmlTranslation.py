@@ -1,6 +1,10 @@
 """
 """
-
+# TODO change uuid to be the string of entire data field, at least for flight.
+#       this is to allow for differential exports for same logbook.
+#       maybe make it a function on the FlightElement class, to support removing the
+#       default uuid required to support typechecking. or change uuid to be a string type. <- this
+# TODO add uuid generator to all Element classes, to be called one time after data parsing. 
 # TODO data structure to hold parsed info
 # TODO data structure to hold parsed info, as well as interpreted info.
 # TODO output parsed info to csv
@@ -17,10 +21,9 @@ from dataclasses_json import dataclass_json
 from typing import List
 from datetime import timedelta
 import uuid
-
-
-#from sys import stdout
 import xml.etree.ElementTree as ET
+#from sys import stdout
+
 
 #### setting up logger ####
 logger = logging.getLogger(__name__)
@@ -287,39 +290,43 @@ def validateFlight(flight, flightElement):
     pass
 
 
-def parse_HHdotMM_ToTimeDelta(durationString)-> timedelta:
-    hours, minutes = durationString.split('.')
-    hours, minutes = map(int, (hours, minutes))
-    return timedelta(hours=hours, minutes=minutes)
+# def parse_HHdotMM_ToTimeDelta(durationString)-> timedelta:
+#     if durationString:
+#         hours, minutes = durationString.split('.')
+#         hours, minutes = map(int, (hours, minutes))
+#         return timedelta(hours=hours, minutes=minutes)
+#     else:
+#         return 
+    
 
 
-def timeDeltaToIsoString(timeDelta: timedelta)-> str:
-    int_seconds = 0
-    if timeDelta.days():  # type: ignore
-        int_seconds += (abs(timeDelta.days())*86400)  # type: ignore
-    if timeDelta.seconds():  # type: ignore
-        int_seconds = int_seconds + timedelta.seconds()  # type: ignore
-    minutes, seconds = divmod(int_seconds, 60)
-    hours, minutes = divmod(minutes, 60)
-    days, hours = divmod(hours, 24)
-    microseconds = timeDelta.microseconds() # type: ignore
-    daystext, hourstext, minutestext, secondstext,microtext = ""
-    if days:
-        daystext = f"{days}D"
-    if hours:
-        hourstext = f"{hours}H"
-    if minutes:
-        minutestext = f"{minutes}M"
-    if microseconds:
-        if not seconds:
-            seconds = 0
-        microtext = f".{microseconds:06d}"  
-    if seconds or microseconds:
-        secondstext = f"{seconds}{microtext}S"
-    if not (hours or minutes or seconds or microseconds):
-        secondstext = f"{seconds}S"
-    isoString = f"P{daystext}T{hourstext}{minutestext}{secondstext}"
-    return isoString
+# def timeDeltaToIsoString(timeDelta: timedelta)-> str:
+#     int_seconds = 0
+#     if timeDelta.days():  # type: ignore
+#         int_seconds += (abs(timeDelta.days())*86400)  # type: ignore
+#     if timeDelta.seconds():  # type: ignore
+#         int_seconds = int_seconds + timedelta.seconds()  # type: ignore
+#     minutes, seconds = divmod(int_seconds, 60)
+#     hours, minutes = divmod(minutes, 60)
+#     days, hours = divmod(hours, 24)
+#     microseconds = timeDelta.microseconds() # type: ignore
+#     daystext, hourstext, minutestext, secondstext,microtext = ""
+#     if days:
+#         daystext = f"{days}D"
+#     if hours:
+#         hourstext = f"{hours}H"
+#     if minutes:
+#         minutestext = f"{minutes}M"
+#     if microseconds:
+#         if not seconds:
+#             seconds = 0
+#         microtext = f".{microseconds:06d}"  
+#     if seconds or microseconds:
+#         secondstext = f"{seconds}{microtext}S"
+#     if not (hours or minutes or seconds or microseconds):
+#         secondstext = f"{seconds}S"
+#     isoString = f"P{daystext}T{hourstext}{minutestext}{secondstext}"
+#     return isoString
 
 # def iso8601(timeDelta: timedelta):
 #     """

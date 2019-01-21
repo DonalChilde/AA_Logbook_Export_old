@@ -1,4 +1,6 @@
 """
+TODO changed parse functions to support sending surrounding object, 
+    in order to make more understandable log messages.
 """
 
 from __future__ import annotations
@@ -7,10 +9,28 @@ from dataclasses import dataclass, field
 from dataclasses_json import dataclass_json
 from typing import List
 from datetime import timedelta, datetime, tzinfo
-from xmlTranslation import LogbookElement, YearElement, MonthElement, TripElement, DutyPeriodElement, FlightElement
-from timeDelta import parse_HHdotMM_ToTimeDelta
+from aaLogbook.xmlTranslation import LogbookElement, YearElement, MonthElement, TripElement, DutyPeriodElement, FlightElement
+from aaLogbook.timeDelta import parse_HHdotMM_To_timedelta
 # from dateutil import tz
 import uuid
+import logging
+
+#### setting up logger ####
+logger = logging.getLogger(__name__)
+
+#### Log Level ####
+# NOTSET=0, DEBUG=10, INFO=20, WARN=30, ERROR=40, and CRITICAL=50
+log_level = logging.DEBUG
+# logLevel = logging.INFO
+logger.setLevel(log_level)
+
+#### Log Handler ####
+log_formatter = logging.Formatter(
+    "%(asctime)s — %(name)s — %(levelname)s — %(funcName)s:%(lineno)d — %(message)s", datefmt='%d-%b-%y %H:%M:%S')
+# log_handler = logging.StreamHandler(stdout)
+log_handler = logging.StreamHandler()
+log_handler.setFormatter(log_formatter)
+# logger.addHandler(log_handler)
 
 
 @dataclass_json
@@ -20,6 +40,7 @@ class Station:
     icao: str = ""
     timezone: str = ""
 
+
 @dataclass_json
 @dataclass
 class Duration:
@@ -27,7 +48,8 @@ class Duration:
     minutes: int = 0
 
     def to_timedelta(self)-> timedelta:
-        return timedelta(hours=self.hours,minutes=self.minutes)
+        return timedelta(hours=self.hours, minutes=self.minutes)
+
 
 @dataclass_json
 @dataclass
@@ -162,22 +184,23 @@ def buildDutyPeriod(dutyPeriodElement: DutyPeriodElement)->DutyPeriod:
 
 
 def buildFlight(flightElement: FlightElement)->Flight:
-    uuid = flightElement.uuid
-    flightNumber = flightElement.uuid
+    uuid = flightElement.uuid  # type: ignore
+    flightNumber = flightElement.flightNumber
     departureStation = buildStation(flightElement.departureStation)
     outDateTimeUTC = buildOutTime(
         flightElement.outDateTime, departureStation.timezone)
     arrivalStation = buildStation(flightElement.arrivalStation)
-    fly = parse_HHdotMM_ToDuration(flightElement.fly)
-    actualBlock = parse_HHdotMM_ToDuration(flightElement.actualBlock)
-    legGreater = parse_HHdotMM_ToDuration(flightElement.legGreater)
-    inDateTimeUTC = buildInTime(flightElement.inDateTime, actualBlock.to_timedelta())
+    fly = parse_HHdotMM_To_Duration(flightElement.fly)
+    actualBlock = parse_HHdotMM_To_Duration(flightElement.actualBlock)
+    legGreater = parse_HHdotMM_To_Duration(flightElement.legGreater)
+    inDateTimeUTC = buildInTime(
+        flightElement.inDateTime, actualBlock.to_timedelta())
     eqModel = flightElement.eqModel
     eqNumber = flightElement.eqNumber
     eqType = flightElement.eqType
     eqCode = flightElement.eqCode
-    groundTime = parse_HHdotMM_ToDuration(flightElement.groundTime)
-    overnightDuration = parse_HHdotMM_ToDuration(
+    groundTime = parse_HHdotMM_To_Duration(flightElement.groundTime)
+    overnightDuration = parse_HHdotMM_To_Duration(
         flightElement.overnightDuration)
     fuelPerformance = flightElement.fuelPerformance
     departurePerformance = flightElement.departurePerformance
@@ -207,25 +230,38 @@ def buildFlight(flightElement: FlightElement)->Flight:
                     delayCode=delayCode)
     return flight
 
-def parse_HHdotMM_ToDuration(durationString:str,separator:str = ".")-> Duration:
+
+def parse_HHdotMM_To_Duration(durationString: str, separator: str = ".")-> Duration:
     """
     parses a string in the format "34.23", assuming HH.MM
+    TODO input checking
     """
-    hours, minutes = durationString.split(separator)
-    duration = Duration(hours=int(hours),minutes = int(minutes))
-    return duration
+    if durationString:
+        if not '.' in durationString:
+            logger.error(f"Improperly formatted time sent to parse_HHdotMM_ToDuration, - {durationString} - Defaulting to 0 Duration")
+            return Duration()
+        hours, minutes = durationString.split(separator)
+        duration = Duration(hours=int(hours), minutes=int(minutes))
+        return duration
+    else:
+        return Duration()
+
 
 def buildStation(iataCode: str)->Station:
+    #TODO not implemented yet
     return Station()
 
 
 def buildOutTime(dateString: str, timeZoneString: str)-> datetime:
+    #TODO not implemented yet
     return datetime.now()
 
 
 def buildInTime(dateString: str, flightTime: timedelta)-> datetime:
+    #TODO not implemented yet
     return datetime.now()
 
 
 def splitTripInfo(sequenceInfo: str):
+    #TODO not implemented yet
     return ("", "", "", "")
