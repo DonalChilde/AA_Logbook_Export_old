@@ -63,7 +63,7 @@ def parse_HHMMSS(durationString: str, separator: str = ":")-> timedelta:
     pass
 
 
-def parse_HHdotMM_ToTimeDelta(durationString: str, separator:str = ".")-> timedelta:
+def parse_HHdotMM_To_timedelta(durationString: str, separator:str = ".")-> timedelta:
     """
     parses a string in the format "34.23", assuming HH.MM
     """
