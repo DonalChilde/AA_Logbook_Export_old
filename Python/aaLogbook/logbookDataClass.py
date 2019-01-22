@@ -11,9 +11,12 @@ from typing import List
 from datetime import timedelta, datetime, tzinfo
 from aaLogbook.xmlTranslation import LogbookElement, YearElement, MonthElement, TripElement, DutyPeriodElement, FlightElement
 from aaLogbook.timeDelta import parse_HHdotMM_To_timedelta
+from aaLogbook.airportsDB import loadIATADB
 # from dateutil import tz
 import uuid
 import logging
+import arrow
+
 
 #### setting up logger ####
 logger = logging.getLogger(__name__)
@@ -184,17 +187,20 @@ def buildDutyPeriod(dutyPeriodElement: DutyPeriodElement)->DutyPeriod:
 
 
 def buildFlight(flightElement: FlightElement)->Flight:
+    airportDB = loadIATADB()
+
+
     uuid = flightElement.uuid  # type: ignore
     flightNumber = flightElement.flightNumber
-    departureStation = buildStation(flightElement.departureStation)
+    departureStation = buildStation(flightElement.departureStation,airportDB)
     outDateTimeUTC = buildOutTime(
         flightElement.outDateTime, departureStation.timezone)
-    arrivalStation = buildStation(flightElement.arrivalStation)
+    arrivalStation = buildStation(flightElement.arrivalStation,airportDB)
     fly = parse_HHdotMM_To_Duration(flightElement.fly)
     actualBlock = parse_HHdotMM_To_Duration(flightElement.actualBlock)
     legGreater = parse_HHdotMM_To_Duration(flightElement.legGreater)
     inDateTimeUTC = buildInTime(
-        flightElement.inDateTime, actualBlock.to_timedelta())
+        flightElement.inDateTime, actualBlock.to_timedelta(),outDateTimeUTC,arrivalStation.timezone)
     eqModel = flightElement.eqModel
     eqNumber = flightElement.eqNumber
     eqType = flightElement.eqType
@@ -247,19 +253,25 @@ def parse_HHdotMM_To_Duration(durationString: str, separator: str = ".")-> Durat
         return Duration()
 
 
-def buildStation(iataCode: str)->Station:
-    #TODO not implemented yet
-    return Station()
+def buildStation(iataCode: str,airportDB:dict)->Station:
+    iataCap = iataCode.upper()
+    icao = airportDB[iataCap]['icao']
+    timezone = airportDB[iataCap]['tz']
+    station = Station(iata=iataCap,icao=icao,timezone=timezone)
+    return station
 
 
 def buildOutTime(dateString: str, timeZoneString: str)-> datetime:
-    #TODO not implemented yet
-    return datetime.now()
+    dt = arrow.get(dateString)
+    dt2 = dt.replace(tzinfo=timeZoneString)
+    return dt2.datetime
 
 
-def buildInTime(dateString: str, flightTime: timedelta)-> datetime:
-    #TODO not implemented yet
-    return datetime.now()
+def buildInTime(inDateString: str, flightTime: timedelta, outDatetime:datetime, inTimeZone:str)-> datetime:
+    
+    inTime = outDatetime + flightTime
+    inDT = arrow.get(inTime).to(inTimeZone)
+    return inDT.datetime
 
 
 def splitTripInfo(sequenceInfo: str):

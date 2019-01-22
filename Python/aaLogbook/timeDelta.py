@@ -74,7 +74,7 @@ def parse_HHdotMM_To_timedelta(durationString: str, separator:str = ".")-> timed
 
 def timedelta_To_isoformat(timeDelta: timedelta, strict=True)->str:
     """
-    if strict then limit output fields to DDHHMMSS.S # Not implemeted
+    if strict then limit output fields to PddDThhHmmMss.sS # Not implemeted
     """
     int_seconds = 0
     if timeDelta.days:

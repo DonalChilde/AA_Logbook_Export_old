@@ -6,6 +6,9 @@ name = "pypi"
 [packages]
 xmltodict = "*"
 dataclasses-json = "*"
+arrow = "*"
+pytz = "*"
+python-dateutil = "*"
 
 [dev-packages]
 pylint = "*"
