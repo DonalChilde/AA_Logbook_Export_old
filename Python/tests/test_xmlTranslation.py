@@ -9,6 +9,7 @@ import dataclasses
 from dataclasses_json import dataclass_json
 import arrow
 from dateutil import tz
+from utilities import csvUtils
 
 
 def test_assertTrue():
@@ -32,8 +33,16 @@ def translateParsedXml():
     translated = logbookDataClass.buildLogbook(parsed)
     return translated
 
+def test_exportXmlToCsvFile():
+    translatedData = translateParsedXml()
+    outPath = Path("Python/tests/resources/elementsCsv.csv")
+    flightRows = xmlTranslation.buildFlightRows(translatedData)
+    fieldList = None
+    csvUtils.writeDictToCsv(outPath,flightRows,)
 
-def test_printTranslatedToStdOut():
+
+
+def test_saveTranslatedToFile():
     translatedData = translateParsedXml()
     outPath = Path("Python/tests/resources/translatedLogbook.json")
     with open(outPath, 'w') as outFile:
