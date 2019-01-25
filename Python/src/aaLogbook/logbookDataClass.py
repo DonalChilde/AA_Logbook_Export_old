@@ -240,7 +240,7 @@ def buildFlight(flightElement: FlightElement)->Flight:
 def parse_HHdotMM_To_Duration(durationString: str, separator: str = ".")-> Duration:
     """
     parses a string in the format "34.23", assuming HH.MM
-    TODO input checking
+    TODO input checking, no dot, minutes more than 59, include parent object in log message
     """
     if durationString:
         if not '.' in durationString:

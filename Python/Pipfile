@@ -9,6 +9,7 @@ dataclasses-json = "*"
 arrow = "*"
 pytz = "*"
 python-dateutil = "*"
+click = "*"
 
 [dev-packages]
 pylint = "*"
@@ -16,6 +17,7 @@ pylint = "*"
 rope = "*"
 mypy = "*"
 pytest = "==4.0.2"
+sphinx = "*"
 
 [requires]
 python_version = "3.7"

@@ -4,7 +4,7 @@
 #       this is to allow for differential exports for same logbook.
 #       maybe make it a function on the FlightElement class, to support removing the
 #       default uuid required to support typechecking. or change uuid to be a string type. <- this
-# TODO add uuid generator to all Element classes, to be called one time after data parsing. 
+# TODO add uuid generator to all Element classes, to be called one time after data parsing.
 # TODO data structure to hold parsed info
 # TODO data structure to hold parsed info, as well as interpreted info.
 # TODO output parsed info to csv
@@ -16,12 +16,13 @@
 from __future__ import annotations
 import logging
 from pathlib import Path
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field,asdict as dc_asdict
 from dataclasses_json import dataclass_json
-from typing import List
+from typing import List, Dict, Sequence, NamedTuple
 from datetime import timedelta
 import uuid
 import xml.etree.ElementTree as ET
+import click
 #from sys import stdout
 
 
@@ -43,6 +44,34 @@ log_handler.setFormatter(log_formatter)
 logger.addHandler(log_handler)
 
 ns = {'crystal_reports': 'urn:crystal-reports:schemas:report-detail'}
+
+
+@dataclass
+class FlightRow:
+    aaNumber: str
+    year: str
+    monthYear: str
+    sequenceInfo: str
+    uuid: str
+    flightNumber: str
+    departureStation: str
+    outDateTime: str
+    arrivalStation: str
+    inDateTime: str
+    fly: str
+    legGreater: str
+    actualBlock: str
+    groundTime: str
+    overnightDuration: str
+    eqModel: str
+    eqNumber: str
+    eqType: str
+    eqCode: str
+    fuelPerformance: str
+    departurePerformance: str
+    arrivalPerformance: str
+    position: str
+    delayCode: str
 
 
 @dataclass_json
@@ -290,14 +319,39 @@ def validateFlight(flight, flightElement):
     pass
 
 
+def buildFlightRows(logbook: LogbookElement)-> List[Dict[str, str]]:
+    flightRows: List[Dict[str, str]] = []
+    logbookFields = {'aaNumber': logbook.aaNumber}
+    for year in logbook.years:
+        yearFields = {'year': year.year}
+        for month in year.months:
+            monthFields = {'monthYear': month.monthYear}
+            for trip in month.trips:
+                tripFields = {'sequenceInfo': trip.sequenceInfo}
+                for dutyPeriod in trip.dutyPeriods:
+                    for flight in dutyPeriod.flights:
+                        flightFields = dc_asdict(flight)
+                        flightFields.update(logbookFields)
+                        flightFields.update(yearFields)
+                        flightFields.update(monthFields)
+                        flightFields.update(tripFields)
+                        # flightRow = FlightRow(**flightFields)
+                        flightRows.append(flightFields)
+    return flightRows
+
+@click.command()
+def main():
+    print('cmd Main!')
+
+if __name__ == '__main__':
+    main()
 # def parse_HHdotMM_ToTimeDelta(durationString)-> timedelta:
 #     if durationString:
 #         hours, minutes = durationString.split('.')
 #         hours, minutes = map(int, (hours, minutes))
 #         return timedelta(hours=hours, minutes=minutes)
 #     else:
-#         return 
-    
+#         return
 
 
 # def timeDeltaToIsoString(timeDelta: timedelta)-> str:
@@ -320,7 +374,7 @@ def validateFlight(flight, flightElement):
 #     if microseconds:
 #         if not seconds:
 #             seconds = 0
-#         microtext = f".{microseconds:06d}"  
+#         microtext = f".{microseconds:06d}"
 #     if seconds or microseconds:
 #         secondstext = f"{seconds}{microtext}S"
 #     if not (hours or minutes or seconds or microseconds):
