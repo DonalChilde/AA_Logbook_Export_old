@@ -1,7 +1,8 @@
 """
 """
 
-from aaLogbook import xmlTranslation, logbookDataClass,timeDelta
+from aaLogbook import xmlTranslation, logbookDataClass
+from utilities import timedelta_util
 from pathlib import Path
 from datetime import timedelta
 # from timeDelta import parse_HHdotMM_To_timedelta
@@ -60,7 +61,7 @@ def test_printParsedXmlToStdOut():
 
 def test_stringTo_timedelta():
     string1 = '23.34'
-    td1 = timeDelta.parse_HHdotMM_To_timedelta(string1)
+    td1 = timedelta_util.parse_HHdotMM_To_timedelta(string1)
     assert(td1 == timedelta(hours=23, minutes=34))
 
 

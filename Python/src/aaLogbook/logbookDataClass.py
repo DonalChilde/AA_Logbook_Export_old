@@ -10,7 +10,7 @@ from dataclasses_json import dataclass_json
 from typing import List
 from datetime import timedelta, datetime, tzinfo
 from aaLogbook.xmlTranslation import LogbookElement, YearElement, MonthElement, TripElement, DutyPeriodElement, FlightElement
-from aaLogbook.timeDelta import parse_HHdotMM_To_timedelta
+from utilities.timedelta_util import parse_HHdotMM_To_timedelta
 from aaLogbook.airportsDB import loadIATADB
 # from dateutil import tz
 import uuid
