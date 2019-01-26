@@ -47,7 +47,7 @@ def loadIATADB()->dict:
 
 def filterOutNonIATAAirports(airportDB:dict)->dict:
     filteredDB:dict = dict()
-    for key,value in airportDB.items():
+    for _,value in airportDB.items():
         if value['iata'] is not "" and value['iata'] is not '0':
             if value['iata'] in filteredDB:
                 logging.error(f"found duplicate IATA values, {value} and {filteredDB[value['iata']]}")
