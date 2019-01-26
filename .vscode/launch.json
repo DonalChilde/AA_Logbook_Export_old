@@ -8,7 +8,7 @@
             "name": "xmlTranslation",
             "type": "python",
             "request": "launch",
-            "module": "/Users/croaker/git/AA_Logbook_Export/Python/aaLogbook/xmlTranslation.py",
+            "module": "/Users/croaker/git/AA_Logbook_Export/Python/src/aaLogbook/xmlTranslation.py",
             "console": "integratedTerminal"
         },
         {

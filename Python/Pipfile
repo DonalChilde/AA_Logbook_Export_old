@@ -18,6 +18,7 @@ rope = "*"
 mypy = "*"
 pytest = "==4.0.2"
 sphinx = "*"
+aalogbook = {editable = true, path = "."}
 
 [requires]
 python_version = "3.7"
