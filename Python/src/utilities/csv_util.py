@@ -115,7 +115,8 @@ def writeListToCsv(outPath: Path, data: Sequence[Sequence], customColumnHeaders:
 def writeDictToCsv(outPath: Path, data: Sequence[Dict[str, str]], fieldNames: Sequence[str], useColumnHeaders=True)->bool:
     try:
         with open(outPath, 'w', newline='', encoding='utf-8') as csvFile:
-            csvWriter = csv.DictWriter(csvFile, fieldNames,quoting=csv.QUOTE_ALL)
+            csvWriter = csv.DictWriter(
+                csvFile, fieldNames, quoting=csv.QUOTE_ALL)
             if useColumnHeaders:
                 csvWriter.writeheader()
             for row in data:
@@ -124,3 +125,15 @@ def writeDictToCsv(outPath: Path, data: Sequence[Dict[str, str]], fieldNames: Se
     except Exception as e:
         logger.exception(f"Error writing csv file to {outPath}")
         raise e
+
+
+def readCsv(inPath: Path, rowFactory=None)->list:
+    with open(inPath, newline='') as csvFile:
+        reader = csv.reader(csvFile)
+        data: list = []
+        for row in reader:
+            if rowFactory:
+                data.append(rowFactory(*row))
+            else:
+                data.append(row)
+        return data

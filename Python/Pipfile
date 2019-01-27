@@ -10,6 +10,7 @@ arrow = "*"
 pytz = "*"
 python-dateutil = "*"
 click = "*"
+aalogbook = {editable = true, path = "."}
 
 [dev-packages]
 pylint = "*"

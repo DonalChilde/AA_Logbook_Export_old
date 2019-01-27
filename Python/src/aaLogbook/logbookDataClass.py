@@ -11,7 +11,7 @@ from typing import List
 from datetime import timedelta, datetime, tzinfo
 from aaLogbook.xmlTranslation import LogbookElement, YearElement, MonthElement, TripElement, DutyPeriodElement, FlightElement
 from utilities.timedelta_util import parse_HHdotMM_To_timedelta
-from aaLogbook.airportsDB import loadIATADB
+from airportsDB.airportsDB import load_airports_IATA_json
 # from dateutil import tz
 import uuid
 import logging
@@ -187,7 +187,7 @@ def buildDutyPeriod(dutyPeriodElement: DutyPeriodElement)->DutyPeriod:
 
 
 def buildFlight(flightElement: FlightElement)->Flight:
-    airportDB = loadIATADB()
+    airportDB = load_airports_IATA_json()
 
 
     uuid = flightElement.uuid  # type: ignore

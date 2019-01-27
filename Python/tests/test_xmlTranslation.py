@@ -11,7 +11,8 @@ import dataclasses
 from dataclasses_json import dataclass_json
 import arrow
 from dateutil import tz
-from utilities import csvUtils
+from utilities import csv_util
+
 
 
 def test_assertTrue():
@@ -42,7 +43,7 @@ def test_exportXmlToCsvFile():
     flightRows = xmlTranslation.buildFlightRows(translatedData)
     fieldList = ('aaNumber', 'year', 'monthYear', 'sequenceInfo', 'uuid', 'flightNumber', 'departureStation', 'outDateTime', 'arrivalStation', 'inDateTime', 'fly', 'legGreater',
                  'actualBlock', 'groundTime', 'overnightDuration', 'eqModel', 'eqNumber', 'eqType', 'eqCode', 'fuelPerformance', 'departurePerformance', 'arrivalPerformance', 'position', 'delayCode')
-    csvUtils.writeDictToCsv(outPath, flightRows, fieldList)
+    csv_util.writeDictToCsv(outPath, flightRows, fieldList)
 
 
 def test_saveTranslatedToFile():
