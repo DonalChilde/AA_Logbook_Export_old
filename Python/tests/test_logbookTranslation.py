@@ -36,4 +36,8 @@ def translateParsedXml():
 
 def test_translatedLogToStdOut():
     print(translateParsedXml())
-    
+
+def test_saveLogbookJson():
+    savePath = pathToDataDirectory() / Path('translated_log.json')
+    logbookElement = loadXml()
+    logbookTranslation.save_logbookJson(logbookElement,savePath)

@@ -11,12 +11,14 @@ from typing import List
 from datetime import timedelta, datetime, tzinfo
 from aaLogbook.xmlTranslation import LogbookElement, YearElement, MonthElement, TripElement, DutyPeriodElement, FlightElement
 from utilities.timedelta_util import parse_HHdotMM_To_timedelta
+from utilities import json_util
 from airportsDB.airportsDB import load_airports_IATA_json
 from pathlib import Path
 # from dateutil import tz
 # import uuid
 import logging
 import arrow
+import json
 
 
 #### setting up logger ####
@@ -281,7 +283,10 @@ def splitTripInfo(sequenceInfo: str):
 
 
 def save_logbookJson(logbookElement: LogbookElement, savePath: Path):
-    pass
+    logbook = buildLogbook(logbookElement)
+    data = logbook.to_json() # pylint: disable=E1101
+    data = json.loads(data)
+    json_util.saveJson(data,savePath)
 
 
 def save_logbookCsv(logbookElement: LogbookElement, savePath: Path):
