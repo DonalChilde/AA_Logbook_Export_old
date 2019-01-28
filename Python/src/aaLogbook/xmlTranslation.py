@@ -367,7 +367,7 @@ def buildFlightRows(logbook: LogbookElement)-> List[Dict[str, str]]:
 
 def saveRawJson(xmlPath: Path, savePath: Path):
     logbook = parseXML(xmlPath)
-    data = logbook.to_json()
+    data = logbook.to_json()  # pylint: disable=E1101
     data = json.loads(data)
     json_util.saveJson(data, savePath)
 

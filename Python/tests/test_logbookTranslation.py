@@ -14,11 +14,14 @@ def test_Arrow():
     print(dt3)
 
 
-def loadXml():
-    xmlPath = pathToDataDirectory() / Path('myCrystalReportViewer.xml')
+def loadXml()->xmlTranslation.LogbookElement:
+    xmlPath = pathToXmlInput()
     parsedXML = xmlTranslation.parseXML(xmlPath)
     return parsedXML
 
+def pathToXmlInput()->Path:
+    xmlPath = pathToDataDirectory() / Path('myCrystalReportViewer.xml')
+    return xmlPath
 
 def pathToDataDirectory()->Path:
     with resources.path('tests', 'resources') as filePath:
@@ -33,3 +36,4 @@ def translateParsedXml():
 
 def test_translatedLogToStdOut():
     print(translateParsedXml())
+    
