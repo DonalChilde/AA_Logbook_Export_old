@@ -16,13 +16,15 @@
 from __future__ import annotations
 import logging
 from pathlib import Path
-from dataclasses import dataclass, field,asdict as dc_asdict
+from dataclasses import dataclass, field, asdict as dc_asdict
 from dataclasses_json import dataclass_json
-from typing import List, Dict, Sequence, NamedTuple
+from typing import List, Dict, Sequence, NamedTuple, Optional
 from datetime import timedelta
+from utilities import json_util, csv_util
 import uuid
 import xml.etree.ElementTree as ET
 import click
+import json
 #from sys import stdout
 
 
@@ -77,61 +79,81 @@ class FlightRow:
 @dataclass_json
 @dataclass
 class LogbookElement:
-    uuid: uuid.UUID = field(default_factory=uuid.uuid4)  # type: ignore
+    uuid: str = ""
     aaNumber: str = ""
     sumOfActualBlock: str = ""
     sumOfLegGreater: str = ""
     sumOfFly: str = ""
     years: list = field(default_factory=list)
 
+    def __post_init__(self):
+        if self.uuid == "":
+            self.uuid = str(uuid.uuid4())
+
 
 @dataclass_json
 @dataclass
 class YearElement:
-    uuid: uuid.UUID = field(default_factory=uuid.uuid4)  # type: ignore
+    uuid: str = ""
     year: str = ""
     sumOfActualBlock: str = ""
     sumOfLegGreater: str = ""
     sumOfFly: str = ""
     months: list = field(default_factory=list)
 
+    def __post_init__(self):
+        if self.uuid == "":
+            self.uuid = str(uuid.uuid4())
+
 
 @dataclass_json
 @dataclass
 class MonthElement:
-    uuid: uuid.UUID = field(default_factory=uuid.uuid4)  # type: ignore
+    uuid: str = ""
     monthYear: str = ""
     sumOfActualBlock: str = ""
     sumOfLegGreater: str = ""
     sumOfFly: str = ""
     trips: list = field(default_factory=list)
 
+    def __post_init__(self):
+        if self.uuid == "":
+            self.uuid = str(uuid.uuid4())
+
 
 @dataclass_json
 @dataclass
 class TripElement:
-    uuid: uuid.UUID = field(default_factory=uuid.uuid4)  # type: ignore
+    uuid: str = ""
     sequenceInfo: str = ""
     sumOfActualBlock: str = ""
     sumOfLegGreater: str = ""
     sumOfFly: str = ""
     dutyPeriods: list = field(default_factory=list)
 
+    def __post_init__(self):
+        if self.uuid == "":
+            self.uuid = str(uuid.uuid4())
+
 
 @dataclass_json
 @dataclass
 class DutyPeriodElement:
-    uuid: uuid.UUID = field(default_factory=uuid.uuid4)  # type: ignore
+    uuid: str = ""
     sumOfActualBlock: str = ""
     sumOfLegGreater: str = ""
     sumOfFly: str = ""
     flights: list = field(default_factory=list)
 
+    def __post_init__(self):
+        if self.uuid == "":
+            self.uuid = str(uuid.uuid4())
+
 
 @dataclass_json
 @dataclass
 class FlightElement:
-    uuid: uuid.UUID = field(default_factory=uuid.uuid4)  # type: ignore
+    uuid: str = ""
     flightNumber: str = ""
     departureStation: str = ""
     outDateTime: str = ""
@@ -152,13 +174,16 @@ class FlightElement:
     delayCode: str = ""
     inDateTime: str = ""
 
+    def __post_init__(self):
+        if self.uuid == "":
+            self.uuid = str(uuid.uuid4())
+
 
 def parseXML(path):
     # print(path.resolve())
     with open(path, 'r') as xmlFile:
         tree = ET.parse(xmlFile)
         root = tree.getroot()
-        print('root:', root.tag)
         logbook = LogbookElement()
         logbook.aaNumber = root.find(
             './crystal_reports:ReportHeader/crystal_reports:Section/crystal_reports:Field[@Name="EmpNum1"]/crystal_reports:Value', ns).text
@@ -339,84 +364,23 @@ def buildFlightRows(logbook: LogbookElement)-> List[Dict[str, str]]:
                         flightRows.append(flightFields)
     return flightRows
 
-@click.command()
-def main():
-    print('cmd Main!')
 
-if __name__ == '__main__':
-    main()
-# def parse_HHdotMM_ToTimeDelta(durationString)-> timedelta:
-#     if durationString:
-#         hours, minutes = durationString.split('.')
-#         hours, minutes = map(int, (hours, minutes))
-#         return timedelta(hours=hours, minutes=minutes)
-#     else:
-#         return
+def saveRawJson(xmlPath: Path, savePath: Path):
+    logbook = parseXML(xmlPath)
+    data = logbook.to_json()
+    data = json.loads(data)
+    json_util.saveJson(data, savePath)
 
 
-# def timeDeltaToIsoString(timeDelta: timedelta)-> str:
-#     int_seconds = 0
-#     if timeDelta.days():  # type: ignore
-#         int_seconds += (abs(timeDelta.days())*86400)  # type: ignore
-#     if timeDelta.seconds():  # type: ignore
-#         int_seconds = int_seconds + timedelta.seconds()  # type: ignore
-#     minutes, seconds = divmod(int_seconds, 60)
-#     hours, minutes = divmod(minutes, 60)
-#     days, hours = divmod(hours, 24)
-#     microseconds = timeDelta.microseconds() # type: ignore
-#     daystext, hourstext, minutestext, secondstext,microtext = ""
-#     if days:
-#         daystext = f"{days}D"
-#     if hours:
-#         hourstext = f"{hours}H"
-#     if minutes:
-#         minutestext = f"{minutes}M"
-#     if microseconds:
-#         if not seconds:
-#             seconds = 0
-#         microtext = f".{microseconds:06d}"
-#     if seconds or microseconds:
-#         secondstext = f"{seconds}{microtext}S"
-#     if not (hours or minutes or seconds or microseconds):
-#         secondstext = f"{seconds}S"
-#     isoString = f"P{daystext}T{hourstext}{minutestext}{secondstext}"
-#     return isoString
+def saveRawFlatJson(xmlPath: Path, savePath: Path):
+    logbook = parseXML(xmlPath)
+    flightRows = buildFlightRows(logbook)
+    json_util.saveJson(flightRows, savePath)
 
-# def iso8601(timeDelta: timedelta):
-#     """
-#     from:
-#     https://stackoverflow.com/questions/27168175/convert-a-datetime-timedelta-into-iso-8601-duration-in-python
-#     """
-#     # split seconds to larger units
-#     seconds = timeDelta.total_seconds()
-#     minutes, seconds = divmod(seconds, 60)
-#     hours, minutes = divmod(minutes, 60)
-#     days, hours = divmod(hours, 24)
-#     days, hours, minutes = map(int, (days, hours, minutes))
-#     seconds = round(seconds, 6)
 
-#     ## build date
-#     date = ''
-#     if days:
-#         date = '%sD' % days
-
-#     ## build time
-#     time = u'T'
-#     # hours
-#     bigger_exists = date or hours
-#     if bigger_exists:
-#         time += '{:02}H'.format(hours)
-#     # minutes
-#     bigger_exists = bigger_exists or minutes
-#     if bigger_exists:
-#       time += '{:02}M'.format(minutes)
-#     # seconds
-#     if seconds.is_integer():
-#         seconds = '{:02}'.format(int(seconds))
-#     else:
-#         # 9 chars long w/leading 0, 6 digits after decimal
-#         seconds = '%09.6f' % seconds
-#     # remove trailing zeros
-#     seconds = seconds.rstrip('0')
-#     time += '{}S'.format(seconds)
-#     return u'P' + date + time
+def saveRawCsv(xmlPath: Path, savePath: Path):
+    logbook = parseXML(xmlPath)
+    flightRows = buildFlightRows(logbook)
+    fieldList = ('aaNumber', 'year', 'monthYear', 'sequenceInfo', 'uuid', 'flightNumber', 'departureStation', 'outDateTime', 'arrivalStation', 'inDateTime', 'fly', 'legGreater',
+                 'actualBlock', 'groundTime', 'overnightDuration', 'eqModel', 'eqNumber', 'eqType', 'eqCode', 'fuelPerformance', 'departurePerformance', 'arrivalPerformance', 'position', 'delayCode')
+    csv_util.writeDictToCsv(savePath, flightRows, fieldList)

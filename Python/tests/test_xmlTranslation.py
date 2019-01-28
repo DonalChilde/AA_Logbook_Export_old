@@ -1,10 +1,11 @@
 """
 """
 
-from aaLogbook import xmlTranslation, logbookDataClass
+from aaLogbook import xmlTranslation
 from utilities import timedelta_util
 from pathlib import Path
 from datetime import timedelta
+from importlib import resources
 # from timeDelta import parse_HHdotMM_To_timedelta
 import json
 import dataclasses
@@ -14,68 +15,40 @@ from dateutil import tz
 from utilities import csv_util
 
 
-
 def test_assertTrue():
     assert True
 
-# def test_loadXml():
-#     path=Path('Python/tests/resources/myCrystalReportViewer.xml')
-#     parsedXML = xmlTranslation.parseXML(path)
-#     # pylint: disable=E1101
-#     print(parsedXML.to_json(indent=2))
-
 
 def loadXml():
-    path = Path('Python/tests/resources/myCrystalReportViewer.xml')
-    parsedXML = xmlTranslation.parseXML(path)
+    xmlPath = pathToDataDirectory() /Path('myCrystalReportViewer.xml')
+    parsedXML = xmlTranslation.parseXML(xmlPath)
     return parsedXML
 
+def pathToDataDirectory()->Path:
+    with resources.path('tests', 'resources') as filePath:
+        return filePath
 
-def translateParsedXml():
-    parsed = loadXml()
-    translated = logbookDataClass.buildLogbook(parsed)
-    return translated
+def test_saveRawJson():
+    xmlPath = pathToDataDirectory() /Path('myCrystalReportViewer.xml')
+    savePath = pathToDataDirectory() / Path('raw.json')
+    xmlTranslation.saveRawJson(xmlPath,savePath)
 
+def test_saveRawFlatJson():
+    xmlPath = pathToDataDirectory() /Path('myCrystalReportViewer.xml')
+    savePath = pathToDataDirectory() / Path('raw_flat.json')
+    xmlTranslation.saveRawFlatJson(xmlPath,savePath)
 
-def test_exportXmlToCsvFile():
-    translatedData = loadXml()
-    outPath = Path("Python/tests/resources/elementsCsv.csv")
-    flightRows = xmlTranslation.buildFlightRows(translatedData)
-    fieldList = ('aaNumber', 'year', 'monthYear', 'sequenceInfo', 'uuid', 'flightNumber', 'departureStation', 'outDateTime', 'arrivalStation', 'inDateTime', 'fly', 'legGreater',
-                 'actualBlock', 'groundTime', 'overnightDuration', 'eqModel', 'eqNumber', 'eqType', 'eqCode', 'fuelPerformance', 'departurePerformance', 'arrivalPerformance', 'position', 'delayCode')
-    csv_util.writeDictToCsv(outPath, flightRows, fieldList)
+def test_saveRawCsv():
+    xmlPath = pathToDataDirectory() /Path('myCrystalReportViewer.xml')
+    savePath = pathToDataDirectory() / Path('raw.csv')
+    xmlTranslation.saveRawCsv(xmlPath,savePath)
 
-
-def test_saveTranslatedToFile():
-    translatedData = translateParsedXml()
-    outPath = Path("Python/tests/resources/translatedLogbook.json")
-    with open(outPath, 'w') as outFile:
-        data = translatedData.to_json()
-        jsonData = json.loads(data)
-        json.dump(jsonData, outFile, indent=2)
-    # print(translateParsedXml().to_json(indent=2))
+def test_rawFlat():
+    xmlPath = pathToDataDirectory() /Path('myCrystalReportViewer.xml')
+    logbookElement = xmlTranslation.parseXML(xmlPath)
+    print(logbookElement.uuid,type(logbookElement.uuid))
 
 
 def test_printParsedXmlToStdOut():
     print(loadXml().to_json(indent=2))
 
-
-def test_stringTo_timedelta():
-    string1 = '23.34'
-    td1 = timedelta_util.parse_HHdotMM_To_timedelta(string1)
-    assert(td1 == timedelta(hours=23, minutes=34))
-
-
-def test_Arrow():
-    dt = arrow.get("2016-10-20T18:15:00")
-    print("\n", dt)
-    dt2 = arrow.get(dt.datetime, tz.gettz('America/New_York'))
-    print(dt2)
-    dt3 = dt.replace(tzinfo="America/New_York")
-    print(dt3)
-
-
-# def test_timedeltaToIsoString():
-#     td1 = timedelta(hours=23,minutes=34)
-#     tdString = xmlTranslation.timeDeltaToIsoString(td1)
-#     assert(tdString=="PT23H34M0S")

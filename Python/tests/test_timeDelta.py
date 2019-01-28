@@ -1,4 +1,4 @@
-from utilities.timedelta_util import timedelta_To_isoformat
+from utilities.timedelta_util import timedelta_To_isoformat,parse_HHdotMM_To_timedelta
 from datetime import timedelta
 
 #days=0, seconds=0, microseconds=0, milliseconds=0, minutes=0, hours=0, weeks=0
@@ -23,3 +23,7 @@ def test_TimeDelta_toiso_5():
     td = timedelta(seconds=345)
     assert(timedelta_To_isoformat(td)=="PT5M45S")
 
+def test_stringTo_timedelta():
+    string1 = '23.34'
+    td1 = parse_HHdotMM_To_timedelta(string1)
+    assert(td1 == timedelta(hours=23, minutes=34))
