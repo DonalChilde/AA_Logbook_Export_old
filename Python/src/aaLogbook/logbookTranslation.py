@@ -1,6 +1,7 @@
 """
 TODO changed parse functions to support sending surrounding object, 
     in order to make more understandable log messages.
+TODO build flight row dictionary for csv output.
 """
 
 from __future__ import annotations
@@ -37,6 +38,39 @@ log_formatter = logging.Formatter(
 log_handler = logging.StreamHandler()
 log_handler.setFormatter(log_formatter)
 # logger.addHandler(log_handler)
+
+
+@dataclass
+class FlightRow:
+    aaNumber: str
+    year: str
+    monthYear: str
+    sequenceNumber: str
+    sequenceStartDate:str
+    base:str
+    sequenceEquipmentType:str
+    uuid: str
+    flightNumber: str
+    departureStation: str
+    outDateTimeUTC: str
+    outDateTimeLCL:str
+    arrivalStation: str
+    inDateTimeUTC: str
+    inDateTimeLCL:str
+    fly: str
+    legGreater: str
+    actualBlock: str
+    groundTime: str
+    overnightDuration: str
+    eqModel: str
+    eqNumber: str
+    eqType: str
+    eqCode: str
+    fuelPerformance: str
+    departurePerformance: str
+    arrivalPerformance: str
+    position: str
+    delayCode: str
 
 
 @dataclass_json
