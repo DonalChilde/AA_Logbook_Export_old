@@ -112,7 +112,7 @@ def writeListToCsv(outPath: Path, data: Sequence[Sequence], customColumnHeaders:
         raise e
 
 
-def writeDictToCsv(outPath: Path, data: Sequence[Dict[str, str]], keyList: Optional[Sequence[str]], useColumnHeaders=True)->bool:
+def writeDictToCsv(outPath: Path, data: Sequence[Dict[str, str]], keyList: Optional[Sequence[str]] = None, useColumnHeaders=True)->bool:
     if len(data) == 0:
         raise ValueError("data is empty. No file written to {outPath} ")
     try:

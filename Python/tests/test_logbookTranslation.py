@@ -19,9 +19,11 @@ def loadXml()->xmlTranslation.LogbookElement:
     parsedXML = xmlTranslation.parseXML(xmlPath)
     return parsedXML
 
+
 def pathToXmlInput()->Path:
     xmlPath = pathToDataDirectory() / Path('myCrystalReportViewer.xml')
     return xmlPath
+
 
 def pathToDataDirectory()->Path:
     with resources.path('tests', 'resources') as filePath:
@@ -37,7 +39,31 @@ def translateParsedXml():
 def test_translatedLogToStdOut():
     print(translateParsedXml())
 
+
 def test_saveLogbookJson():
     savePath = pathToDataDirectory() / Path('translated_log.json')
     logbookElement = loadXml()
-    logbookTranslation.save_logbookJson(logbookElement,savePath)
+    logbookTranslation.save_logbookJson(logbookElement, savePath)
+
+def test_saveLogbookCsv():
+    savePath = pathToDataDirectory() / Path('translated_log.csv')
+    logbookElement = loadXml()
+    logbook = logbookTranslation.buildLogbook(logbookElement)
+    logbookTranslation.save_logbookCsv(logbook, savePath)
+
+
+def test_buildFlightRowDict():
+    data = translateParsedXml()
+    dataDict = logbookTranslation.buildFlightRowDict(data)
+    print(dataDict)
+
+
+def test_lambda():
+    dur = logbookTranslation.Duration(hours=3, minutes=35)
+    foo = lambdaFunc()
+    print(dur.to_timedelta())
+    print(foo(dur))
+
+
+def lambdaFunc():
+    return lambda x: str(x.to_timedelta())

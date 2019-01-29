@@ -6,13 +6,13 @@ TODO build flight row dictionary for csv output.
 
 from __future__ import annotations
 import logging
-from dataclasses import dataclass, field
-from dataclasses_json import dataclass_json
-from typing import List
+from dataclasses import dataclass, field,asdict
+from dataclasses_json import dataclass_json, DataClassJsonMixin
+from typing import List, Optional, Any,Dict
 from datetime import timedelta, datetime, tzinfo
 from aaLogbook.xmlTranslation import LogbookElement, YearElement, MonthElement, TripElement, DutyPeriodElement, FlightElement
 from utilities.timedelta_util import parse_HHdotMM_To_timedelta
-from utilities import json_util
+from utilities import json_util, csv_util
 from airportsDB.airportsDB import load_airports_IATA_json
 from pathlib import Path
 # from dateutil import tz
@@ -42,35 +42,39 @@ log_handler.setFormatter(log_formatter)
 
 @dataclass
 class FlightRow:
-    aaNumber: str
-    year: str
-    monthYear: str
-    sequenceNumber: str
-    sequenceStartDate:str
-    base:str
-    sequenceEquipmentType:str
-    uuid: str
-    flightNumber: str
-    departureStation: str
-    outDateTimeUTC: str
-    outDateTimeLCL:str
-    arrivalStation: str
-    inDateTimeUTC: str
-    inDateTimeLCL:str
-    fly: str
-    legGreater: str
-    actualBlock: str
-    groundTime: str
-    overnightDuration: str
-    eqModel: str
-    eqNumber: str
-    eqType: str
-    eqCode: str
-    fuelPerformance: str
-    departurePerformance: str
-    arrivalPerformance: str
-    position: str
-    delayCode: str
+    aaNumber: str = ''
+    year: str = ''
+    monthYear: str = ''
+    sequenceNumber: str = ''
+    sequenceStartDate: str = ''
+    base: str = ''
+    sequenceEquipmentType: str = ''
+    uuid: str = ''
+    flightNumber: str = ''
+    departureStationIata: str = ''
+    departureStationIcao: str = ''
+    departureStationTz: str = ''
+    outDateTimeUTC: str = ''
+    outDateTimeLCL: str = ''
+    arrivalStationIata: str = ''
+    arrivalStationIcao: str = ''
+    arrivalStationTz: str = ''
+    inDateTimeUTC: str = ''
+    inDateTimeLCL: str = ''
+    fly: str = ''
+    legGreater: str = ''
+    actualBlock: str = ''
+    groundTime: str = ''
+    overnightDuration: str = ''
+    eqModel: str = ''
+    eqNumber: str = ''
+    eqType: str = ''
+    eqCode: str = ''
+    fuelPerformance: str = ''
+    departurePerformance: str = ''
+    arrivalPerformance: str = ''
+    position: str = ''
+    delayCode: str = ''
 
 
 @dataclass_json
@@ -91,9 +95,9 @@ class Duration:
         return timedelta(hours=self.hours, minutes=self.minutes)
 
 
-@dataclass_json
+# @dataclass_json
 @dataclass
-class Logbook(object):
+class Logbook(DataClassJsonMixin):
     uuid: str = ""
     aaNumber: str = ""
     sumOfActualBlock: Duration = field(default_factory=Duration)
@@ -253,12 +257,12 @@ def buildFlight(flightElement: FlightElement)->Flight:
     flight = Flight(uuid=uuid,
                     flightNumber=flightNumber,
                     departureStation=departureStation,
-                    outDateTimeUTC=outDateTimeUTC.isoformat(),
+                    outDateTimeUTC=outDateTimeUTC,
                     arrivalStation=arrivalStation,
                     fly=fly,
                     actualBlock=actualBlock,
                     legGreater=legGreater,
-                    inDateTimeUTC=inDateTimeUTC.isoformat(),
+                    inDateTimeUTC=inDateTimeUTC,
                     eqModel=eqModel,
                     eqNumber=eqNumber,
                     eqType=eqType,
@@ -272,6 +276,60 @@ def buildFlight(flightElement: FlightElement)->Flight:
                     delayCode=delayCode)
     return flight
 
+def durationFormatterBasic(dur:Duration):
+    return str(dur.to_timedelta())
+
+def buildFlightRowDict(logbook: Logbook, durationFormatter: Optional[Any] = None)->List[Dict[str,str]]:
+    if not durationFormatter:
+        durationFormatter = durationFormatterBasic
+    flightRows: List[Dict[str,str]] = []
+    row = FlightRow()
+    row.aaNumber = logbook.aaNumber
+    for year in logbook.years:
+        row.year = year.year
+        for month in year.months:
+            row.monthYear = month.monthYear
+            for trip in month.trips:
+                row.sequenceStartDate = trip.startDate
+                row.sequenceNumber = trip.sequenceNumber
+                row.sequenceEquipmentType = trip.equipmentType
+                row.base = trip.base
+                for dutyPeriod in trip.dutyPeriods:
+                    for flight in dutyPeriod.flights:
+                        row.uuid = flight.uuid
+                        row.flightNumber = flight.flightNumber
+                        row.departureStationIata = flight.departureStation.iata
+                        row.departureStationIcao = flight.departureStation.icao
+                        row.departureStationTz = flight.departureStation.timezone
+                        row.outDateTimeUTC = flight.outDateTimeUTC.to('utc')
+                        row.outDateTimeLCL = flight.outDateTimeUTC
+                        row.arrivalStationIata = flight.arrivalStation.iata
+                        row.arrivalStationIcao = flight.arrivalStation.icao
+                        row.arrivalStationTz = flight.arrivalStation.timezone
+                        row.inDateTimeUTC = flight.inDateTimeUTC.to('utc')
+                        row.inDateTimeLCL = flight.inDateTimeUTC
+                        row.fly = durationFormatter(flight.fly)
+                        row.legGreater = durationFormatter(
+                            flight.legGreater)
+                        row.actualBlock = durationFormatter(
+                            flight.actualBlock)
+                        row.groundTime = durationFormatter(
+                            flight.groundTime)
+                        row.overnightDuration = durationFormatter(
+                            flight.overnightDuration)
+                        row.eqModel = flight.eqModel
+                        row.eqNumber = flight.eqNumber
+                        row.eqType = flight.eqType
+                        row.eqCode = flight.eqCode
+                        row.fuelPerformance = flight.fuelPerformance
+                        row.departurePerformance = flight.departurePerformance
+                        row.arrivalPerformance = flight.arrivalPerformance
+                        row.position = flight.position
+                        row.delayCode = flight.delayCode
+                        flightRows.append(asdict(row))
+    return flightRows
+
+
 
 def parse_HHdotMM_To_Duration(durationString: str, separator: str = ".")-> Duration:
     """
@@ -280,8 +338,8 @@ def parse_HHdotMM_To_Duration(durationString: str, separator: str = ".")-> Durat
     """
     if durationString:
         if not '.' in durationString:
-            logger.error(
-                f"Improperly formatted time sent to parse_HHdotMM_ToDuration, - {durationString} - Defaulting to 0 Duration")
+            # logger.debug(
+            #     f"Improperly formatted time sent to parse_HHdotMM_ToDuration, - {durationString} - Defaulting to 0 Duration")
             return Duration()
         hours, minutes = durationString.split(separator)
         duration = Duration(hours=int(hours), minutes=int(minutes))
@@ -298,17 +356,18 @@ def buildStation(iataCode: str, airportDB: dict)->Station:
     return station
 
 
-def buildOutTime(dateString: str, timeZoneString: str)-> datetime:
+def buildOutTime(dateString: str, timeZoneString: str)-> arrow.Arrow:
     dt = arrow.get(dateString)
     dt2 = dt.replace(tzinfo=timeZoneString)
-    return dt2.datetime
+    return dt2
 
 
-def buildInTime(inDateString: str, flightTime: timedelta, outDatetime: datetime, inTimeZone: str)-> datetime:
+def buildInTime(inDateString: str, flightTime: timedelta, outDatetime: arrow.Arrow, inTimeZone: str)-> arrow.Arrow:
 
     inTime = outDatetime + flightTime
+    # TODO check for use after change input to Arrow
     inDT = arrow.get(inTime).to(inTimeZone)
-    return inDT.datetime
+    return inDT
 
 
 def splitTripInfo(sequenceInfo: str):
@@ -317,11 +376,15 @@ def splitTripInfo(sequenceInfo: str):
 
 
 def save_logbookJson(logbookElement: LogbookElement, savePath: Path):
+    # TODO change to handle Logbook instaed of LogbookElement
     logbook = buildLogbook(logbookElement)
-    data = logbook.to_json() # pylint: disable=E1101
+    data = logbook.to_json()
     data = json.loads(data)
-    json_util.saveJson(data,savePath)
+    json_util.saveJson(data, savePath)
 
 
-def save_logbookCsv(logbookElement: LogbookElement, savePath: Path):
-    pass
+def save_logbookCsv(logbook: Logbook, savePath: Path):
+    flightRows = buildFlightRowDict(logbook)
+    csv_util.writeDictToCsv(savePath,flightRows)
+    
+
