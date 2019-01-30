@@ -250,9 +250,7 @@ def splitTripInfo(sequenceInfo: str):
     return ("", "", "", "")
 
 
-def save_logbookJson(logbookElement: LogbookElement, savePath: Path):
-    # TODO change to handle Logbook instaed of LogbookElement
-    logbook = buildLogbook(logbookElement)
+def save_logbookJson(logbook: ltm.Logbook, savePath: Path):
     data = logbook.to_json()
     data = json.loads(data)
     json_util.saveJson(data, savePath)
