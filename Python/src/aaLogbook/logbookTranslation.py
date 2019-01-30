@@ -55,12 +55,20 @@ class FlightRow:
     departureStationIcao: str = ''
     departureStationTz: str = ''
     outDateTimeUTC: str = ''
+    outDateUTC: str=''
+    outTimeUTC: str=''
     outDateTimeLCL: str = ''
+    outDateLCL: str=''
+    outTimeLCL: str=''
     arrivalStationIata: str = ''
     arrivalStationIcao: str = ''
     arrivalStationTz: str = ''
     inDateTimeUTC: str = ''
+    inDateUTC: str=''
+    inTimeUTC: str=''
     inDateTimeLCL: str = ''
+    inDateLCL: str=''
+    inTimeLCL: str=''
     fly: str = ''
     legGreater: str = ''
     actualBlock: str = ''
@@ -234,13 +242,13 @@ def buildFlight(flightElement: FlightElement)->Flight:
     flightNumber = flightElement.flightNumber
     departureStation = buildStation(flightElement.departureStation, airportDB)
     outDateTimeUTC = buildOutTime(
-        flightElement.outDateTime, departureStation.timezone)
+        flightElement.outDateTime, departureStation.timezone).to('utc')
     arrivalStation = buildStation(flightElement.arrivalStation, airportDB)
     fly = parse_HHdotMM_To_Duration(flightElement.fly)
     actualBlock = parse_HHdotMM_To_Duration(flightElement.actualBlock)
     legGreater = parse_HHdotMM_To_Duration(flightElement.legGreater)
     inDateTimeUTC = buildInTime(
-        flightElement.inDateTime, actualBlock.to_timedelta(), outDateTimeUTC, arrivalStation.timezone)
+        flightElement.inDateTime, actualBlock.to_timedelta(), outDateTimeUTC, arrivalStation.timezone).to('utc')
     eqModel = flightElement.eqModel
     eqNumber = flightElement.eqNumber
     eqType = flightElement.eqType
@@ -301,13 +309,21 @@ def buildFlightRowDict(logbook: Logbook, durationFormatter: Optional[Any] = None
                         row.departureStationIata = flight.departureStation.iata
                         row.departureStationIcao = flight.departureStation.icao
                         row.departureStationTz = flight.departureStation.timezone
-                        row.outDateTimeUTC = flight.outDateTimeUTC.to('utc')
-                        row.outDateTimeLCL = flight.outDateTimeUTC
+                        row.outDateTimeUTC = flight.outDateTimeUTC
+                        row.outDateUTC = flight.outDateTimeUTC.format('YYYY-MM-DD')
+                        row.outTimeUTC = flight.outDateTimeUTC.format('HH:mm:ss')
+                        row.outDateTimeLCL = flight.outDateTimeUTC.to(flight.departureStation.timezone)
+                        row.outDateLCL = row.outDateTimeLCL.format('YYYY-MM-DD')
+                        row.outTimeLCL = row.outDateTimeLCL.format('HH:mm:ss')
                         row.arrivalStationIata = flight.arrivalStation.iata
                         row.arrivalStationIcao = flight.arrivalStation.icao
                         row.arrivalStationTz = flight.arrivalStation.timezone
-                        row.inDateTimeUTC = flight.inDateTimeUTC.to('utc')
-                        row.inDateTimeLCL = flight.inDateTimeUTC
+                        row.inDateTimeUTC = flight.inDateTimeUTC
+                        row.inDateUTC = flight.inDateTimeUTC.format('YYYY-MM-DD')
+                        row.inTimeUTC = flight.inDateTimeUTC.format('HH:mm:ss')
+                        row.inDateTimeLCL = flight.inDateTimeUTC.to(flight.departureStation.timezone)
+                        row.inDateLCL = row.inDateTimeLCL.format('YYYY-MM-DD')
+                        row.inTimeLCL = row.inDateTimeLCL.format('HH:mm:ss')
                         row.fly = durationFormatter(flight.fly)
                         row.legGreater = durationFormatter(
                             flight.legGreater)
