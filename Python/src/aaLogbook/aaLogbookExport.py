@@ -1,3 +1,11 @@
+"""
+TODO output ooptions for all save files
+TODO more than one save format at a time
+TODO save/load output proflies to a file.
+TODO for csv, allow list of output fields to be loaded from file
+TODO save a list of possible output fields to a file
+TODO allow different duration formats in csv
+"""
 
 import logging
 import click

@@ -163,7 +163,8 @@ def buildFlightRowDict(logbook: ltm.Logbook, durationFormatter: Optional[Any] = 
                 row.sequenceNumber = trip.sequenceNumber
                 row.sequenceEquipmentType = trip.equipmentType
                 row.base = trip.base
-                for dutyPeriod in trip.dutyPeriods:
+                for index, dutyPeriod in enumerate(trip.dutyPeriods):
+                    row.dutyPeriodNumber = str(index+1)
                     for flight in dutyPeriod.flights:
                         row.uuid = flight.uuid
                         row.flightNumber = flight.flightNumber
@@ -248,8 +249,8 @@ def buildInTime(inDateString: str, flightTime: timedelta, outDatetime: arrow.Arr
 
 
 def splitTripInfo(sequenceInfo: str):
-    # TODO not implemented yet
-    return ("", "", "", "")
+    
+    return sequenceInfo.split()
 
 
 def save_logbookJson(logbook: ltm.Logbook, savePath: Path):

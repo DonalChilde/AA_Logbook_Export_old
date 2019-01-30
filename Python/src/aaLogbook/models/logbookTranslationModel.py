@@ -15,6 +15,7 @@ class FlightRow:
     base: str = ''
     sequenceEquipmentType: str = ''
     uuid: str = ''
+    dutyPeriodNumber: str = ''
     flightNumber: str = ''
     departureStationIata: str = ''
     departureStationIcao: str = ''
