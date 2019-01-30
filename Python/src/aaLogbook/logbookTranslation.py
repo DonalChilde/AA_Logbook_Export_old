@@ -43,58 +43,61 @@ log_handler.setFormatter(log_formatter)
 
 
 
+
 def buildLogbook(logbookElement: LogbookElement)->ltm.Logbook:
+    airportDB = load_airports_IATA_json()
+    context = {'airportDB':airportDB}
     log = ltm.Logbook(uuid=logbookElement.uuid, aaNumber=logbookElement.aaNumber)
     for yearElement in logbookElement.years:
-        year = buildYear(yearElement)
+        year = buildYear(yearElement,context)
         # pylint: disable=E1101
         log.years.append(year)
 
     return log
 
 
-def buildYear(yearElement: YearElement)->ltm.Year:
+def buildYear(yearElement: YearElement,context:Dict[str,Any])->ltm.Year:
     year = ltm.Year(uuid=yearElement.uuid, year=yearElement.year)
     for monthElement in yearElement.months:
-        month = buildMonth(monthElement)
+        month = buildMonth(monthElement,context)
         # pylint: disable=E1101
         year.months.append(month)
     return year
 
 
-def buildMonth(monthElement: MonthElement)->ltm.Month:
+def buildMonth(monthElement: MonthElement,context:Dict[str,Any])->ltm.Month:
     month = ltm.Month(uuid=monthElement.uuid, monthYear=monthElement.monthYear)
     for tripElement in monthElement.trips:
-        trip = buildTrip(tripElement)
+        trip = buildTrip(tripElement,context)
         # pylint: disable=E1101
         month.trips.append(trip)
     return month
 
 
-def buildTrip(tripElement: TripElement)->ltm.Trip:
+def buildTrip(tripElement: TripElement,context:Dict[str,Any])->ltm.Trip:
     startDate, sequenceNumber, base, equipmentType = splitTripInfo(
         tripElement.sequenceInfo)
     trip = ltm.Trip(uuid=tripElement.uuid, startDate=startDate,
                 sequenceNumber=sequenceNumber, base=base, equipmentType=equipmentType)
     for dutyPeriodElement in tripElement.dutyPeriods:
-        dutyPeriod = buildDutyPeriod(dutyPeriodElement)
+        dutyPeriod = buildDutyPeriod(dutyPeriodElement,context)
         # pylint: disable=E1101
         trip.dutyPeriods.append(dutyPeriod)
 
     return trip
 
 
-def buildDutyPeriod(dutyPeriodElement: DutyPeriodElement)->ltm.DutyPeriod:
+def buildDutyPeriod(dutyPeriodElement: DutyPeriodElement,context:Dict[str,Any])->ltm.DutyPeriod:
     dutyPeriod = ltm.DutyPeriod(uuid=dutyPeriodElement.uuid)
     for flightElement in dutyPeriodElement.flights:
-        flight = buildFlight(flightElement)
+        flight = buildFlight(flightElement,context)
         # pylint: disable=E1101
         dutyPeriod.flights.append(flight)
     return dutyPeriod
 
 
-def buildFlight(flightElement: FlightElement)->ltm.Flight:
-    airportDB = load_airports_IATA_json()
+def buildFlight(flightElement: FlightElement,context:Dict[str,Any])->ltm.Flight:
+    airportDB = context['airportDB']
 
     uuid = flightElement.uuid  # type: ignore
     flightNumber = flightElement.flightNumber
