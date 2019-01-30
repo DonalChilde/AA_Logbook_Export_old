@@ -2,6 +2,7 @@
 """
 
 from aaLogbook import xmlTranslation
+from aaLogbook.models.xmlElementModel import LogbookElement
 from utilities import timedelta_util
 from pathlib import Path
 from importlib import resources
@@ -11,7 +12,7 @@ from dataclasses_json import dataclass_json
 from utilities import csv_util
 
 
-def loadXml()->xmlTranslation.LogbookElement:
+def loadXml()->LogbookElement:
     xmlPath = pathToXmlInput()
     parsedXML = xmlTranslation.parseXML(xmlPath)
     return parsedXML

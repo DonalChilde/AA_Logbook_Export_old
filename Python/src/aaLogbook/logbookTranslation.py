@@ -1,7 +1,6 @@
 """
 TODO changed parse functions to support sending surrounding object, 
     in order to make more understandable log messages.
-TODO build flight row dictionary for csv output.
 """
 
 from __future__ import annotations

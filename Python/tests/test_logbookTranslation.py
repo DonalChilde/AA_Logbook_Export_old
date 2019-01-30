@@ -1,8 +1,11 @@
 import arrow
 from dateutil import tz
 from aaLogbook import xmlTranslation, logbookTranslation
+from aaLogbook.models.xmlElementModel import LogbookElement
+from aaLogbook.models.logbookTranslationModel import Duration
 from pathlib import Path
 from importlib import resources
+from time import perf_counter
 
 
 def test_Arrow():
@@ -14,7 +17,7 @@ def test_Arrow():
     print(dt3)
 
 
-def loadXml()->xmlTranslation.LogbookElement:
+def loadXml()->LogbookElement:
     xmlPath = pathToXmlInput()
     parsedXML = xmlTranslation.parseXML(xmlPath)
     return parsedXML
@@ -47,9 +50,17 @@ def test_saveLogbookJson():
 
 def test_saveLogbookCsv():
     savePath = pathToDataDirectory() / Path('translated_log.csv')
+    startTime = perf_counter()
     logbookElement = loadXml()
+    xmlParseTime = perf_counter()
     logbook = logbookTranslation.buildLogbook(logbookElement)
+    logbookTranslationTime = perf_counter()
     logbookTranslation.save_logbookCsv(logbook, savePath)
+    saveFileTime = perf_counter()
+    print(f"Time to parse xml: {xmlParseTime-startTime}")
+    print(f"Time to translate parsed xml: {logbookTranslationTime-xmlParseTime}")
+    print(f"Time to save file: {saveFileTime-logbookTranslationTime}")
+    print(f"Total Time: {saveFileTime-startTime}")
 
 
 def test_buildFlightRowDict():
@@ -59,7 +70,7 @@ def test_buildFlightRowDict():
 
 
 def test_lambda():
-    dur = logbookTranslation.Duration(hours=3, minutes=35)
+    dur = Duration(hours=3, minutes=35)
     foo = lambdaFunc()
     print(dur.to_timedelta())
     print(foo(dur))

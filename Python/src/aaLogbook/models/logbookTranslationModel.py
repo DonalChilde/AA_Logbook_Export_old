@@ -1,6 +1,8 @@
+from __future__ import annotations
 from dataclasses import dataclass, field, asdict as dc_asdict
 from dataclasses_json import dataclass_json, DataClassJsonMixin
 from datetime import timedelta
+from typing import List
 import uuid
 
 @dataclass
@@ -74,7 +76,7 @@ class Logbook(DataClassJsonMixin):
     sumOfActualBlock: Duration = field(default_factory=Duration)
     sumOfLegGreater: Duration = field(default_factory=Duration)
     sumOfFly: Duration = field(default_factory=Duration)
-    years: list = field(default_factory=list)
+    years: List['Year'] = field(default_factory=list)
 
 
 @dataclass_json
