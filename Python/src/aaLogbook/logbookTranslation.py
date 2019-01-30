@@ -10,7 +10,8 @@ from dataclasses import dataclass, field,asdict
 from dataclasses_json import dataclass_json, DataClassJsonMixin
 from typing import List, Optional, Any,Dict
 from datetime import timedelta, datetime, tzinfo
-from aaLogbook.xmlTranslation import LogbookElement, YearElement, MonthElement, TripElement, DutyPeriodElement, FlightElement
+from aaLogbook.models.xmlElementModel import LogbookElement, YearElement, MonthElement, TripElement, DutyPeriodElement, FlightElement
+import aaLogbook.models.logbookTranslationModel as ltm
 from utilities.timedelta_util import parse_HHdotMM_To_timedelta
 from utilities import json_util, csv_util
 from airportsDB.airportsDB import load_airports_IATA_json
@@ -40,153 +41,11 @@ log_handler.setFormatter(log_formatter)
 # logger.addHandler(log_handler)
 
 
-@dataclass
-class FlightRow:
-    aaNumber: str = ''
-    year: str = ''
-    monthYear: str = ''
-    sequenceNumber: str = ''
-    sequenceStartDate: str = ''
-    base: str = ''
-    sequenceEquipmentType: str = ''
-    uuid: str = ''
-    flightNumber: str = ''
-    departureStationIata: str = ''
-    departureStationIcao: str = ''
-    departureStationTz: str = ''
-    outDateTimeUTC: str = ''
-    outDateUTC: str=''
-    outTimeUTC: str=''
-    outDateTimeLCL: str = ''
-    outDateLCL: str=''
-    outTimeLCL: str=''
-    arrivalStationIata: str = ''
-    arrivalStationIcao: str = ''
-    arrivalStationTz: str = ''
-    inDateTimeUTC: str = ''
-    inDateUTC: str=''
-    inTimeUTC: str=''
-    inDateTimeLCL: str = ''
-    inDateLCL: str=''
-    inTimeLCL: str=''
-    fly: str = ''
-    legGreater: str = ''
-    actualBlock: str = ''
-    groundTime: str = ''
-    overnightDuration: str = ''
-    eqModel: str = ''
-    eqNumber: str = ''
-    eqType: str = ''
-    eqCode: str = ''
-    fuelPerformance: str = ''
-    departurePerformance: str = ''
-    arrivalPerformance: str = ''
-    position: str = ''
-    delayCode: str = ''
 
 
-@dataclass_json
-@dataclass
-class Station:
-    iata: str = ""
-    icao: str = ""
-    timezone: str = ""
 
-
-@dataclass_json
-@dataclass
-class Duration:
-    hours: int = 0
-    minutes: int = 0
-
-    def to_timedelta(self)-> timedelta:
-        return timedelta(hours=self.hours, minutes=self.minutes)
-
-
-# @dataclass_json
-@dataclass
-class Logbook(DataClassJsonMixin):
-    uuid: str = ""
-    aaNumber: str = ""
-    sumOfActualBlock: Duration = field(default_factory=Duration)
-    sumOfLegGreater: Duration = field(default_factory=Duration)
-    sumOfFly: Duration = field(default_factory=Duration)
-    years: list = field(default_factory=list)
-
-
-@dataclass_json
-@dataclass
-class Year:
-    uuid: str = ""
-    year: str = ""
-    sumOfActualBlock: Duration = field(default_factory=Duration)
-    sumOfLegGreater: Duration = field(default_factory=Duration)
-    sumOfFly: Duration = field(default_factory=Duration)
-    months: list = field(default_factory=list)
-
-
-@dataclass_json
-@dataclass
-class Month:
-    uuid: str = ""
-    monthYear: str = ""
-    sumOfActualBlock: Duration = field(default_factory=Duration)
-    sumOfLegGreater: Duration = field(default_factory=Duration)
-    sumOfFly: Duration = field(default_factory=Duration)
-    trips: list = field(default_factory=list)
-
-
-@dataclass_json
-@dataclass
-class Trip:
-    uuid: str = ""
-    startDate: str = ""
-    sequenceNumber: str = ""
-    base: str = ""
-    equipmentType: str = ""
-    sumOfActualBlock: Duration = field(default_factory=Duration)
-    sumOfLegGreater: Duration = field(default_factory=Duration)
-    sumOfFly: Duration = field(default_factory=Duration)
-    dutyPeriods: list = field(default_factory=list)
-
-
-@dataclass_json
-@dataclass
-class DutyPeriod:
-    uuid: str = ""
-    sumOfActualBlock: Duration = field(default_factory=Duration)
-    sumOfLegGreater: Duration = field(default_factory=Duration)
-    sumOfFly: Duration = field(default_factory=Duration)
-    flights: list = field(default_factory=list)
-
-
-@dataclass_json
-@dataclass
-class Flight:
-    uuid: str = ""
-    flightNumber: str = ""
-    departureStation: Station = field(default_factory=Station)
-    outDateTimeUTC: str = ""
-    arrivalStation: Station = field(default_factory=Station)
-    inDateTimeUTC: str = ""
-    fly: Duration = field(default_factory=Duration)
-    actualBlock: Duration = field(default_factory=Duration)
-    legGreater: Duration = field(default_factory=Duration)
-    eqModel: str = ""
-    eqNumber: str = ""
-    eqType: str = ""
-    eqCode: str = ""
-    groundTime: Duration = field(default_factory=Duration)
-    overnightDuration: Duration = field(default_factory=Duration)
-    fuelPerformance: str = ""
-    departurePerformance: str = ""
-    arrivalPerformance: str = ""
-    position: str = ""
-    delayCode: str = ""
-
-
-def buildLogbook(logbookElement: LogbookElement)->Logbook:
-    log = Logbook(uuid=logbookElement.uuid, aaNumber=logbookElement.aaNumber)
+def buildLogbook(logbookElement: LogbookElement)->ltm.Logbook:
+    log = ltm.Logbook(uuid=logbookElement.uuid, aaNumber=logbookElement.aaNumber)
     for yearElement in logbookElement.years:
         year = buildYear(yearElement)
         # pylint: disable=E1101
@@ -195,8 +54,8 @@ def buildLogbook(logbookElement: LogbookElement)->Logbook:
     return log
 
 
-def buildYear(yearElement: YearElement)->Year:
-    year = Year(uuid=yearElement.uuid, year=yearElement.year)
+def buildYear(yearElement: YearElement)->ltm.Year:
+    year = ltm.Year(uuid=yearElement.uuid, year=yearElement.year)
     for monthElement in yearElement.months:
         month = buildMonth(monthElement)
         # pylint: disable=E1101
@@ -204,8 +63,8 @@ def buildYear(yearElement: YearElement)->Year:
     return year
 
 
-def buildMonth(monthElement: MonthElement)->Month:
-    month = Month(uuid=monthElement.uuid, monthYear=monthElement.monthYear)
+def buildMonth(monthElement: MonthElement)->ltm.Month:
+    month = ltm.Month(uuid=monthElement.uuid, monthYear=monthElement.monthYear)
     for tripElement in monthElement.trips:
         trip = buildTrip(tripElement)
         # pylint: disable=E1101
@@ -213,10 +72,10 @@ def buildMonth(monthElement: MonthElement)->Month:
     return month
 
 
-def buildTrip(tripElement: TripElement)->Trip:
+def buildTrip(tripElement: TripElement)->ltm.Trip:
     startDate, sequenceNumber, base, equipmentType = splitTripInfo(
         tripElement.sequenceInfo)
-    trip = Trip(uuid=tripElement.uuid, startDate=startDate,
+    trip = ltm.Trip(uuid=tripElement.uuid, startDate=startDate,
                 sequenceNumber=sequenceNumber, base=base, equipmentType=equipmentType)
     for dutyPeriodElement in tripElement.dutyPeriods:
         dutyPeriod = buildDutyPeriod(dutyPeriodElement)
@@ -226,8 +85,8 @@ def buildTrip(tripElement: TripElement)->Trip:
     return trip
 
 
-def buildDutyPeriod(dutyPeriodElement: DutyPeriodElement)->DutyPeriod:
-    dutyPeriod = DutyPeriod(uuid=dutyPeriodElement.uuid)
+def buildDutyPeriod(dutyPeriodElement: DutyPeriodElement)->ltm.DutyPeriod:
+    dutyPeriod = ltm.DutyPeriod(uuid=dutyPeriodElement.uuid)
     for flightElement in dutyPeriodElement.flights:
         flight = buildFlight(flightElement)
         # pylint: disable=E1101
@@ -235,7 +94,7 @@ def buildDutyPeriod(dutyPeriodElement: DutyPeriodElement)->DutyPeriod:
     return dutyPeriod
 
 
-def buildFlight(flightElement: FlightElement)->Flight:
+def buildFlight(flightElement: FlightElement)->ltm.Flight:
     airportDB = load_airports_IATA_json()
 
     uuid = flightElement.uuid  # type: ignore
@@ -262,7 +121,7 @@ def buildFlight(flightElement: FlightElement)->Flight:
     position = flightElement.position
     delayCode = flightElement.delayCode
 
-    flight = Flight(uuid=uuid,
+    flight = ltm.Flight(uuid=uuid,
                     flightNumber=flightNumber,
                     departureStation=departureStation,
                     outDateTimeUTC=outDateTimeUTC,
@@ -284,14 +143,14 @@ def buildFlight(flightElement: FlightElement)->Flight:
                     delayCode=delayCode)
     return flight
 
-def durationFormatterBasic(dur:Duration):
+def durationFormatterBasic(dur:ltm.Duration):
     return str(dur.to_timedelta())
 
-def buildFlightRowDict(logbook: Logbook, durationFormatter: Optional[Any] = None)->List[Dict[str,str]]:
+def buildFlightRowDict(logbook: ltm.Logbook, durationFormatter: Optional[Any] = None)->List[Dict[str,str]]:
     if not durationFormatter:
         durationFormatter = durationFormatterBasic
     flightRows: List[Dict[str,str]] = []
-    row = FlightRow()
+    row = ltm.FlightRow()
     row.aaNumber = logbook.aaNumber
     for year in logbook.years:
         row.year = year.year
@@ -347,7 +206,7 @@ def buildFlightRowDict(logbook: Logbook, durationFormatter: Optional[Any] = None
 
 
 
-def parse_HHdotMM_To_Duration(durationString: str, separator: str = ".")-> Duration:
+def parse_HHdotMM_To_Duration(durationString: str, separator: str = ".")-> ltm.Duration:
     """
     parses a string in the format "34.23", assuming HH.MM
     TODO input checking, no dot, minutes more than 59, include parent object in log message
@@ -356,19 +215,19 @@ def parse_HHdotMM_To_Duration(durationString: str, separator: str = ".")-> Durat
         if not '.' in durationString:
             # logger.debug(
             #     f"Improperly formatted time sent to parse_HHdotMM_ToDuration, - {durationString} - Defaulting to 0 Duration")
-            return Duration()
+            return ltm.Duration()
         hours, minutes = durationString.split(separator)
-        duration = Duration(hours=int(hours), minutes=int(minutes))
+        duration = ltm.Duration(hours=int(hours), minutes=int(minutes))
         return duration
     else:
-        return Duration()
+        return ltm.Duration()
 
 
-def buildStation(iataCode: str, airportDB: dict)->Station:
+def buildStation(iataCode: str, airportDB: dict)->ltm.Station:
     iataCap = iataCode.upper()
     icao = airportDB[iataCap]['icao']
     timezone = airportDB[iataCap]['tz']
-    station = Station(iata=iataCap, icao=icao, timezone=timezone)
+    station = ltm.Station(iata=iataCap, icao=icao, timezone=timezone)
     return station
 
 
@@ -399,7 +258,7 @@ def save_logbookJson(logbookElement: LogbookElement, savePath: Path):
     json_util.saveJson(data, savePath)
 
 
-def save_logbookCsv(logbook: Logbook, savePath: Path):
+def save_logbookCsv(logbook: ltm.Logbook, savePath: Path):
     flightRows = buildFlightRowDict(logbook)
     csv_util.writeDictToCsv(savePath,flightRows)
     

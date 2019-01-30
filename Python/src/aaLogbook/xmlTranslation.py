@@ -21,6 +21,7 @@ from dataclasses_json import dataclass_json
 from typing import List, Dict, Sequence, NamedTuple, Optional
 from datetime import timedelta
 from utilities import json_util, csv_util
+import aaLogbook.models.xmlElementModel as xem
 import uuid
 import xml.etree.ElementTree as ET
 import click
@@ -47,144 +48,12 @@ logger.addHandler(log_handler)
 
 ns = {'crystal_reports': 'urn:crystal-reports:schemas:report-detail'}
 
-
-@dataclass
-class FlightRow:
-    aaNumber: str
-    year: str
-    monthYear: str
-    sequenceInfo: str
-    uuid: str
-    flightNumber: str
-    departureStation: str
-    outDateTime: str
-    arrivalStation: str
-    inDateTime: str
-    fly: str
-    legGreater: str
-    actualBlock: str
-    groundTime: str
-    overnightDuration: str
-    eqModel: str
-    eqNumber: str
-    eqType: str
-    eqCode: str
-    fuelPerformance: str
-    departurePerformance: str
-    arrivalPerformance: str
-    position: str
-    delayCode: str
-
-
-@dataclass_json
-@dataclass
-class LogbookElement:
-    uuid: str = ""
-    aaNumber: str = ""
-    sumOfActualBlock: str = ""
-    sumOfLegGreater: str = ""
-    sumOfFly: str = ""
-    years: list = field(default_factory=list)
-
-    def __post_init__(self):
-        if self.uuid == "":
-            self.uuid = str(uuid.uuid4())
-
-
-@dataclass_json
-@dataclass
-class YearElement:
-    uuid: str = ""
-    year: str = ""
-    sumOfActualBlock: str = ""
-    sumOfLegGreater: str = ""
-    sumOfFly: str = ""
-    months: list = field(default_factory=list)
-
-    def __post_init__(self):
-        if self.uuid == "":
-            self.uuid = str(uuid.uuid4())
-
-
-@dataclass_json
-@dataclass
-class MonthElement:
-    uuid: str = ""
-    monthYear: str = ""
-    sumOfActualBlock: str = ""
-    sumOfLegGreater: str = ""
-    sumOfFly: str = ""
-    trips: list = field(default_factory=list)
-
-    def __post_init__(self):
-        if self.uuid == "":
-            self.uuid = str(uuid.uuid4())
-
-
-@dataclass_json
-@dataclass
-class TripElement:
-    uuid: str = ""
-    sequenceInfo: str = ""
-    sumOfActualBlock: str = ""
-    sumOfLegGreater: str = ""
-    sumOfFly: str = ""
-    dutyPeriods: list = field(default_factory=list)
-
-    def __post_init__(self):
-        if self.uuid == "":
-            self.uuid = str(uuid.uuid4())
-
-
-@dataclass_json
-@dataclass
-class DutyPeriodElement:
-    uuid: str = ""
-    sumOfActualBlock: str = ""
-    sumOfLegGreater: str = ""
-    sumOfFly: str = ""
-    flights: list = field(default_factory=list)
-
-    def __post_init__(self):
-        if self.uuid == "":
-            self.uuid = str(uuid.uuid4())
-
-
-@dataclass_json
-@dataclass
-class FlightElement:
-    uuid: str = ""
-    flightNumber: str = ""
-    departureStation: str = ""
-    outDateTime: str = ""
-    arrivalStation: str = ""
-    fly: str = ""
-    legGreater: str = ""
-    eqModel: str = ""
-    eqNumber: str = ""
-    eqType: str = ""
-    eqCode: str = ""
-    groundTime: str = ""
-    overnightDuration: str = ""
-    fuelPerformance: str = ""
-    departurePerformance: str = ""
-    arrivalPerformance: str = ""
-    actualBlock: str = ""
-    position: str = ""
-    delayCode: str = ""
-    inDateTime: str = ""
-
-    def __post_init__(self):
-        if self.uuid == "":
-            self.uuid = str(uuid.uuid4())
-
-
 def parseXML(path):
     # print(path.resolve())
     with open(path, 'r') as xmlFile:
         tree = ET.parse(xmlFile)
         root = tree.getroot()
-        logbook = LogbookElement()
+        logbook = xem.LogbookElement()
         logbook.aaNumber = root.find(
             './crystal_reports:ReportHeader/crystal_reports:Section/crystal_reports:Field[@Name="EmpNum1"]/crystal_reports:Value', ns).text
         logbook.sumOfActualBlock = root.find(
@@ -202,7 +71,7 @@ def parseXML(path):
 
 def handleYear(yearElement):
     # print('made it to year')
-    year = YearElement()
+    year = xem.YearElement()
     year.year = yearElement.find(
         './crystal_reports:GroupFooter/crystal_reports:Section/crystal_reports:Text[@Name="Text34"]/crystal_reports:TextValue', ns).text
     year.sumOfActualBlock = yearElement.find(
@@ -222,7 +91,7 @@ def handleYear(yearElement):
 
 def handleMonth(monthElement):
     # print('made it to month')
-    month = MonthElement()
+    month = xem.MonthElement()
     month.monthYear = monthElement.find(
         './crystal_reports:GroupFooter/crystal_reports:Section/crystal_reports:Text[@Name="Text35"]/crystal_reports:TextValue', ns).text
     month.sumOfActualBlock = monthElement.find(
@@ -241,7 +110,7 @@ def handleMonth(monthElement):
 
 def handleTrip(tripElement):
     # print('made it to trip')
-    trip = TripElement()
+    trip = xem.TripElement()
     trip.sequenceInfo = tripElement.find(
         './crystal_reports:GroupHeader/crystal_reports:Section/crystal_reports:Text[@Name="Text10"]/crystal_reports:TextValue', ns).text
     trip.sumOfActualBlock = tripElement.find(
@@ -261,7 +130,7 @@ def handleTrip(tripElement):
 
 def handleDutyPeriod(dutyPeriodElement):
     # print('made it to dp')
-    dutyPeriod = DutyPeriodElement()
+    dutyPeriod = xem.DutyPeriodElement()
     dutyPeriod.sumOfActualBlock = dutyPeriodElement.find(
         './crystal_reports:GroupFooter/crystal_reports:Section/crystal_reports:Field[@Name="SumofActualBlock1"]/crystal_reports:Value', ns).text
     dutyPeriod.sumOfLegGreater = dutyPeriodElement.find(
@@ -280,7 +149,7 @@ def handleDutyPeriod(dutyPeriodElement):
 def handleFlight(flightElement):
     # print('made it to flight')
     # print(flightElement.findall('.'))
-    flight = FlightElement()
+    flight = xem.FlightElement()
     # flight.flightNumber = flightElement.find('./{urn:crystal-reports:schemas:report-detail}Section/{urn:crystal-reports:schemas:report-detail}Field/{urn:crystal-reports:schemas:report-detail}Value').text
     flight.flightNumber = flightElement.find(
         './crystal_reports:Section/crystal_reports:Field[@Name="Flt1"]/crystal_reports:Value', ns).text
@@ -344,7 +213,7 @@ def validateFlight(flight, flightElement):
     pass
 
 
-def buildFlightRows(logbook: LogbookElement)-> List[Dict[str, str]]:
+def buildFlightRows(logbook: xem.LogbookElement)-> List[Dict[str, str]]:
     flightRows: List[Dict[str, str]] = []
     logbookFields = {'aaNumber': logbook.aaNumber}
     for year in logbook.years:
