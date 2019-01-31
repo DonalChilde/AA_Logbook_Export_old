@@ -248,6 +248,7 @@ def saveRawFlatJson(xmlPath: Path, savePath: Path):
 
 
 def saveRawCsv(xmlPath: Path, savePath: Path):
+    # TODO selectable save fields
     logbook = parseXML(xmlPath)
     flightRows = buildFlightRows(logbook)
     fieldList = ('aaNumber', 'year', 'monthYear', 'sequenceInfo', 'uuid', 'flightNumber', 'departureStation', 'outDateTime', 'arrivalStation', 'inDateTime', 'fly', 'legGreater',

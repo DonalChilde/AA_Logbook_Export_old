@@ -5,13 +5,13 @@ TODO changed parse functions to support sending surrounding object,
 
 from __future__ import annotations
 import logging
-from dataclasses import dataclass, field,asdict
+from dataclasses import dataclass, field, asdict
 from dataclasses_json import dataclass_json, DataClassJsonMixin
-from typing import List, Optional, Any,Dict
+from typing import List, Optional, Any, Dict, Sequence
 from datetime import timedelta, datetime, tzinfo
 from aaLogbook.models.xmlElementModel import LogbookElement, YearElement, MonthElement, TripElement, DutyPeriodElement, FlightElement
 import aaLogbook.models.logbookTranslationModel as ltm
-from utilities.timedelta_util import parse_HHdotMM_To_timedelta
+from utilities.timedelta_util import parse_HHdotMM_To_timedelta,timeDelta_TO_HHMMSS
 from utilities import json_util, csv_util
 from airportsDB.airportsDB import load_airports_IATA_json
 from pathlib import Path
@@ -40,76 +40,73 @@ log_handler.setFormatter(log_formatter)
 # logger.addHandler(log_handler)
 
 
-
-
-
-
 def buildLogbook(logbookElement: LogbookElement)->ltm.Logbook:
     airportDB = load_airports_IATA_json()
-    context = {'airportDB':airportDB}
-    log = ltm.Logbook(uuid=logbookElement.uuid, aaNumber=logbookElement.aaNumber)
+    context = {'airportDB': airportDB}
+    log = ltm.Logbook(uuid=logbookElement.uuid,
+                      aaNumber=logbookElement.aaNumber)
     for yearElement in logbookElement.years:
-        year = buildYear(yearElement,context)
+        year = buildYear(yearElement, context)
         # pylint: disable=E1101
         log.years.append(year)
 
     return log
 
 
-def buildYear(yearElement: YearElement,context:Dict[str,Any])->ltm.Year:
+def buildYear(yearElement: YearElement, context: Dict[str, Any])->ltm.Year:
     year = ltm.Year(uuid=yearElement.uuid, year=yearElement.year)
     for monthElement in yearElement.months:
-        month = buildMonth(monthElement,context)
+        month = buildMonth(monthElement, context)
         # pylint: disable=E1101
         year.months.append(month)
     return year
 
 
-def buildMonth(monthElement: MonthElement,context:Dict[str,Any])->ltm.Month:
+def buildMonth(monthElement: MonthElement, context: Dict[str, Any])->ltm.Month:
     month = ltm.Month(uuid=monthElement.uuid, monthYear=monthElement.monthYear)
     for tripElement in monthElement.trips:
-        trip = buildTrip(tripElement,context)
+        trip = buildTrip(tripElement, context)
         # pylint: disable=E1101
         month.trips.append(trip)
     return month
 
 
-def buildTrip(tripElement: TripElement,context:Dict[str,Any])->ltm.Trip:
+def buildTrip(tripElement: TripElement, context: Dict[str, Any])->ltm.Trip:
     startDate, sequenceNumber, base, equipmentType = splitTripInfo(
         tripElement.sequenceInfo)
     trip = ltm.Trip(uuid=tripElement.uuid, startDate=startDate,
-                sequenceNumber=sequenceNumber, base=base, equipmentType=equipmentType)
+                    sequenceNumber=sequenceNumber, base=base, equipmentType=equipmentType)
     for dutyPeriodElement in tripElement.dutyPeriods:
-        dutyPeriod = buildDutyPeriod(dutyPeriodElement,context)
+        dutyPeriod = buildDutyPeriod(dutyPeriodElement, context)
         # pylint: disable=E1101
         trip.dutyPeriods.append(dutyPeriod)
 
     return trip
 
 
-def buildDutyPeriod(dutyPeriodElement: DutyPeriodElement,context:Dict[str,Any])->ltm.DutyPeriod:
+def buildDutyPeriod(dutyPeriodElement: DutyPeriodElement, context: Dict[str, Any])->ltm.DutyPeriod:
     dutyPeriod = ltm.DutyPeriod(uuid=dutyPeriodElement.uuid)
     for flightElement in dutyPeriodElement.flights:
-        flight = buildFlight(flightElement,context)
+        flight = buildFlight(flightElement, context)
         # pylint: disable=E1101
         dutyPeriod.flights.append(flight)
     return dutyPeriod
 
 
-def buildFlight(flightElement: FlightElement,context:Dict[str,Any])->ltm.Flight:
+def buildFlight(flightElement: FlightElement, context: Dict[str, Any])->ltm.Flight:
     airportDB = context['airportDB']
 
     uuid = flightElement.uuid  # type: ignore
     flightNumber = flightElement.flightNumber
     departureStation = buildStation(flightElement.departureStation, airportDB)
-    outDateTimeUTC = buildOutTime(
-        flightElement.outDateTime, departureStation.timezone).to('utc')
+    outDateTimeUTC = buildOutTimeUTC(
+        flightElement.outDateTime, departureStation.timezone)
     arrivalStation = buildStation(flightElement.arrivalStation, airportDB)
     fly = parse_HHdotMM_To_Duration(flightElement.fly)
     actualBlock = parse_HHdotMM_To_Duration(flightElement.actualBlock)
     legGreater = parse_HHdotMM_To_Duration(flightElement.legGreater)
-    inDateTimeUTC = buildInTime(
-        flightElement.inDateTime, actualBlock.to_timedelta(), outDateTimeUTC, arrivalStation.timezone).to('utc')
+    inDateTimeUTC = buildInTimeUTC(
+        flightElement.inDateTime, actualBlock.to_timedelta(), outDateTimeUTC, arrivalStation.timezone)
     eqModel = flightElement.eqModel
     eqNumber = flightElement.eqNumber
     eqType = flightElement.eqType
@@ -124,34 +121,36 @@ def buildFlight(flightElement: FlightElement,context:Dict[str,Any])->ltm.Flight:
     delayCode = flightElement.delayCode
 
     flight = ltm.Flight(uuid=uuid,
-                    flightNumber=flightNumber,
-                    departureStation=departureStation,
-                    outDateTimeUTC=outDateTimeUTC,
-                    arrivalStation=arrivalStation,
-                    fly=fly,
-                    actualBlock=actualBlock,
-                    legGreater=legGreater,
-                    inDateTimeUTC=inDateTimeUTC,
-                    eqModel=eqModel,
-                    eqNumber=eqNumber,
-                    eqType=eqType,
-                    eqCode=eqCode,
-                    groundTime=groundTime,
-                    overnightDuration=overnightDuration,
-                    fuelPerformance=fuelPerformance,
-                    departurePerformance=departurePerformance,
-                    arrivalPerformance=arrivalPerformance,
-                    position=position,
-                    delayCode=delayCode)
+                        flightNumber=flightNumber,
+                        departureStation=departureStation,
+                        outDateTimeUTC=outDateTimeUTC,
+                        arrivalStation=arrivalStation,
+                        fly=fly,
+                        actualBlock=actualBlock,
+                        legGreater=legGreater,
+                        inDateTimeUTC=inDateTimeUTC,
+                        eqModel=eqModel,
+                        eqNumber=eqNumber,
+                        eqType=eqType,
+                        eqCode=eqCode,
+                        groundTime=groundTime,
+                        overnightDuration=overnightDuration,
+                        fuelPerformance=fuelPerformance,
+                        departurePerformance=departurePerformance,
+                        arrivalPerformance=arrivalPerformance,
+                        position=position,
+                        delayCode=delayCode)
     return flight
 
-def durationFormatterBasic(dur:ltm.Duration):
-    return str(dur.to_timedelta())
 
-def buildFlightRowDict(logbook: ltm.Logbook, durationFormatter: Optional[Any] = None)->List[Dict[str,str]]:
+def durationFormatterBasic(dur: ltm.Duration):
+    return timeDelta_TO_HHMMSS(dur.to_timedelta())
+
+
+def buildFlightRowDict(logbook: ltm.Logbook, durationFormatter: Optional[Any] = None)->List[Dict[str, str]]:
     if not durationFormatter:
         durationFormatter = durationFormatterBasic
-    flightRows: List[Dict[str,str]] = []
+    flightRows: List[Dict[str, str]] = []
     row = ltm.FlightRow()
     row.aaNumber = logbook.aaNumber
     for year in logbook.years:
@@ -172,18 +171,24 @@ def buildFlightRowDict(logbook: ltm.Logbook, durationFormatter: Optional[Any] = 
                         row.departureStationIcao = flight.departureStation.icao
                         row.departureStationTz = flight.departureStation.timezone
                         row.outDateTimeUTC = flight.outDateTimeUTC
-                        row.outDateUTC = flight.outDateTimeUTC.format('YYYY-MM-DD')
-                        row.outTimeUTC = flight.outDateTimeUTC.format('HH:mm:ss')
-                        row.outDateTimeLCL = flight.outDateTimeUTC.to(flight.departureStation.timezone)
-                        row.outDateLCL = row.outDateTimeLCL.format('YYYY-MM-DD')
+                        row.outDateUTC = flight.outDateTimeUTC.format(
+                            'YYYY-MM-DD')
+                        row.outTimeUTC = flight.outDateTimeUTC.format(
+                            'HH:mm:ss')
+                        row.outDateTimeLCL = flight.outDateTimeUTC.to(
+                            flight.departureStation.timezone)
+                        row.outDateLCL = row.outDateTimeLCL.format(
+                            'YYYY-MM-DD')
                         row.outTimeLCL = row.outDateTimeLCL.format('HH:mm:ss')
                         row.arrivalStationIata = flight.arrivalStation.iata
                         row.arrivalStationIcao = flight.arrivalStation.icao
                         row.arrivalStationTz = flight.arrivalStation.timezone
                         row.inDateTimeUTC = flight.inDateTimeUTC
-                        row.inDateUTC = flight.inDateTimeUTC.format('YYYY-MM-DD')
+                        row.inDateUTC = flight.inDateTimeUTC.format(
+                            'YYYY-MM-DD')
                         row.inTimeUTC = flight.inDateTimeUTC.format('HH:mm:ss')
-                        row.inDateTimeLCL = flight.inDateTimeUTC.to(flight.departureStation.timezone)
+                        row.inDateTimeLCL = flight.inDateTimeUTC.to(
+                            flight.departureStation.timezone)
                         row.inDateLCL = row.inDateTimeLCL.format('YYYY-MM-DD')
                         row.inTimeLCL = row.inDateTimeLCL.format('HH:mm:ss')
                         row.fly = durationFormatter(flight.fly)
@@ -206,7 +211,6 @@ def buildFlightRowDict(logbook: ltm.Logbook, durationFormatter: Optional[Any] = 
                         row.delayCode = flight.delayCode
                         flightRows.append(asdict(row))
     return flightRows
-
 
 
 def parse_HHdotMM_To_Duration(durationString: str, separator: str = ".")-> ltm.Duration:
@@ -234,22 +238,21 @@ def buildStation(iataCode: str, airportDB: dict)->ltm.Station:
     return station
 
 
-def buildOutTime(dateString: str, timeZoneString: str)-> arrow.Arrow:
-    dt = arrow.get(dateString)
-    dt2 = dt.replace(tzinfo=timeZoneString)
-    return dt2
+def buildOutTimeUTC(dateString: str, timeZoneString: str)-> arrow.Arrow:
+    outTime = arrow.get(dateString)
+    outTimeWithTZ = outTime.replace(tzinfo=timeZoneString)
+    return outTimeWithTZ.to('utc')
 
 
-def buildInTime(inDateString: str, flightTime: timedelta, outDatetime: arrow.Arrow, inTimeZone: str)-> arrow.Arrow:
+def buildInTimeUTC(inDateString: str, flightTime: timedelta, outDatetime: arrow.Arrow, inTimeZone: str)-> arrow.Arrow:
+    inTimeUTC = outDatetime + flightTime
+    # TODO do validation checks against partial datetime from inDateString
 
-    inTime = outDatetime + flightTime
-    # TODO check for use after change input to Arrow
-    inDT = arrow.get(inTime).to(inTimeZone)
-    return inDT
+    return inTimeUTC
 
 
 def splitTripInfo(sequenceInfo: str):
-    
+    # TODO do validation checks
     return sequenceInfo.split()
 
 
@@ -259,8 +262,6 @@ def save_logbookJson(logbook: ltm.Logbook, savePath: Path):
     json_util.saveJson(data, savePath)
 
 
-def save_logbookCsv(logbook: ltm.Logbook, savePath: Path):
+def save_logbookCsv(logbook: ltm.Logbook, savePath: Path, fieldList: Optional[Sequence[str]] = None):
     flightRows = buildFlightRowDict(logbook)
-    csv_util.writeDictToCsv(savePath,flightRows)
-    
-
+    csv_util.writeDictToCsv(savePath, flightRows, fieldList)
