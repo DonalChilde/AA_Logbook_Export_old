@@ -64,9 +64,11 @@ class Station:
 class Duration:
     hours: int = 0
     minutes: int = 0
-
+    seconds: int = 0
+    decimalSeconds: str = ''
+    
     def to_timedelta(self)-> timedelta:
-        return timedelta(hours=self.hours, minutes=self.minutes)
+        return timedelta(hours=self.hours, minutes=self.minutes, seconds = self.seconds)
 
 
 # @dataclass_json
