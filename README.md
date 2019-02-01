@@ -1,8 +1,18 @@
 # AA_Logbook_Export
 
-Exports American Airlines logbook data to a more useable format.
+Exports American Airlines logbook data to a more useable format. The XSLT version of this script
 
 ## Python script instructions
+
+Requires python >= 3.7
+
+instructions TODO
+
+- installing python
+- downloading aaLogbookExport
+- installing aaLogbookExport
+  - virtual environments
+- using same
 
 ### To download your logbook in XML format
 
@@ -77,7 +87,7 @@ Exports American Airlines logbook data to a more useable format.
 
 You should see something like this:
 
-![example of web page table](Logbook_Screenshot.png)
+![example of web page table](XSLT/Logbook_Screenshot.png)
 
 At the bottom of the page is a link to convert and save your logbook in CSV format, suitable for importing into any spreadsheet program.
 Alternatively, if you copy the table from the webpage, you can paste it into Google Sheets.
