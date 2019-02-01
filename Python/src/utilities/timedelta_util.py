@@ -43,7 +43,11 @@ def timedelta_split(timeDelta:timedelta)-> TimeDeltaSplit:
 def timeDelta_TO_HHMMSS(timeDelta:timedelta, separator:str = ':'):
     timeSplit = timedelta_split(timeDelta)
     totalHours = (timeSplit.days * 24)+timeSplit.hours
-    return(f"{totalHours}{separator}{timeSplit.minutes}{separator}{timeSplit.seconds}.{timeSplit.microseconds:06d}")
+    if timeSplit.microseconds:
+        decimalSecondsString = f".{timeSplit.microseconds:06d}"
+    else:
+        decimalSecondsString = ""
+    return(f"{totalHours}{separator}{timeSplit.minutes}{separator}{timeSplit.seconds}{decimalSecondsString}")
 
 def timedelta_To_isoformat(timeDelta: timedelta, strict=True)->str:
     """
