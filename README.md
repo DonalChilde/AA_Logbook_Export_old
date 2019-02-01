@@ -1,10 +1,12 @@
 # AA_Logbook_Export
 
-Exports American Airlines logbook data to a more useable format. The XSLT version of this script
+Exports American Airlines logbook data to a more useable format. The XSLT version of this script works but is not currently being developed. Use the python version for the latest features.
 
 ## Python script instructions
 
 Requires python >= 3.7
+
+[Example output](https://github.com/DonalChilde/AA_Logbook_Export/tree/master/Python/tests/resources)
 
 instructions TODO
 
@@ -13,6 +15,7 @@ instructions TODO
 - installing aaLogbookExport
   - virtual environments
 - using same
+- feature list and demonstration
 
 ### To download your logbook in XML format
 
