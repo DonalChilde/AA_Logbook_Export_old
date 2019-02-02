@@ -20,7 +20,7 @@ URL = 'https://github.com/DonalChilde/AA_Logbook_Export'
 EMAIL = 'pfmsoft@gmail.com'
 AUTHOR = 'Chad'
 REQUIRES_PYTHON = '>=3.7.0'
-VERSION = '0.0.1.dev'
+VERSION = '0.1.0'
 
 # What packages are required for this module to be executed?
 REQUIRED = [
