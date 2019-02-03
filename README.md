@@ -8,23 +8,24 @@ Requires python >= 3.7
 
 [Example output](https://github.com/DonalChilde/AA_Logbook_Export/tree/master/Python/tests/resources)
 
-instructions TODO
-
-- installing python
-- downloading aaLogbookExport
-- installing aaLogbookExport
-  - virtual environments
-- using same
-- feature list and demonstration
-
 ### To download your logbook in XML format
 
-1. Go to the [APA website](https://www.alliedpilots.org)
-1. Click [3XP / PBS Awards / Scheduling](https://www.alliedpilots.org/Committees/Scheduling) under Quick Links
-1. Click [PBS Awards & 3XP](https://oac.alliedpilots.org/).
-1. Click on the [Sabre](https://tasc.alliedpilots.org/Sabre/SabreLogin.aspx) link in the top right corner.
+First, try the direct link to [Sabre](https://tasc.alliedpilots.org/Sabre/SabreLogin.aspx). If that doesn't work, follow all the steps below.
+
+1. Go to the [APA website](https://www.alliedpilots.org) and log in.
+1. Click `3XP / PBS Awards / Scheduling` under Quick Links
+1. Click `PBS Awards & 3XP`.
+1. Click on the `Sabre` link in the top right corner.
 1. In Sabre, Under the `Go To` dropdown in the top right corner, select `Logbook`.
-1. Click the harddrive icon with a bent arrow coming out of the top to export. Choose XML file format and save the file to a location that is easy to find later. The file name should look like `myCrystalReportViewer.xml`
+1. Click the harddrive icon with a bent arrow coming out of the top to export. Choose XML file format and save the file to a location that is easy to find later. The downloaded file should look like `myCrystalReportViewer.xml`. Feel free to rename this, but keep the `.xml` ending.
+
+### Usage Instructions
+
+### Installing Python (>=3.7 required)
+
+### Using pipenv and Virtual Environments
+
+### Downloading or updating aaLogbookExport
 
 ## XSLT Instructions
 
