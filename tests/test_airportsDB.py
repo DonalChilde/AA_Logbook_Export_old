@@ -43,28 +43,29 @@ def test_readOpenFlightsCSV():
 
 def test_filterOpenFlights_iata():
     airports = loadOpenFlightsCSV()
-    assert 5000<len(airports)<9000
+    assert 5000 < len(airports) < 9000
     filtered = airportsDB.filter_Non_IATA_Airports(airports)
-    assert 5000<len(filtered)<7000
+    assert 5000 < len(filtered) < 7000
     # print(len(filtered))
     # for airport in filtered:
     #     print(airport.name, airport.icao, airport.iata)
 
 
-def test_OpenFlights_Json():
-    savepath = airportsDB.pathToDataDirectory()/Path("openflights_airports.json")
-    data = loadOpenFlightsCSV()
-    dictList = [asdict(airport) for airport in data]
-    airportsDB.saveAirportJson(dictList, savepath)
+# def test_OpenFlights_Json():
+#     savepath = airportsDB.pathToDataDirectory()/Path("openflights_airports.json")
+#     data = loadOpenFlightsCSV()
+#     dictList = [asdict(airport) for airport in data]
+#     airportsDB.saveAirportJson(dictList, savepath)
 
 
 def test_load_airports_IATA_json():
     data = airportsDB.load_airports_IATA_json()
     assert data['PHX']
 
+
 def test_load_airports_json():
     data = airportsDB.load_airports_json()
-    assert 1000<len(data)<8000
+    assert 1000 < len(data) < 8000
 
 
 def test_pathToDataDirectory():

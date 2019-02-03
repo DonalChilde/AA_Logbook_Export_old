@@ -1,6 +1,6 @@
 [
   {
-    "uuid": "b2392ea7-b70a-4c91-a495-99c9bc39e463",
+    "uuid": "ba2d8274-aa81-4ec8-a325-04a4aa32b8d9",
     "flightNumber": "552",
     "departureStation": "PHX",
     "outDateTime": "2016-10-01T16:37:00",
@@ -26,7 +26,7 @@
     "sequenceInfo": "10/1/2016 22868 PHX 320"
   },
   {
-    "uuid": "5aa62280-cfc9-48c4-9698-5ecdd6db991e",
+    "uuid": "18e52dce-8ca0-47ba-a07e-630a05ec4224",
     "flightNumber": "593",
     "departureStation": "SMF",
     "outDateTime": "2016-10-03T05:52:00",
@@ -52,7 +52,7 @@
     "sequenceInfo": "10/1/2016 22868 PHX 320"
   },
   {
-    "uuid": "65224d93-3131-4e85-9576-ee8572edbbbd",
+    "uuid": "2da113bb-f4cf-4364-a7fe-38916ac7cf79",
     "flightNumber": "574",
     "departureStation": "PHX",
     "outDateTime": "2016-10-13T15:11:00",
@@ -78,7 +78,7 @@
     "sequenceInfo": "10/13/2016 23386 PHX 320"
   },
   {
-    "uuid": "9adec100-46fe-42c7-91e6-4ae92e07186b",
+    "uuid": "9f0bb3ee-dc9a-441b-96a7-edfc698f8a6e",
     "flightNumber": "814",
     "departureStation": "TPA",
     "outDateTime": "2016-10-14T14:00:00",
@@ -104,7 +104,7 @@
     "sequenceInfo": "10/13/2016 23386 PHX 320"
   },
   {
-    "uuid": "5c07a59c-e036-4d4a-b18d-d9f235d2cbd5",
+    "uuid": "f7777c3a-d3ba-4c0c-96b2-08e7237c3c64",
     "flightNumber": "506",
     "departureStation": "PHL",
     "outDateTime": "2016-10-15T07:03:00",
@@ -130,7 +130,7 @@
     "sequenceInfo": "10/13/2016 23386 PHX 320"
   },
   {
-    "uuid": "9521457b-0489-4878-95f1-210de41b7dc7",
+    "uuid": "2b538805-71a9-450b-ab42-f5d268f2dbfb",
     "flightNumber": "1712",
     "departureStation": "PHX",
     "outDateTime": "2016-10-17T14:55:00",
@@ -156,7 +156,7 @@
     "sequenceInfo": "10/17/2016 22616 PHX 320"
   },
   {
-    "uuid": "34b91934-35ea-498a-9a08-383c7c40dc56",
+    "uuid": "9f091a15-5fe9-4216-bdd4-d4a1f836c54d",
     "flightNumber": "701",
     "departureStation": "PHL",
     "outDateTime": "2016-10-18T17:22:00",
@@ -182,7 +182,7 @@
     "sequenceInfo": "10/17/2016 22616 PHX 320"
   },
   {
-    "uuid": "eec147a0-ab4b-4f71-981b-7b1f95c8d63a",
+    "uuid": "99cf13c9-932b-40fc-8b4e-904be68fa9ec",
     "flightNumber": "1705",
     "departureStation": "LAX",
     "outDateTime": "2016-10-19T09:40:00",
@@ -208,7 +208,7 @@
     "sequenceInfo": "10/17/2016 22616 PHX 320"
   },
   {
-    "uuid": "0ac0f4a0-a205-4ca8-b934-078563636e0f",
+    "uuid": "fb2142b4-f6fa-4b2d-b6f0-bd679ec02452",
     "flightNumber": "1705",
     "departureStation": "LAS",
     "outDateTime": "2016-10-19T11:40:00",
@@ -234,7 +234,7 @@
     "sequenceInfo": "10/17/2016 22616 PHX 320"
   },
   {
-    "uuid": "0d815c7e-5786-429b-abb4-7fcce6022363",
+    "uuid": "bf30717d-1172-41c1-ae72-73694edb3c3e",
     "flightNumber": "726",
     "departureStation": "LAX",
     "outDateTime": "2016-10-19T15:23:00",
@@ -260,7 +260,7 @@
     "sequenceInfo": "10/17/2016 22616 PHX 320"
   },
   {
-    "uuid": "35a72d7b-4af1-4ce7-b6a5-36ac88322914",
+    "uuid": "270c5c33-88b7-4510-8f7b-c671ffecc43d",
     "flightNumber": "528",
     "departureStation": "PIT",
     "outDateTime": "2016-10-20T18:15:00",
@@ -286,7 +286,7 @@
     "sequenceInfo": "10/17/2016 22616 PHX 320"
   },
   {
-    "uuid": "76de8ba1-0d8b-4a07-a1b1-82d8d23644b6",
+    "uuid": "83a9819c-96fb-4d58-9aac-c11ad87a8190",
     "flightNumber": "1712",
     "departureStation": "PHX",
     "outDateTime": "2016-10-22T14:47:00",
@@ -312,7 +312,7 @@
     "sequenceInfo": "10/22/2016 22616 PHX 320"
   },
   {
-    "uuid": "97d6cfc7-880c-4824-9fc8-c305ccd870ea",
+    "uuid": "8d7569b6-ced7-4daa-a563-69f6e3657955",
     "flightNumber": "701",
     "departureStation": "PHL",
     "outDateTime": "2016-10-23T15:55:00",
@@ -338,7 +338,7 @@
     "sequenceInfo": "10/22/2016 22616 PHX 320"
   },
   {
-    "uuid": "1de830a1-cd89-4d73-bcae-d3c979f35aa6",
+    "uuid": "eecf4d61-ebdd-47db-b49c-39cb51fc12c3",
     "flightNumber": "2450",
     "departureStation": "LAX",
     "outDateTime": "2016-10-24T09:31:00",
@@ -364,7 +364,7 @@
     "sequenceInfo": "10/22/2016 22616 PHX 320"
   },
   {
-    "uuid": "e58c5087-0fce-4c2c-be6a-c03f9beef6c1",
+    "uuid": "cdcf8ff3-27bd-4a04-a578-bb0c880116e0",
     "flightNumber": "524",
     "departureStation": "DFW",
     "outDateTime": "2016-10-24T16:10:00",
@@ -390,7 +390,7 @@
     "sequenceInfo": "10/22/2016 22616 PHX 320"
   },
   {
-    "uuid": "e8a8714f-b646-4dcf-9ed3-12eb1cab90a1",
+    "uuid": "564d75ec-4c2b-4314-9465-849c223fa71f",
     "flightNumber": "473",
     "departureStation": "PHX",
     "outDateTime": "2016-10-28T08:45:00",
@@ -416,7 +416,7 @@
     "sequenceInfo": "10/28/2016 23860 PHX 320"
   },
   {
-    "uuid": "ad896e0d-2975-4926-a4ff-46d7b3ef7b0e",
+    "uuid": "2f0b684b-812d-4a3a-8ef6-acd67b1ae9b3",
     "flightNumber": "473",
     "departureStation": "IAH",
     "outDateTime": "2016-10-28T14:16:00",
@@ -442,7 +442,7 @@
     "sequenceInfo": "10/28/2016 23860 PHX 320"
   },
   {
-    "uuid": "599c015f-71c0-4d54-a4c3-7de2b41857a9",
+    "uuid": "e0ce3525-a475-463b-8bc8-cbc716139b44",
     "flightNumber": "420",
     "departureStation": "DFW",
     "outDateTime": "2016-10-28T16:49:00",
@@ -468,7 +468,7 @@
     "sequenceInfo": "10/28/2016 23860 PHX 320"
   },
   {
-    "uuid": "0e3d6930-e207-42ac-9508-dee896aee0e9",
+    "uuid": "3788d4fc-5661-484b-8108-f32e9ea696e2",
     "flightNumber": "566",
     "departureStation": "PDX",
     "outDateTime": "2016-10-30T08:34:00",
@@ -494,7 +494,7 @@
     "sequenceInfo": "10/28/2016 23860 PHX 320"
   },
   {
-    "uuid": "8e229f86-ff48-4909-9c28-7d8acbf28d86",
+    "uuid": "b767232e-c7e9-4d33-8d99-c4f9b649dd52",
     "flightNumber": "401",
     "departureStation": "PHX",
     "outDateTime": "2016-11-03T08:47:00",
@@ -520,7 +520,7 @@
     "sequenceInfo": "11/3/2016 6245 PHX 320"
   },
   {
-    "uuid": "c5389c45-707f-4744-a977-2019d75a0f63",
+    "uuid": "fdec7253-65de-4584-98dd-7f7c27e75d7b",
     "flightNumber": "401",
     "departureStation": "MZT",
     "outDateTime": "2016-11-03T11:54:00",
@@ -546,7 +546,7 @@
     "sequenceInfo": "11/3/2016 6245 PHX 320"
   },
   {
-    "uuid": "1cf8a716-648e-43ab-aab2-917e3691055f",
+    "uuid": "c935a4d5-e2d9-4a9e-aa16-d24dfe97a971",
     "flightNumber": "490",
     "departureStation": "PHX",
     "outDateTime": "2016-11-03T15:08:00",
@@ -572,7 +572,7 @@
     "sequenceInfo": "11/3/2016 6245 PHX 320"
   },
   {
-    "uuid": "4ae9acfe-dca2-4093-97ba-cd39359d4013",
+    "uuid": "541d58c7-9874-49ee-aa30-c43eb61efddd",
     "flightNumber": "493",
     "departureStation": "OMA",
     "outDateTime": "2016-11-05T07:55:00",
@@ -598,7 +598,7 @@
     "sequenceInfo": "11/3/2016 6245 PHX 320"
   },
   {
-    "uuid": "bac87f1f-7443-4e9a-9f3f-4c2d1b0c7205",
+    "uuid": "eb46a70f-711a-4e52-8704-94dc87ce68dd",
     "flightNumber": "1907",
     "departureStation": "PHX",
     "outDateTime": "2016-11-06T11:30:00",
@@ -624,7 +624,7 @@
     "sequenceInfo": "11/6/2016 6444 PHX 320"
   },
   {
-    "uuid": "2ba03d42-24e9-494a-92cf-084bf848a070",
+    "uuid": "c7d4099a-1c24-42ba-9c1b-107fb8f237c5",
     "flightNumber": "573",
     "departureStation": "PVR",
     "outDateTime": "2016-11-06T15:49:00",
@@ -650,7 +650,7 @@
     "sequenceInfo": "11/6/2016 6444 PHX 320"
   },
   {
-    "uuid": "d1db8d97-414e-40f1-846f-63612fc13506",
+    "uuid": "6235d62b-a8a4-4f31-abb4-65c4bf2f7b99",
     "flightNumber": "490",
     "departureStation": "PHX",
     "outDateTime": "2016-11-06T19:54:00",
@@ -676,7 +676,7 @@
     "sequenceInfo": "11/6/2016 6444 PHX 320"
   },
   {
-    "uuid": "475e8391-da94-4a77-9aa8-36b90962ac37",
+    "uuid": "89d7c762-20b3-4a07-88ac-bb3b2850690b",
     "flightNumber": "493",
     "departureStation": "OMA",
     "outDateTime": "2016-11-08T07:54:00",
@@ -702,7 +702,7 @@
     "sequenceInfo": "11/6/2016 6444 PHX 320"
   },
   {
-    "uuid": "5d6a6921-e118-4a71-9c8c-8cf00e91a25d",
+    "uuid": "f02115c7-e223-4244-ba20-0e87e29af7f0",
     "flightNumber": "401",
     "departureStation": "PHX",
     "outDateTime": "2016-11-19T09:45:00",
@@ -728,7 +728,7 @@
     "sequenceInfo": "11/19/2016 6072 PHX 320"
   },
   {
-    "uuid": "f46ae1fb-1e09-4cc2-a7a3-8f2530caf841",
+    "uuid": "947e62ee-f209-46bd-af30-bc4f83c5c66b",
     "flightNumber": "401",
     "departureStation": "MZT",
     "outDateTime": "2016-11-19T12:58:00",
@@ -754,7 +754,7 @@
     "sequenceInfo": "11/19/2016 6072 PHX 320"
   },
   {
-    "uuid": "678bbdfc-bca1-4289-bead-6620687e2dd4",
+    "uuid": "54966528-ea33-484d-9c25-c20cdfaaeba4",
     "flightNumber": "621",
     "departureStation": "PHX",
     "outDateTime": "2016-11-19T17:39:00",
@@ -780,7 +780,7 @@
     "sequenceInfo": "11/19/2016 6072 PHX 320"
   },
   {
-    "uuid": "d6936b72-180c-4453-b32b-1a5fe5447ec8",
+    "uuid": "1273c17a-df2e-4f69-9fb9-80c2b428b884",
     "flightNumber": "467",
     "departureStation": "OAK",
     "outDateTime": "2016-11-21T05:53:00",
@@ -806,7 +806,7 @@
     "sequenceInfo": "11/19/2016 6072 PHX 320"
   },
   {
-    "uuid": "57f89f4a-a38b-46d1-a809-95b49e79fa32",
+    "uuid": "058a062e-9bbd-475f-a13d-b0709f0ddab7",
     "flightNumber": "528",
     "departureStation": "PHX",
     "outDateTime": "2016-11-23T21:02:00",
@@ -832,7 +832,7 @@
     "sequenceInfo": "11/23/2016 7217 PHX 320"
   },
   {
-    "uuid": "8a50926d-9b76-4b48-b286-31c31d85f1c2",
+    "uuid": "bdac1aff-3b7f-467a-98a9-5a239ff7c2bb",
     "flightNumber": "574",
     "departureStation": "RNO",
     "outDateTime": "2016-11-25T12:31:00",
@@ -858,7 +858,7 @@
     "sequenceInfo": "11/23/2016 7217 PHX 320"
   },
   {
-    "uuid": "990e47bf-0057-4718-958c-006571965fa6",
+    "uuid": "546db2aa-7f3f-48b3-ac7b-8003b431ed9e",
     "flightNumber": "447",
     "departureStation": "PHX",
     "outDateTime": "2016-11-26T13:24:00",
@@ -884,7 +884,7 @@
     "sequenceInfo": "11/26/2016 6078 PHX 320"
   },
   {
-    "uuid": "f86f8de8-fb4c-4c42-8943-02cb75128235",
+    "uuid": "ccbd0621-6c12-4d81-bf35-78d52248c9a8",
     "flightNumber": "803",
     "departureStation": "MZT",
     "outDateTime": "2016-11-26T16:22:00",
@@ -910,7 +910,7 @@
     "sequenceInfo": "11/26/2016 6078 PHX 320"
   },
   {
-    "uuid": "e9fcff38-60c5-4ae5-8f59-16726594b45b",
+    "uuid": "2706d9c4-aaaf-493f-97f3-557b6a5eb419",
     "flightNumber": "509",
     "departureStation": "PHX",
     "outDateTime": "2016-11-26T19:45:00",
@@ -936,7 +936,7 @@
     "sequenceInfo": "11/26/2016 6078 PHX 320"
   },
   {
-    "uuid": "5285b378-e048-4b4d-adad-e6e5019f3360",
+    "uuid": "bad0a05d-efd2-420c-bffa-1496410aaa48",
     "flightNumber": "586",
     "departureStation": "DSM",
     "outDateTime": "2016-11-28T07:54:00",
@@ -962,7 +962,7 @@
     "sequenceInfo": "11/26/2016 6078 PHX 320"
   },
   {
-    "uuid": "0d1634c3-ad78-4995-a49b-5074c2d952bb",
+    "uuid": "68c59ab2-1f72-4b77-99ac-f870cfc728c5",
     "flightNumber": "646",
     "departureStation": "PHX",
     "outDateTime": "2016-12-03T10:21:00",
@@ -988,7 +988,7 @@
     "sequenceInfo": "12/3/2016 20888 PHX 320"
   },
   {
-    "uuid": "a383e7d8-6862-444d-b574-8b549442df43",
+    "uuid": "1ca4ad9c-67f1-4a26-9bad-a145d08f3e0d",
     "flightNumber": "1933",
     "departureStation": "BOS",
     "outDateTime": "2016-12-03T17:45:00",
@@ -1014,7 +1014,7 @@
     "sequenceInfo": "12/3/2016 20888 PHX 320"
   },
   {
-    "uuid": "be4db962-de9e-41f1-84f4-24fd4227adad",
+    "uuid": "4c5ed661-d579-4786-af6b-1b53262367ca",
     "flightNumber": "597",
     "departureStation": "PHL",
     "outDateTime": "2016-12-04T09:39:00",
@@ -1040,7 +1040,7 @@
     "sequenceInfo": "12/3/2016 20888 PHX 320"
   },
   {
-    "uuid": "75c3de16-7261-4773-912a-32acc900a713",
+    "uuid": "b88f2f47-6e7a-4d2a-a932-7ad82cebc339",
     "flightNumber": "706",
     "departureStation": "LAX",
     "outDateTime": "2016-12-05T08:18:00",
@@ -1066,7 +1066,7 @@
     "sequenceInfo": "12/3/2016 20888 PHX 320"
   },
   {
-    "uuid": "98173d90-2728-4f89-9a44-86ab0c379c33",
+    "uuid": "f5d05ade-7619-460d-9d27-1198933d6cdf",
     "flightNumber": "404",
     "departureStation": "IND",
     "outDateTime": "2016-12-06T08:01:00",
@@ -1092,7 +1092,7 @@
     "sequenceInfo": "12/3/2016 20888 PHX 320"
   },
   {
-    "uuid": "9e3fcd0b-789d-48ee-897f-a2b4718cb26d",
+    "uuid": "9bd90700-2bec-4b6e-b5f0-08e9c8127628",
     "flightNumber": "483",
     "departureStation": "PHX",
     "outDateTime": "2016-12-08T13:18:00",
@@ -1118,7 +1118,7 @@
     "sequenceInfo": "12/8/2016 20678 PHX 320"
   },
   {
-    "uuid": "e6b7ca24-bba9-406a-9a28-22400fdaa8f1",
+    "uuid": "cd702f33-0cb4-4c8a-b892-62121e3f5bd5",
     "flightNumber": "453",
     "departureStation": "STL",
     "outDateTime": "2016-12-08T17:53:00",
@@ -1144,7 +1144,7 @@
     "sequenceInfo": "12/8/2016 20678 PHX 320"
   },
   {
-    "uuid": "d737bbbf-1a8b-47b4-94b4-b2b76ea3e3ab",
+    "uuid": "9b488bba-3f1a-4a7e-b06a-eabf282ffd79",
     "flightNumber": "627",
     "departureStation": "PHX",
     "outDateTime": "2016-12-08T21:13:00",
@@ -1170,7 +1170,7 @@
     "sequenceInfo": "12/8/2016 20678 PHX 320"
   },
   {
-    "uuid": "695f01fb-94bd-45f8-b8e5-8b1e5b63457b",
+    "uuid": "55427435-79b2-4d9e-b365-b593382fe00f",
     "flightNumber": "835",
     "departureStation": "OAK",
     "outDateTime": "2016-12-09T12:28:00",
@@ -1196,7 +1196,7 @@
     "sequenceInfo": "12/8/2016 20678 PHX 320"
   },
   {
-    "uuid": "96723512-15dd-4e26-89f3-424e504e708c",
+    "uuid": "dd909b1d-8428-46d7-8a64-ca280f401b79",
     "flightNumber": "835",
     "departureStation": "PHX",
     "outDateTime": "2016-12-09T16:39:00",
@@ -1222,7 +1222,7 @@
     "sequenceInfo": "12/8/2016 20678 PHX 320"
   },
   {
-    "uuid": "698a35aa-f737-48d5-a4a1-239d8cb9e8f5",
+    "uuid": "ca18bbc4-18c6-4efa-ad76-6d59e76d4b0d",
     "flightNumber": "449",
     "departureStation": "DSM",
     "outDateTime": "2016-12-10T14:25:00",
@@ -1248,7 +1248,7 @@
     "sequenceInfo": "12/8/2016 20678 PHX 320"
   },
   {
-    "uuid": "41c9be0c-a728-4f6f-ad84-0e877a34cb8d",
+    "uuid": "4b161447-8a1b-452a-96c2-262f23b6e636",
     "flightNumber": "545",
     "departureStation": "PHX",
     "outDateTime": "2016-12-13T19:50:00",
@@ -1274,7 +1274,7 @@
     "sequenceInfo": "12/13/2016 21364 PHX 320"
   },
   {
-    "uuid": "7b518b19-ae67-4ab0-bba0-3795762b5edb",
+    "uuid": "4d74a7ea-d951-4716-9e0f-6b0092557dab",
     "flightNumber": "2480",
     "departureStation": "DFW",
     "outDateTime": "2016-12-14T13:11:00",
@@ -1300,7 +1300,7 @@
     "sequenceInfo": "12/13/2016 21364 PHX 320"
   },
   {
-    "uuid": "8f1bfa8e-456e-4ec7-81d7-b348a3f576ee",
+    "uuid": "2163d50c-56a5-40e6-b1ca-fc73a0fb5cfb",
     "flightNumber": "1667",
     "departureStation": "LAX",
     "outDateTime": "2016-12-14T16:21:00",
@@ -1326,7 +1326,7 @@
     "sequenceInfo": "12/13/2016 21364 PHX 320"
   },
   {
-    "uuid": "5a9722c2-ec35-4346-908f-80fe85c1f520",
+    "uuid": "3e79264e-13af-407c-88c9-1c4cc19a421c",
     "flightNumber": "627",
     "departureStation": "PIT",
     "outDateTime": "2016-12-15T17:24:00",
@@ -1352,7 +1352,7 @@
     "sequenceInfo": "12/13/2016 21364 PHX 320"
   },
   {
-    "uuid": "a8758599-39ce-4ad2-8068-b626981ba0aa",
+    "uuid": "534a2485-dd1d-4b4c-96c3-752c95282a8d",
     "flightNumber": "669",
     "departureStation": "PHX",
     "outDateTime": "2016-12-17T12:10:00",
@@ -1378,7 +1378,7 @@
     "sequenceInfo": "12/17/2016 21587 PHX 320"
   },
   {
-    "uuid": "e54be3e8-b8de-4e31-9a00-2a8de33ad196",
+    "uuid": "0fd8c6bd-6026-4529-b228-486194be666c",
     "flightNumber": "1695",
     "departureStation": "PHL",
     "outDateTime": "2016-12-17T20:45:00",
@@ -1404,7 +1404,7 @@
     "sequenceInfo": "12/17/2016 21587 PHX 320"
   },
   {
-    "uuid": "800d5f7d-5b75-453b-a481-9abbfc734357",
+    "uuid": "af39fca9-a658-4981-9c58-53b67d4b62aa",
     "flightNumber": "1920",
     "departureStation": "PBI",
     "outDateTime": "2016-12-18T18:21:00",
@@ -1430,7 +1430,7 @@
     "sequenceInfo": "12/17/2016 21587 PHX 320"
   },
   {
-    "uuid": "68d6bb79-cdd3-4edf-ae35-c12b1e4dc029",
+    "uuid": "a130d342-1012-4979-8131-b42f7b94131a",
     "flightNumber": "1920",
     "departureStation": "CLT",
     "outDateTime": "2016-12-18T20:50:00",
@@ -1456,7 +1456,7 @@
     "sequenceInfo": "12/17/2016 21587 PHX 320"
   },
   {
-    "uuid": "8be2b889-dfb4-41de-ac49-ed00eb759f31",
+    "uuid": "b1664fa8-1321-4a79-8eb3-cc072353d106",
     "flightNumber": "603",
     "departureStation": "BWI",
     "outDateTime": "2016-12-19T17:08:00",
@@ -1482,7 +1482,7 @@
     "sequenceInfo": "12/17/2016 21587 PHX 320"
   },
   {
-    "uuid": "f1a47f81-74c2-4db8-861d-f28c97b8f892",
+    "uuid": "e974e039-4ee1-4ceb-b24e-4835ef7b59ad",
     "flightNumber": "532",
     "departureStation": "PHX",
     "outDateTime": "2016-12-21T09:35:00",
@@ -1508,7 +1508,7 @@
     "sequenceInfo": "12/21/2016 20639 PHX 320"
   },
   {
-    "uuid": "6947cb68-82b2-4196-93b6-5c05dfbf85cc",
+    "uuid": "3c7845f1-2fe4-4ea1-9f58-9175a9827ef3",
     "flightNumber": "533",
     "departureStation": "SJD",
     "outDateTime": "2016-12-21T12:36:00",
@@ -1534,7 +1534,7 @@
     "sequenceInfo": "12/21/2016 20639 PHX 320"
   },
   {
-    "uuid": "acf39814-7c59-45e3-8e0f-46fd4007a9ea",
+    "uuid": "ad09d502-e22d-47a5-8875-5ef40704c33c",
     "flightNumber": "548",
     "departureStation": "PHX",
     "outDateTime": "2016-12-21T16:04:00",
@@ -1560,7 +1560,7 @@
     "sequenceInfo": "12/21/2016 20639 PHX 320"
   },
   {
-    "uuid": "cee81933-3f63-496f-af31-1e07f5fe8ea0",
+    "uuid": "6c964abb-f5cb-4e55-aed9-c4fe835b43cd",
     "flightNumber": "640",
     "departureStation": "MKE",
     "outDateTime": "2016-12-22T22:12:00",
@@ -1586,7 +1586,7 @@
     "sequenceInfo": "12/21/2016 20639 PHX 320"
   },
   {
-    "uuid": "d949fadd-a27a-420e-9610-00ec6ba46976",
+    "uuid": "00c0c759-fd76-4d5b-8a79-616764617200",
     "flightNumber": "1794",
     "departureStation": "PHX",
     "outDateTime": "2017-01-07T09:37:00",
@@ -1612,7 +1612,7 @@
     "sequenceInfo": "1/7/2017 5403 PHX 320"
   },
   {
-    "uuid": "d3054a8e-0761-4062-8c5e-f7ef65db4c5a",
+    "uuid": "61913e91-7ae9-4aeb-863a-9d372f7faf54",
     "flightNumber": "1871",
     "departureStation": "CLT",
     "outDateTime": "2017-01-07T18:19:00",
@@ -1638,7 +1638,7 @@
     "sequenceInfo": "1/7/2017 5403 PHX 320"
   },
   {
-    "uuid": "fb171a54-a8ba-4b5e-b314-21e79c694470",
+    "uuid": "3477f8d5-9e5e-4eb3-bc81-3e1514e156fa",
     "flightNumber": "556",
     "departureStation": "TPA",
     "outDateTime": "2017-01-08T19:33:00",
@@ -1664,7 +1664,7 @@
     "sequenceInfo": "1/7/2017 5403 PHX 320"
   },
   {
-    "uuid": "957f2d89-0841-4e77-b1a1-6ee01f3c58c7",
+    "uuid": "0035376c-210e-4e18-b119-b42319c0f5ff",
     "flightNumber": "1856",
     "departureStation": "PHX",
     "outDateTime": "2017-01-11T08:34:00",
@@ -1690,7 +1690,7 @@
     "sequenceInfo": "1/11/2017 5014 PHX 320"
   },
   {
-    "uuid": "7715362a-7123-423c-aec7-9de5f1ebf3ad",
+    "uuid": "8822af91-fd05-48a6-ad9b-6c0a2994467f",
     "flightNumber": "834",
     "departureStation": "PHL",
     "outDateTime": "2017-01-11T17:26:00",
@@ -1716,7 +1716,7 @@
     "sequenceInfo": "1/11/2017 5014 PHX 320"
   },
   {
-    "uuid": "56179d1b-3b66-4eae-a3a9-11edb38a8c3e",
+    "uuid": "5fd372a9-7485-4243-8898-5272942ee658",
     "flightNumber": "1810",
     "departureStation": "TPA",
     "outDateTime": "2017-01-12T17:23:00",
@@ -1742,7 +1742,7 @@
     "sequenceInfo": "1/11/2017 5014 PHX 320"
   },
   {
-    "uuid": "c32679a8-d98e-4f88-a68c-ca1be7a73629",
+    "uuid": "feb0968b-03f4-448d-a87e-03dda4851789",
     "flightNumber": "493",
     "departureStation": "PHX",
     "outDateTime": "2017-01-14T10:55:00",
@@ -1768,7 +1768,7 @@
     "sequenceInfo": "1/14/2017 5647 PHX 320"
   },
   {
-    "uuid": "a18cdc45-36cf-4f97-adfd-92671dea53eb",
+    "uuid": "8159bbda-3829-4121-9ffc-8bb259b76041",
     "flightNumber": "634",
     "departureStation": "OAK",
     "outDateTime": "2017-01-14T12:37:00",
@@ -1794,7 +1794,7 @@
     "sequenceInfo": "1/14/2017 5647 PHX 320"
   },
   {
-    "uuid": "4b5b57dd-3ff2-4ae9-8aad-4328ea983daf",
+    "uuid": "9c69bee0-5c08-4e21-ac75-888b9fa06748",
     "flightNumber": "462",
     "departureStation": "PHX",
     "outDateTime": "2017-01-14T18:05:00",
@@ -1820,7 +1820,7 @@
     "sequenceInfo": "1/14/2017 5647 PHX 320"
   },
   {
-    "uuid": "4407c826-e79d-457f-a657-8762cae95415",
+    "uuid": "3f0a797d-e993-4d3d-ad04-191670d8d598",
     "flightNumber": "1763",
     "departureStation": "SAN",
     "outDateTime": "2017-01-15T11:24:00",
@@ -1846,7 +1846,7 @@
     "sequenceInfo": "1/14/2017 5647 PHX 320"
   },
   {
-    "uuid": "fe7adcc2-8fc5-46ff-bf7b-d4c735c88e87",
+    "uuid": "27a71994-22e6-4c20-8937-be527f2ee0df",
     "flightNumber": "2589",
     "departureStation": "DFW",
     "outDateTime": "2017-01-15T17:43:00",
@@ -1872,7 +1872,7 @@
     "sequenceInfo": "1/14/2017 5647 PHX 320"
   },
   {
-    "uuid": "b3ffdac1-a53b-4881-b37d-0c20d21ec8b8",
+    "uuid": "af9af121-fc86-4fd2-ba6f-8c5a522d6c6f",
     "flightNumber": "2649",
     "departureStation": "AUS",
     "outDateTime": "2017-01-16T11:23:00",
@@ -1898,7 +1898,7 @@
     "sequenceInfo": "1/14/2017 5647 PHX 320"
   },
   {
-    "uuid": "4e5dff6d-e45e-4dca-931e-af868d039d45",
+    "uuid": "2c71fa1b-c0f0-49f9-8c26-a05eea2b102e",
     "flightNumber": "561",
     "departureStation": "LAX",
     "outDateTime": "2017-01-16T13:25:00",
@@ -1924,7 +1924,7 @@
     "sequenceInfo": "1/14/2017 5647 PHX 320"
   },
   {
-    "uuid": "cb942e03-1379-43d0-b90b-615054920ad7",
+    "uuid": "7493572f-ec6b-41c0-a9cb-ee101ca145a2",
     "flightNumber": "403",
     "departureStation": "PHX",
     "outDateTime": "2017-01-19T08:31:00",
@@ -1950,7 +1950,7 @@
     "sequenceInfo": "1/19/2017 5742 PHX 320"
   },
   {
-    "uuid": "dd5d4802-e5f9-4dea-a2d1-5464aaeeb94b",
+    "uuid": "45b040bb-91ec-4f2b-bbde-729f19e56275",
     "flightNumber": "12",
     "departureStation": "SFO",
     "outDateTime": "2017-01-19T11:23:00",
@@ -1976,7 +1976,7 @@
     "sequenceInfo": "1/19/2017 5742 PHX 320"
   },
   {
-    "uuid": "31d9a003-a1ec-4f5e-803b-ea9e36656b7f",
+    "uuid": "b8e80c21-ed0d-4a67-836d-3f95a18e56cf",
     "flightNumber": "255",
     "departureStation": "JFK",
     "outDateTime": "2017-01-20T09:56:00",
@@ -2002,7 +2002,7 @@
     "sequenceInfo": "1/19/2017 5742 PHX 320"
   },
   {
-    "uuid": "85172744-c584-4d62-b577-6267834f12c6",
+    "uuid": "5beb7216-2b27-449d-8d71-e9ff78e4a690",
     "flightNumber": "362",
     "departureStation": "LAX",
     "outDateTime": "2017-01-21T08:02:00",
@@ -2028,7 +2028,7 @@
     "sequenceInfo": "1/19/2017 5742 PHX 320"
   },
   {
-    "uuid": "92c637a8-d2e6-45fc-a9a6-2dc0c4d35dc4",
+    "uuid": "9fca8e19-7d1a-4722-8859-2658a427bb30",
     "flightNumber": "853",
     "departureStation": "ORD",
     "outDateTime": "2017-01-21T15:18:00",
@@ -2054,7 +2054,7 @@
     "sequenceInfo": "1/19/2017 5742 PHX 320"
   },
   {
-    "uuid": "f01b0e9f-e22d-451e-9b11-d11ea729ced6",
+    "uuid": "30e632ca-cef0-48f4-ae30-34c946d98af4",
     "flightNumber": "429",
     "departureStation": "PHX",
     "outDateTime": "2017-01-22T16:39:00",
@@ -2080,7 +2080,7 @@
     "sequenceInfo": "1/22/2017 5801 PHX 320"
   },
   {
-    "uuid": "597b1df6-50b1-4566-bac6-398b8218a645",
+    "uuid": "549a3205-607d-44e8-9d4b-3e2c593b6fe2",
     "flightNumber": "1358",
     "departureStation": "ORD",
     "outDateTime": "2017-01-23T15:04:00",
@@ -2106,7 +2106,7 @@
     "sequenceInfo": "1/22/2017 5801 PHX 320"
   },
   {
-    "uuid": "1ada5e73-d914-4ef3-831c-e1e104f1289f",
+    "uuid": "cefd4bcd-4700-4fa5-a721-fd3253c5d7f9",
     "flightNumber": "501",
     "departureStation": "LAX",
     "outDateTime": "2017-01-23T19:06:00",
@@ -2132,7 +2132,7 @@
     "sequenceInfo": "1/22/2017 5801 PHX 320"
   },
   {
-    "uuid": "a8b4e9aa-c21f-4e09-875f-aa6e5f1228fe",
+    "uuid": "c1c37ed6-2ce1-4eb6-a3f8-894d9b3a2dfe",
     "flightNumber": "526",
     "departureStation": "OMA",
     "outDateTime": "2017-01-24T15:26:00",
@@ -2158,7 +2158,7 @@
     "sequenceInfo": "1/22/2017 5801 PHX 320"
   },
   {
-    "uuid": "9f5df337-5b6a-47ad-97ea-8ad966e48587",
+    "uuid": "7cf1c7e8-86eb-4bfb-86c5-8ec602192e66",
     "flightNumber": "549",
     "departureStation": "PHX",
     "outDateTime": "2017-01-28T07:37:00",
@@ -2184,7 +2184,7 @@
     "sequenceInfo": "1/28/2017 5909 PHX 320"
   },
   {
-    "uuid": "e613e8a6-f9b8-4048-9d6e-91e08a2b5b54",
+    "uuid": "883438ea-8e26-4670-b8f7-16945f4358fe",
     "flightNumber": "349",
     "departureStation": "DFW",
     "outDateTime": "2017-01-28T12:54:00",
@@ -2210,7 +2210,7 @@
     "sequenceInfo": "1/28/2017 5909 PHX 320"
   },
   {
-    "uuid": "71d154bf-4dd2-4693-aa40-d2ae3bbe2fff",
+    "uuid": "80a5e96c-33d3-4335-a399-0d58cd3f4850",
     "flightNumber": "1145",
     "departureStation": "SFO",
     "outDateTime": "2017-01-29T11:11:00",
@@ -2236,7 +2236,7 @@
     "sequenceInfo": "1/28/2017 5909 PHX 320"
   },
   {
-    "uuid": "6891fa8a-68a3-4d3e-b23e-8aa4e4a45654",
+    "uuid": "e06a4268-39c0-40ac-9b84-3688af108363",
     "flightNumber": "1644",
     "departureStation": "ORD",
     "outDateTime": "2017-01-29T18:54:00",
@@ -2262,7 +2262,7 @@
     "sequenceInfo": "1/28/2017 5909 PHX 320"
   },
   {
-    "uuid": "313c57aa-1ac3-4d43-b1ea-8d5a55b9801b",
+    "uuid": "d39a6005-510e-40bb-bb00-d207809e5c0b",
     "flightNumber": "473",
     "departureStation": "PHX",
     "outDateTime": "2017-02-04T09:43:00",
@@ -2288,7 +2288,7 @@
     "sequenceInfo": "2/4/2017 21082 PHX 320"
   },
   {
-    "uuid": "fdca281d-099b-493f-993d-b108e1e886f6",
+    "uuid": "fb608988-1094-4b10-8fa9-dcfc42af4912",
     "flightNumber": "744",
     "departureStation": "IAH",
     "outDateTime": "2017-02-04T15:43:00",
@@ -2314,7 +2314,7 @@
     "sequenceInfo": "2/4/2017 21082 PHX 320"
   },
   {
-    "uuid": "09b7e4ff-b87d-4628-86d7-ab977c2ab3f8",
+    "uuid": "16e83660-1c53-47c0-999e-183fd6788fc0",
     "flightNumber": "1679",
     "departureStation": "CLT",
     "outDateTime": "2017-02-04T19:57:00",
@@ -2340,7 +2340,7 @@
     "sequenceInfo": "2/4/2017 21082 PHX 320"
   },
   {
-    "uuid": "0bddb2a7-758d-4cca-a046-1ab0893fdd34",
+    "uuid": "2c49e0e7-07ae-4ca8-ab78-797f47d86887",
     "flightNumber": "1736",
     "departureStation": "MDT",
     "outDateTime": "2017-02-06T08:53:00",
@@ -2366,7 +2366,7 @@
     "sequenceInfo": "2/4/2017 21082 PHX 320"
   },
   {
-    "uuid": "60421a74-9d76-4bd5-8352-e031c8ecd40f",
+    "uuid": "43125734-8362-42eb-920c-6ed9f1b976d6",
     "flightNumber": "628",
     "departureStation": "CLT",
     "outDateTime": "2017-02-06T12:58:00",
@@ -2392,7 +2392,7 @@
     "sequenceInfo": "2/4/2017 21082 PHX 320"
   },
   {
-    "uuid": "77318369-95dd-4b85-85c5-41a863189efc",
+    "uuid": "3120b46a-30cc-4ff6-af9e-b71bf3856480",
     "flightNumber": "1856",
     "departureStation": "PHX",
     "outDateTime": "2017-02-10T08:23:00",
@@ -2418,7 +2418,7 @@
     "sequenceInfo": "2/10/2017 21516 PHX 320"
   },
   {
-    "uuid": "cdb26828-0a83-4d00-b9a8-3e85d3a62b1b",
+    "uuid": "4d2ed074-191e-4024-a801-9cf04b3226b7",
     "flightNumber": "2047",
     "departureStation": "PHL",
     "outDateTime": "2017-02-10T17:55:00",
@@ -2444,7 +2444,7 @@
     "sequenceInfo": "2/10/2017 21516 PHX 320"
   },
   {
-    "uuid": "d2650d19-91b3-4ee1-b9a0-6f3cb380c129",
+    "uuid": "90e6d8ab-029e-458c-8d16-a357f68755c9",
     "flightNumber": "1828",
     "departureStation": "MIA",
     "outDateTime": "2017-02-11T21:45:00",
@@ -2470,7 +2470,7 @@
     "sequenceInfo": "2/10/2017 21516 PHX 320"
   },
   {
-    "uuid": "38028655-6bf2-48ab-8bef-995074776c4c",
+    "uuid": "694da7d9-a1ae-4d51-982b-c8d8264a5210",
     "flightNumber": "1908",
     "departureStation": "CLT",
     "outDateTime": "2017-02-12T17:50:00",
@@ -2496,7 +2496,7 @@
     "sequenceInfo": "2/10/2017 21516 PHX 320"
   },
   {
-    "uuid": "bf758b55-2be7-454f-b8f4-63bb8524fa8e",
+    "uuid": "0e31c177-becd-4936-a8e7-25ab8223c8dd",
     "flightNumber": "1908",
     "departureStation": "ORD",
     "outDateTime": "2017-02-12T20:18:00",
@@ -2522,7 +2522,7 @@
     "sequenceInfo": "2/10/2017 21516 PHX 320"
   },
   {
-    "uuid": "565049bb-0d79-4043-b442-a8ed393d69e0",
+    "uuid": "8785a91c-bc2e-4fa2-924e-00aadadb593b",
     "flightNumber": "560",
     "departureStation": "PHX",
     "outDateTime": "2017-02-19T11:40:00",
@@ -2548,7 +2548,7 @@
     "sequenceInfo": "2/19/2017 21750 PHX 320"
   },
   {
-    "uuid": "20847c0b-4905-404f-89e7-e2d1c8253d39",
+    "uuid": "ebc6f58b-f332-40f0-a961-348e8c768655",
     "flightNumber": "1220",
     "departureStation": "DFW",
     "outDateTime": "2017-02-19T19:19:00",
@@ -2574,7 +2574,7 @@
     "sequenceInfo": "2/19/2017 21750 PHX 320"
   },
   {
-    "uuid": "e7a530b9-57cf-4571-bcae-b346a86b7b19",
+    "uuid": "2777a40f-435b-43c8-98bc-702d30ddb10b",
     "flightNumber": "1402",
     "departureStation": "SEA",
     "outDateTime": "2017-02-20T12:22:00",
@@ -2600,7 +2600,7 @@
     "sequenceInfo": "2/19/2017 21750 PHX 320"
   },
   {
-    "uuid": "7b9cf4c7-0777-4677-8dc4-42d1f530bdae",
+    "uuid": "4107eed3-1cae-49b5-b5bd-ec60137e1894",
     "flightNumber": "1125",
     "departureStation": "DFW",
     "outDateTime": "2017-02-20T20:43:00",
@@ -2626,7 +2626,7 @@
     "sequenceInfo": "2/19/2017 21750 PHX 320"
   },
   {
-    "uuid": "ae90fda8-3e4b-4c9b-87e5-267b4970dae7",
+    "uuid": "1378401d-6657-42f8-b34b-932869cd3093",
     "flightNumber": "516",
     "departureStation": "MCO",
     "outDateTime": "2017-02-21T17:18:00",
@@ -2652,7 +2652,7 @@
     "sequenceInfo": "2/19/2017 21750 PHX 320"
   },
   {
-    "uuid": "d09b1066-d4fb-4d73-8feb-c565e4883084",
+    "uuid": "b29e6ff5-fd3c-4c77-847d-e95b0a9684a0",
     "flightNumber": "424",
     "departureStation": "PHX",
     "outDateTime": "2017-02-24T16:27:00",
@@ -2678,7 +2678,7 @@
     "sequenceInfo": "2/24/2017 21054 PHX 320"
   },
   {
-    "uuid": "dca7ea2b-625e-4b93-9515-822dcfa23d59",
+    "uuid": "0d6b030e-a2d8-496c-81a0-f201d3ef7eba",
     "flightNumber": "413",
     "departureStation": "DTW",
     "outDateTime": "2017-02-25T11:03:00",
@@ -2704,7 +2704,7 @@
     "sequenceInfo": "2/24/2017 21054 PHX 320"
   },
   {
-    "uuid": "f559c601-5a49-4d9b-85d5-54a2fbee86bd",
+    "uuid": "c788e5b8-bcad-4b90-8a57-df1628ae37fd",
     "flightNumber": "574",
     "departureStation": "PHX",
     "outDateTime": "2017-02-25T16:02:00",
@@ -2730,7 +2730,7 @@
     "sequenceInfo": "2/24/2017 21054 PHX 320"
   },
   {
-    "uuid": "b2b25777-07bb-4d50-89b4-739fc335bd6b",
+    "uuid": "afd2bb7c-19cb-4727-b66d-3e40dd125880",
     "flightNumber": "1805",
     "departureStation": "TPA",
     "outDateTime": "2017-02-26T17:21:00",
@@ -2756,7 +2756,7 @@
     "sequenceInfo": "2/24/2017 21054 PHX 320"
   },
   {
-    "uuid": "713a26eb-4a75-4b72-b621-4c613599f2c0",
+    "uuid": "44c41df0-6076-4b0d-8450-163542b34f32",
     "flightNumber": "521",
     "departureStation": "PHX",
     "outDateTime": "2017-03-05T18:11:00",
@@ -2782,7 +2782,7 @@
     "sequenceInfo": "3/5/2017 6122 PHX 320"
   },
   {
-    "uuid": "33192671-ba95-4349-9f3b-e839c07f199d",
+    "uuid": "7cb80061-75af-4104-92d9-35df57a3b0c8",
     "flightNumber": "1623",
     "departureStation": "SEA",
     "outDateTime": "2017-03-06T09:48:00",
@@ -2808,7 +2808,7 @@
     "sequenceInfo": "3/5/2017 6122 PHX 320"
   },
   {
-    "uuid": "4c95282a-6773-45a6-b7b5-bc68b1140f1b",
+    "uuid": "da84314c-e764-45a4-b763-2b4dd61000fa",
     "flightNumber": "420",
     "departureStation": "DFW",
     "outDateTime": "2017-03-06T17:34:00",
@@ -2834,7 +2834,7 @@
     "sequenceInfo": "3/5/2017 6122 PHX 320"
   },
   {
-    "uuid": "8911e8e1-911a-4f19-830e-116e2e3267a2",
+    "uuid": "20db15ed-a4a9-4038-99e0-cae35fc51ec9",
     "flightNumber": "1826",
     "departureStation": "PHL",
     "outDateTime": "2017-03-07T10:35:00",
@@ -2860,7 +2860,7 @@
     "sequenceInfo": "3/5/2017 6122 PHX 320"
   },
   {
-    "uuid": "e5e90d71-16ac-4e4e-95cd-1724ad4f7274",
+    "uuid": "82731b32-15d4-4913-9462-2e89e25537c0",
     "flightNumber": "1774",
     "departureStation": "PHX",
     "outDateTime": "2017-03-11T22:43:00",
@@ -2886,7 +2886,7 @@
     "sequenceInfo": "3/11/2017 6356 PHX 320"
   },
   {
-    "uuid": "2708b839-8fd6-4d2a-a762-75aa14730602",
+    "uuid": "d5bbc2f5-79f2-404e-8e0e-7930cbce81cd",
     "flightNumber": "1987",
     "departureStation": "EWR",
     "outDateTime": "2017-03-12T20:03:00",
@@ -2912,7 +2912,7 @@
     "sequenceInfo": "3/11/2017 6356 PHX 320"
   },
   {
-    "uuid": "43cbdb88-711c-4e44-b93e-3f337e1b550d",
+    "uuid": "6a074b63-45af-491d-bbc7-eb268872a648",
     "flightNumber": "623",
     "departureStation": "CLT",
     "outDateTime": "2017-03-12T22:40:00",
@@ -2938,7 +2938,7 @@
     "sequenceInfo": "3/11/2017 6356 PHX 320"
   },
   {
-    "uuid": "16238b3e-d101-41ee-ba28-a46040078d68",
+    "uuid": "fdca3d2a-f244-4d1b-90ff-60992127c4cf",
     "flightNumber": "853",
     "departureStation": "ORD",
     "outDateTime": "2017-03-13T15:44:00",
@@ -2964,7 +2964,7 @@
     "sequenceInfo": "3/11/2017 6356 PHX 320"
   },
   {
-    "uuid": "00a95694-b89e-4944-b2ef-15155970b6e8",
+    "uuid": "b4549592-321d-414a-b82d-609412e7b93e",
     "flightNumber": "490",
     "departureStation": "PHX",
     "outDateTime": "2017-03-13T18:45:00",
@@ -2990,7 +2990,7 @@
     "sequenceInfo": "3/11/2017 6356 PHX 320"
   },
   {
-    "uuid": "e69e33ef-8ea1-49f4-9537-c50611b5b055",
+    "uuid": "bbdd1fbb-993c-4d2c-a956-87969c8f6b28",
     "flightNumber": "526",
     "departureStation": "OMA",
     "outDateTime": "2017-03-14T14:50:00",
@@ -3016,7 +3016,7 @@
     "sequenceInfo": "3/11/2017 6356 PHX 320"
   },
   {
-    "uuid": "07dfa5c2-fd54-4459-870a-3a336fdec4d9",
+    "uuid": "a511a167-a3c1-4a02-a54f-a6c917e0a741",
     "flightNumber": "644",
     "departureStation": "PHX",
     "outDateTime": "2017-03-14T17:12:00",
@@ -3042,7 +3042,7 @@
     "sequenceInfo": "3/11/2017 6356 PHX 320"
   },
   {
-    "uuid": "44028b2c-8523-437b-9c23-11e374b45edc",
+    "uuid": "8c70ea69-a2ea-49bb-9ff9-9a3214fdc3ca",
     "flightNumber": "459",
     "departureStation": "ONT",
     "outDateTime": "2017-03-14T19:26:00",
@@ -3068,7 +3068,7 @@
     "sequenceInfo": "3/11/2017 6356 PHX 320"
   },
   {
-    "uuid": "55415d76-543f-4e3b-9f32-9f03666863f5",
+    "uuid": "ede90012-d70c-41c7-9888-82a531c7fc7a",
     "flightNumber": "1650",
     "departureStation": "PHX",
     "outDateTime": "2017-03-17T08:53:00",
@@ -3094,7 +3094,7 @@
     "sequenceInfo": "3/17/2017 5831 PHX 320"
   },
   {
-    "uuid": "634ddb94-326a-4238-9dc6-6d824fad4d15",
+    "uuid": "964ef16a-42d4-4bfa-b072-62e646bf9b20",
     "flightNumber": "1650",
     "departureStation": "PHX",
     "outDateTime": "2017-03-17T09:15:00",
@@ -3120,7 +3120,7 @@
     "sequenceInfo": "3/17/2017 5831 PHX 320"
   },
   {
-    "uuid": "2cb76011-c903-4005-ace6-b8612c11a893",
+    "uuid": "5cd3801b-243e-4dd3-8c3c-f70c85c398ba",
     "flightNumber": "1711",
     "departureStation": "ATL",
     "outDateTime": "2017-03-17T19:06:00",
@@ -3146,7 +3146,7 @@
     "sequenceInfo": "3/17/2017 5831 PHX 320"
   },
   {
-    "uuid": "62c6d0f2-6808-4c26-b577-da2e53c1f91f",
+    "uuid": "83b80c48-2765-4fe5-81bb-dd30dca9925f",
     "flightNumber": "1866",
     "departureStation": "CLT",
     "outDateTime": "2017-03-17T21:06:00",
@@ -3172,7 +3172,7 @@
     "sequenceInfo": "3/17/2017 5831 PHX 320"
   },
   {
-    "uuid": "07957904-5cc9-421e-93cc-4713da7e1174",
+    "uuid": "94913ee0-fd5c-46fc-a5fd-e280194366e2",
     "flightNumber": "2006",
     "departureStation": "MSY",
     "outDateTime": "2017-03-18T16:49:00",
@@ -3198,7 +3198,7 @@
     "sequenceInfo": "3/17/2017 5831 PHX 320"
   },
   {
-    "uuid": "fa9250e4-489d-433d-8c43-1a1576b77ba0",
+    "uuid": "d75a9383-4b45-4adc-9fd1-137adb4c8602",
     "flightNumber": "635",
     "departureStation": "CLT",
     "outDateTime": "2017-03-18T21:02:00",
@@ -3224,7 +3224,7 @@
     "sequenceInfo": "3/17/2017 5831 PHX 320"
   },
   {
-    "uuid": "6ecdda1c-6d96-4eba-a4f1-fb652c7d2586",
+    "uuid": "960ae905-c789-401a-8d25-e8929322e7a2",
     "flightNumber": "500",
     "departureStation": "PHX",
     "outDateTime": "2017-03-19T15:46:00",
@@ -3250,7 +3250,7 @@
     "sequenceInfo": "3/19/2017 5881 PHX 320"
   },
   {
-    "uuid": "ad49c3ca-c37b-4198-a8e3-bf3fad87a7cc",
+    "uuid": "cc9b9d32-0e97-4509-8447-10541c3632d7",
     "flightNumber": "460",
     "departureStation": "IND",
     "outDateTime": "2017-03-20T15:49:00",
@@ -3276,7 +3276,7 @@
     "sequenceInfo": "3/19/2017 5881 PHX 320"
   },
   {
-    "uuid": "65816558-ad72-458f-b195-be0d2ac69b92",
+    "uuid": "9e628914-9229-4c2e-944a-633990febafa",
     "flightNumber": "501",
     "departureStation": "LAX",
     "outDateTime": "2017-03-20T18:34:00",
@@ -3302,7 +3302,7 @@
     "sequenceInfo": "3/19/2017 5881 PHX 320"
   },
   {
-    "uuid": "3cdc9845-42dd-476a-beae-24fcb2d1e612",
+    "uuid": "dfe531cb-7d1c-4075-907a-bdbdf245c235",
     "flightNumber": "1286",
     "departureStation": "OMA",
     "outDateTime": "2017-03-21T14:49:00",
@@ -3328,7 +3328,7 @@
     "sequenceInfo": "3/19/2017 5881 PHX 320"
   },
   {
-    "uuid": "60a59465-33c6-4d58-93d0-6c6cc5be294f",
+    "uuid": "85b65626-6755-466d-a8ee-dc645755c718",
     "flightNumber": "550",
     "departureStation": "DFW",
     "outDateTime": "2017-03-21T20:21:00",
@@ -3354,7 +3354,7 @@
     "sequenceInfo": "3/19/2017 5881 PHX 320"
   },
   {
-    "uuid": "1f2474e4-5399-4790-8fce-ec8bdc8b1180",
+    "uuid": "8d0fa62d-dc80-4e48-95b0-19a786ea6d66",
     "flightNumber": "710",
     "departureStation": "PHX",
     "outDateTime": "2017-03-30T10:57:00",
@@ -3380,7 +3380,7 @@
     "sequenceInfo": "3/30/2017 6693 PHX 320"
   },
   {
-    "uuid": "58d6c4ea-5a9d-43e6-8396-c07f66081f48",
+    "uuid": "64772382-ccbe-46ec-8f07-b7074a61c68a",
     "flightNumber": "55",
     "departureStation": "ORD",
     "outDateTime": "2017-03-30T18:46:00",
@@ -3406,7 +3406,7 @@
     "sequenceInfo": "3/30/2017 6693 PHX 320"
   },
   {
-    "uuid": "a11ce03b-5d9c-47e6-9ed0-0a56bffc3b27",
+    "uuid": "8ba8009d-9f34-46e2-bad7-587761aeb167",
     "flightNumber": "1812",
     "departureStation": "MCO",
     "outDateTime": "2017-03-31T19:14:00",
@@ -3432,7 +3432,7 @@
     "sequenceInfo": "3/30/2017 6693 PHX 320"
   },
   {
-    "uuid": "8cd74ba0-890e-43bd-bb37-007d1553a271",
+    "uuid": "215c5a65-1daa-4caa-be1d-5d090ad207ef",
     "flightNumber": "890",
     "departureStation": "CLT",
     "outDateTime": "2017-03-31T22:09:00",
@@ -3458,7 +3458,7 @@
     "sequenceInfo": "3/30/2017 6693 PHX 320"
   },
   {
-    "uuid": "3f16482c-f566-41d9-b807-412ba50359c2",
+    "uuid": "bac1fc14-9e12-4517-9e91-abef2dd764b8",
     "flightNumber": "686",
     "departureStation": "DFW",
     "outDateTime": "2017-04-01T15:25:00",
@@ -3484,7 +3484,7 @@
     "sequenceInfo": "3/30/2017 6693 PHX 320"
   },
   {
-    "uuid": "07d9e410-08e8-4ce9-8f06-8ab361bd41ab",
+    "uuid": "322b69d1-f5ac-41e7-90d1-fc9123e85e26",
     "flightNumber": "1744",
     "departureStation": "PHX",
     "outDateTime": "2017-04-02T18:53:00",
@@ -3510,7 +3510,7 @@
     "sequenceInfo": "4/2/2017 21103 PHX 320"
   },
   {
-    "uuid": "bd3a0dee-2242-4fa4-a362-c341e1a4f1a2",
+    "uuid": "36e66209-7ae5-4081-9701-4b50be0a0445",
     "flightNumber": "604",
     "departureStation": "MSP",
     "outDateTime": "2017-04-03T16:26:00",
@@ -3536,7 +3536,7 @@
     "sequenceInfo": "4/2/2017 21103 PHX 320"
   },
   {
-    "uuid": "6ab3376c-428b-44e2-a71e-e1d83677ff8f",
+    "uuid": "cf48920b-4ead-46f2-b764-ce0c362d15d4",
     "flightNumber": "110",
     "departureStation": "LAX",
     "outDateTime": "2017-04-04T10:02:00",
@@ -3562,7 +3562,7 @@
     "sequenceInfo": "4/2/2017 21103 PHX 320"
   },
   {
-    "uuid": "f9e586a4-20dd-45e5-9b5d-57d6e5659820",
+    "uuid": "6e8f01b7-db81-4d55-8a56-4e90d3077c61",
     "flightNumber": "547",
     "departureStation": "ORD",
     "outDateTime": "2017-04-04T17:19:00",
@@ -3588,7 +3588,7 @@
     "sequenceInfo": "4/2/2017 21103 PHX 320"
   },
   {
-    "uuid": "72d690de-428e-4a92-ba77-8343d3e6edc5",
+    "uuid": "596285cc-a40e-470a-9ad7-096b8e81c040",
     "flightNumber": "458",
     "departureStation": "LAX",
     "outDateTime": "2017-05-08T16:13:00",
@@ -3614,7 +3614,7 @@
     "sequenceInfo": "5/8/2017 31085 LAX 320"
   },
   {
-    "uuid": "768d1ce5-d1ee-4654-a481-46dae9b12222",
+    "uuid": "8d119024-bc6b-4746-8430-de3aa2c788b4",
     "flightNumber": "491",
     "departureStation": "PHX",
     "outDateTime": "2017-05-09T07:18:00",
@@ -3640,7 +3640,7 @@
     "sequenceInfo": "5/8/2017 31085 LAX 320"
   },
   {
-    "uuid": "c19d816a-0aaa-4ae0-9af1-60d1f59e83de",
+    "uuid": "1135a03e-0e2a-44e8-b3b5-2693bc6a5955",
     "flightNumber": "82",
     "departureStation": "LAX",
     "outDateTime": "2017-05-09T10:38:00",
@@ -3666,7 +3666,7 @@
     "sequenceInfo": "5/8/2017 31085 LAX 320"
   },
   {
-    "uuid": "45e56938-104d-4ee6-be2b-1cb1e0bc2484",
+    "uuid": "aae1f461-2ae6-4a1c-b23c-35ee9947489d",
     "flightNumber": "179",
     "departureStation": "JFK",
     "outDateTime": "2017-05-10T10:54:00",
@@ -3692,7 +3692,7 @@
     "sequenceInfo": "5/8/2017 31085 LAX 320"
   },
   {
-    "uuid": "375a54c2-cb5f-4fad-add4-5d821361d3f2",
+    "uuid": "0a348a20-014c-411b-83ea-1e9e7f3822b6",
     "flightNumber": "486",
     "departureStation": "SFO",
     "outDateTime": "2017-05-10T15:39:00",
@@ -3718,7 +3718,7 @@
     "sequenceInfo": "5/8/2017 31085 LAX 320"
   },
   {
-    "uuid": "7b93b68f-14ff-4b12-9891-7433ca632ebb",
+    "uuid": "f7e36be1-116b-4e5b-9b72-1114be069016",
     "flightNumber": "491",
     "departureStation": "PHX",
     "outDateTime": "2017-05-11T07:16:00",
@@ -3744,7 +3744,7 @@
     "sequenceInfo": "5/8/2017 31085 LAX 320"
   },
   {
-    "uuid": "853cf1ff-e52a-421f-b674-e40f94043481",
+    "uuid": "02c133cb-05f5-4511-847d-98dd6d8bf60f",
     "flightNumber": "1133",
     "departureStation": "LAX",
     "outDateTime": "2017-05-14T12:24:00",
@@ -3770,7 +3770,7 @@
     "sequenceInfo": "5/14/2017 4489 LAX 320"
   },
   {
-    "uuid": "d0871233-a348-40e9-91ce-50ef2c9e2858",
+    "uuid": "1b54b44f-ded5-442e-b807-e8e27ab8115a",
     "flightNumber": "1133",
     "departureStation": "LAS",
     "outDateTime": "2017-05-14T14:40:00",
@@ -3796,7 +3796,7 @@
     "sequenceInfo": "5/14/2017 4489 LAX 320"
   },
   {
-    "uuid": "b0be4002-4af6-4040-b6d8-5cd02030e7de",
+    "uuid": "3793e211-4e4f-49ab-b8e1-92cb1856ecbf",
     "flightNumber": "1633",
     "departureStation": "LAX",
     "outDateTime": "2017-05-14T18:22:00",
@@ -3822,7 +3822,7 @@
     "sequenceInfo": "5/14/2017 4489 LAX 320"
   },
   {
-    "uuid": "e771250c-acf8-4380-bfa4-2b58b3128fae",
+    "uuid": "1d1cfa83-6114-47b7-983a-7785dcdf0f60",
     "flightNumber": "1667",
     "departureStation": "DEN",
     "outDateTime": "2017-05-15T13:51:00",
@@ -3848,7 +3848,7 @@
     "sequenceInfo": "5/14/2017 4489 LAX 320"
   },
   {
-    "uuid": "e5d2a9b3-b9bb-419c-ba56-e57f24d3c802",
+    "uuid": "674982c5-08bf-44fd-b9fb-770d073bfaef",
     "flightNumber": "1058",
     "departureStation": "LAX",
     "outDateTime": "2017-05-15T16:46:00",
@@ -3874,7 +3874,7 @@
     "sequenceInfo": "5/14/2017 4489 LAX 320"
   },
   {
-    "uuid": "a582acdb-da54-415a-b567-aa5c35ca9f51",
+    "uuid": "fcb1e4be-f351-47bb-9b2d-15a18b684206",
     "flightNumber": "73",
     "departureStation": "LAS",
     "outDateTime": "2017-05-15T18:56:00",
@@ -3900,7 +3900,7 @@
     "sequenceInfo": "5/14/2017 4489 LAX 320"
   },
   {
-    "uuid": "17fe93b9-ffc3-4262-8e41-4a3fe4844983",
+    "uuid": "17e882a7-a921-4108-9ba8-16a05b7222f9",
     "flightNumber": "265",
     "departureStation": "LAX",
     "outDateTime": "2017-05-18T09:42:00",
@@ -3926,7 +3926,7 @@
     "sequenceInfo": "5/18/2017 4361 LAX 320"
   },
   {
-    "uuid": "e51c73b6-6d6e-453e-8eca-7c9937cb0292",
+    "uuid": "a57a25c4-c800-480d-99b2-1872fe57ae26",
     "flightNumber": "266",
     "departureStation": "LIH",
     "outDateTime": "2017-05-19T14:23:00",
@@ -3952,7 +3952,7 @@
     "sequenceInfo": "5/18/2017 4361 LAX 320"
   },
   {
-    "uuid": "a3e2ff63-901d-4aa3-a78e-2949a30f2a4b",
+    "uuid": "738673a8-e1c3-4181-9003-a03b1d84606a",
     "flightNumber": "1641",
     "departureStation": "LAX",
     "outDateTime": "2017-05-26T12:40:00",
@@ -3978,7 +3978,7 @@
     "sequenceInfo": "5/26/2017 31124 LAX 320"
   },
   {
-    "uuid": "204b460c-c70c-462d-bb59-13c5455dd34c",
+    "uuid": "9d01435b-bb06-4136-94c7-0d5fa8c25284",
     "flightNumber": "1693",
     "departureStation": "DFW",
     "outDateTime": "2017-05-26T20:14:00",
@@ -4004,7 +4004,7 @@
     "sequenceInfo": "5/26/2017 31124 LAX 320"
   },
   {
-    "uuid": "3ca03957-dd9f-4627-b970-fa95066d93ab",
+    "uuid": "16e8c862-e90f-4712-bbf9-920fd5e0a7e7",
     "flightNumber": "1617",
     "departureStation": "LAS",
     "outDateTime": "2017-05-27T10:43:00",
@@ -4030,7 +4030,7 @@
     "sequenceInfo": "5/26/2017 31124 LAX 320"
   },
   {
-    "uuid": "880f4bd4-0925-4a57-9580-8fcf263644b6",
+    "uuid": "249a0a99-b52c-49a3-a4c8-c2e98b508bf2",
     "flightNumber": "2055",
     "departureStation": "LAX",
     "outDateTime": "2017-06-03T06:08:00",
@@ -4056,7 +4056,7 @@
     "sequenceInfo": "6/3/2017 31094 LAX 320"
   },
   {
-    "uuid": "9e674fb7-ec20-481e-9f96-fa5f6ca9af80",
+    "uuid": "f07267a8-7275-4eb7-bbd1-39f27d1b61e9",
     "flightNumber": "1993",
     "departureStation": "CLT",
     "outDateTime": "2017-06-04T07:46:00",
@@ -4082,7 +4082,7 @@
     "sequenceInfo": "6/3/2017 31094 LAX 320"
   },
   {
-    "uuid": "e6884a20-0534-4fab-8ae1-62a58f8f6331",
+    "uuid": "e2461642-4378-4a77-975a-8df335c0e432",
     "flightNumber": "520",
     "departureStation": "LAX",
     "outDateTime": "2017-06-10T00:05:00",
@@ -4108,7 +4108,7 @@
     "sequenceInfo": "6/9/2017 19374 LAX 320"
   },
   {
-    "uuid": "16f9e72f-32c2-4639-88fe-2e67d53c42c2",
+    "uuid": "518d88e0-7194-4239-9508-c3595e78ea57",
     "flightNumber": "423",
     "departureStation": "PHL",
     "outDateTime": "2017-06-10T20:48:00",
@@ -4134,7 +4134,7 @@
     "sequenceInfo": "6/9/2017 19374 LAX 320"
   },
   {
-    "uuid": "aa38d8e0-6a03-47ad-bef9-6fad4ccb2d3e",
+    "uuid": "08f97004-9895-435f-8465-619a4c5d03fa",
     "flightNumber": "520",
     "departureStation": "LAX",
     "outDateTime": "2017-06-17T00:23:00",
@@ -4160,7 +4160,7 @@
     "sequenceInfo": "6/16/2017 19374 LAX 320"
   },
   {
-    "uuid": "b207fa4c-5698-4516-ad88-7e96795311a1",
+    "uuid": "56555f74-0e18-4351-93e6-fa653542e27a",
     "flightNumber": "423",
     "departureStation": "PHL",
     "outDateTime": "2017-06-17T22:30:00",
@@ -4186,7 +4186,7 @@
     "sequenceInfo": "6/16/2017 19374 LAX 320"
   },
   {
-    "uuid": "16b1c813-756c-4f4d-81ea-30a7a4cadc37",
+    "uuid": "1548975a-140d-4ee4-ac0f-a5afab798f51",
     "flightNumber": "70",
     "departureStation": "LAX",
     "outDateTime": "2017-07-01T08:16:00",
@@ -4212,7 +4212,7 @@
     "sequenceInfo": "7/1/2017 19396 LAX 320"
   },
   {
-    "uuid": "492dc35a-88c1-48f1-92de-13e7d4383e78",
+    "uuid": "9fd9fbd3-082d-46fe-b473-8279e8c3cc35",
     "flightNumber": "1271",
     "departureStation": "DFW",
     "outDateTime": "2017-07-01T14:35:00",
@@ -4238,7 +4238,7 @@
     "sequenceInfo": "7/1/2017 19396 LAX 320"
   },
   {
-    "uuid": "65670c92-b0a6-42f7-aaf1-a8cfc2b5067e",
+    "uuid": "106a01f6-af53-497a-8d19-5382aae4c89e",
     "flightNumber": "1271",
     "departureStation": "OKC",
     "outDateTime": "2017-07-01T16:21:00",
@@ -4264,7 +4264,7 @@
     "sequenceInfo": "7/1/2017 19396 LAX 320"
   },
   {
-    "uuid": "74a6a135-5a25-40c1-abc6-ce1048bb3813",
+    "uuid": "f07b9b69-c909-4af1-a495-974569bc88ba",
     "flightNumber": "2429",
     "departureStation": "DFW",
     "outDateTime": "2017-07-01T20:19:00",
@@ -4290,7 +4290,7 @@
     "sequenceInfo": "7/1/2017 19396 LAX 320"
   },
   {
-    "uuid": "1e787577-b6f4-4d1d-a77f-074702d2a480",
+    "uuid": "83f28f9b-eef1-4a31-addd-a773c4183fde",
     "flightNumber": "357",
     "departureStation": "SAT",
     "outDateTime": "2017-07-02T16:29:00",
@@ -4316,7 +4316,7 @@
     "sequenceInfo": "7/1/2017 19396 LAX 320"
   },
   {
-    "uuid": "b6215eaa-d67f-4e74-a7f5-eecc1361a39b",
+    "uuid": "731148e4-1a5b-4110-b2ca-552fce6d40d6",
     "flightNumber": "2489",
     "departureStation": "DFW",
     "outDateTime": "2017-07-02T19:32:00",
@@ -4342,7 +4342,7 @@
     "sequenceInfo": "7/1/2017 19396 LAX 320"
   },
   {
-    "uuid": "6f3457cd-595b-4f50-8f21-9649ee4f5e9a",
+    "uuid": "49d2a39f-3491-4667-98b9-751e1aceb7b9",
     "flightNumber": "172",
     "departureStation": "LAX",
     "outDateTime": "2017-07-09T10:47:00",
@@ -4368,7 +4368,7 @@
     "sequenceInfo": "7/9/2017 3067 LAX 320"
   },
   {
-    "uuid": "3b13bc44-8a6d-4938-8365-8a23760faa5a",
+    "uuid": "1c0daebd-0bca-4173-ba07-cbdfd673dc34",
     "flightNumber": "1105",
     "departureStation": "JFK",
     "outDateTime": "2017-07-09T21:16:00",
@@ -4394,7 +4394,7 @@
     "sequenceInfo": "7/9/2017 3067 LAX 320"
   },
   {
-    "uuid": "1b1b8fda-afed-4af1-a8ea-6b3d19513f47",
+    "uuid": "a8831c9b-e9b3-48d2-b4d3-1cdba9bd6ada",
     "flightNumber": "333",
     "departureStation": "BOS",
     "outDateTime": "2017-07-10T12:29:00",
@@ -4420,7 +4420,7 @@
     "sequenceInfo": "7/9/2017 3067 LAX 320"
   },
   {
-    "uuid": "e2d4a58f-4452-4945-a482-c272033fa0df",
+    "uuid": "33ce0464-bc7a-4980-94e8-a46c9b1a5737",
     "flightNumber": "2",
     "departureStation": "LAX",
     "outDateTime": "2017-07-22T09:00:00",
@@ -4446,7 +4446,7 @@
     "sequenceInfo": "7/22/2017 3147 LAX 320"
   },
   {
-    "uuid": "7a64e6d3-c612-4d58-b4f6-a8b176ea98fd",
+    "uuid": "6cf3ea50-a5c2-40b6-8b69-83bfdd5953d1",
     "flightNumber": "133",
     "departureStation": "JFK",
     "outDateTime": "2017-07-23T16:59:00",
@@ -4472,7 +4472,7 @@
     "sequenceInfo": "7/22/2017 3147 LAX 320"
   },
   {
-    "uuid": "748a427c-0ce2-41f8-8143-b8e3adb35032",
+    "uuid": "a6f3132f-5767-4270-b65b-011e048148d8",
     "flightNumber": "458",
     "departureStation": "LAX",
     "outDateTime": "2017-07-29T16:44:00",
@@ -4498,7 +4498,7 @@
     "sequenceInfo": "7/29/2017 31179 LAX 320"
   },
   {
-    "uuid": "b8f3d88a-5faa-4bb2-8986-820a0b293156",
+    "uuid": "2c53e79f-9830-4d92-ab01-f8d4a1dc88b1",
     "flightNumber": "548",
     "departureStation": "PHX",
     "outDateTime": "2017-07-29T18:49:00",
@@ -4524,7 +4524,7 @@
     "sequenceInfo": "7/29/2017 31179 LAX 320"
   },
   {
-    "uuid": "b4536dc5-3bc2-4c1e-b0a4-5e33e70c057a",
+    "uuid": "80ce47f9-2b34-464c-97bf-fb8254f7f213",
     "flightNumber": "596",
     "departureStation": "MKE",
     "outDateTime": "2017-07-30T20:20:00",
@@ -4550,7 +4550,7 @@
     "sequenceInfo": "7/29/2017 31179 LAX 320"
   },
   {
-    "uuid": "a2cd3f81-44c5-4314-b58b-79573203bb74",
+    "uuid": "198a11c4-aba2-42c9-b58e-8654326446b9",
     "flightNumber": "2034",
     "departureStation": "PHX",
     "outDateTime": "2017-07-30T23:38:00",
@@ -4576,7 +4576,7 @@
     "sequenceInfo": "7/29/2017 31179 LAX 320"
   },
   {
-    "uuid": "3be1a883-ddf9-46da-8d15-f94d5dbe9a79",
+    "uuid": "a3063f38-dc9e-48cc-a712-4b8e58be4acc",
     "flightNumber": "1852",
     "departureStation": "LAX",
     "outDateTime": "2017-08-04T00:21:00",
@@ -4602,7 +4602,7 @@
     "sequenceInfo": "8/4/2017 19243 LAX 320"
   },
   {
-    "uuid": "65bcdedd-0aab-4627-a1f7-7f4c96fe5670",
+    "uuid": "51eca58d-fa2f-4afa-ac72-ff9362b31e9d",
     "flightNumber": "1975",
     "departureStation": "CLT",
     "outDateTime": "2017-08-04T21:13:00",
@@ -4628,7 +4628,7 @@
     "sequenceInfo": "8/4/2017 19243 LAX 320"
   },
   {
-    "uuid": "0c1ffffe-f692-491d-9f96-5acebebaa983",
+    "uuid": "26272171-407c-429d-a9fd-366b135d8c47",
     "flightNumber": "1517",
     "departureStation": "LAX",
     "outDateTime": "2017-08-06T20:33:00",
@@ -4654,7 +4654,7 @@
     "sequenceInfo": "8/6/2017 19435 LAX 320"
   },
   {
-    "uuid": "04652047-39e7-4363-9b8f-3fbe30636f70",
+    "uuid": "b3397963-c4e9-4f93-99f9-e35c8e6d74d0",
     "flightNumber": "774",
     "departureStation": "PHX",
     "outDateTime": "2017-08-07T00:13:00",
@@ -4680,7 +4680,7 @@
     "sequenceInfo": "8/6/2017 19435 LAX 320"
   },
   {
-    "uuid": "724c34fa-1ec8-4c86-a123-264b20702877",
+    "uuid": "1eb99d01-7155-4018-8057-13001a774ba0",
     "flightNumber": "1249",
     "departureStation": "ATL",
     "outDateTime": "2017-08-07T20:31:00",
@@ -4706,7 +4706,7 @@
     "sequenceInfo": "8/6/2017 19435 LAX 320"
   },
   {
-    "uuid": "22843092-c872-4bbf-8323-d3da964f1708",
+    "uuid": "9ed0f51a-06de-4522-8521-e0d4274c6060",
     "flightNumber": "1133",
     "departureStation": "LAX",
     "outDateTime": "2017-08-11T11:32:00",
@@ -4732,7 +4732,7 @@
     "sequenceInfo": "8/11/2017 19322 LAX 320"
   },
   {
-    "uuid": "124d5bb1-7ab8-4610-9cd3-ac7838194dc5",
+    "uuid": "9c51af97-ca23-4268-85d1-e7637d0f7c77",
     "flightNumber": "1133",
     "departureStation": "LAS",
     "outDateTime": "2017-08-11T13:46:00",
@@ -4758,7 +4758,7 @@
     "sequenceInfo": "8/11/2017 19322 LAX 320"
   },
   {
-    "uuid": "c3f7d8ce-5144-427c-aa8d-95e328899625",
+    "uuid": "5b674ea6-fc25-4115-b852-c18c2d710396",
     "flightNumber": "803",
     "departureStation": "LAX",
     "outDateTime": "2017-08-11T16:55:00",
@@ -4784,7 +4784,7 @@
     "sequenceInfo": "8/11/2017 19322 LAX 320"
   },
   {
-    "uuid": "ee7874fe-4233-4a83-b7a3-629b93a98d3d",
+    "uuid": "516d68f4-1c16-498d-9fda-8428d462bb3c",
     "flightNumber": "2700",
     "departureStation": "STL",
     "outDateTime": "2017-08-12T17:51:00",
@@ -4810,7 +4810,7 @@
     "sequenceInfo": "8/11/2017 19322 LAX 320"
   },
   {
-    "uuid": "61ded928-1958-452d-8022-9e58f373dfa5",
+    "uuid": "61d882ce-0edd-4119-b673-6c5aadbcdab4",
     "flightNumber": "2444",
     "departureStation": "MIA",
     "outDateTime": "2017-08-13T11:48:00",
@@ -4836,7 +4836,7 @@
     "sequenceInfo": "8/11/2017 19322 LAX 320"
   },
   {
-    "uuid": "597165d9-a6f2-4363-a18c-03b55d6cdff3",
+    "uuid": "ea52ffb1-8374-4b9b-89b1-dd28a6e06c90",
     "flightNumber": "1667",
     "departureStation": "DEN",
     "outDateTime": "2017-08-13T14:23:00",
@@ -4862,7 +4862,7 @@
     "sequenceInfo": "8/11/2017 19322 LAX 320"
   },
   {
-    "uuid": "bf1ae159-a62c-4b65-ba78-3c9a00f9db7f",
+    "uuid": "ff4636be-9c15-46ba-9475-efbed7d6fb77",
     "flightNumber": "472",
     "departureStation": "LAX",
     "outDateTime": "2017-08-18T21:26:00",
@@ -4888,7 +4888,7 @@
     "sequenceInfo": "8/18/2017 19373 LAX 320"
   },
   {
-    "uuid": "d8acf600-4fcc-45bf-8e32-40153fa57453",
+    "uuid": "36751895-3433-4794-98e4-7cbbd37236ec",
     "flightNumber": "2433",
     "departureStation": "MCO",
     "outDateTime": "2017-08-19T17:48:00",
@@ -4914,7 +4914,7 @@
     "sequenceInfo": "8/18/2017 19373 LAX 320"
   },
   {
-    "uuid": "34d03995-dccd-4a70-9279-89d516994f23",
+    "uuid": "e5f16416-731a-4d9f-834a-8fc50413f746",
     "flightNumber": "409",
     "departureStation": "DFW",
     "outDateTime": "2017-08-19T20:42:00",
@@ -4940,7 +4940,7 @@
     "sequenceInfo": "8/18/2017 19373 LAX 320"
   },
   {
-    "uuid": "4d1d0ef5-9396-4dcd-8429-35b0a804d8b9",
+    "uuid": "e26991f5-d07e-43f8-b521-322cf4818b96",
     "flightNumber": "1637",
     "departureStation": "CLT",
     "outDateTime": "2017-08-20T18:06:00",
@@ -4966,7 +4966,7 @@
     "sequenceInfo": "8/18/2017 19373 LAX 320"
   },
   {
-    "uuid": "0361a86a-7e77-4c97-8774-5e023418f1e3",
+    "uuid": "96aa700b-aa56-48dd-9feb-12e862328086",
     "flightNumber": "1024",
     "departureStation": "LAX",
     "outDateTime": "2017-08-26T12:37:00",
@@ -4992,7 +4992,7 @@
     "sequenceInfo": "8/26/2017 19773 LAX 320"
   },
   {
-    "uuid": "38c8e420-4455-43a6-9ffa-b43a45551c76",
+    "uuid": "fdfa03e5-8575-4de9-92fd-ddf46bc0ed5a",
     "flightNumber": "39",
     "departureStation": "MIA",
     "outDateTime": "2017-08-26T22:54:00",
@@ -5018,7 +5018,7 @@
     "sequenceInfo": "8/26/2017 19773 LAX 320"
   },
   {
-    "uuid": "7c72bfdf-ff32-4482-8d2d-54e5a25ca9b6",
+    "uuid": "59b1a6db-cdf9-4ddc-b6e9-b11a1a65e3a9",
     "flightNumber": "2433",
     "departureStation": "MCO",
     "outDateTime": "2017-08-27T21:12:00",
@@ -5044,7 +5044,7 @@
     "sequenceInfo": "8/26/2017 19773 LAX 320"
   },
   {
-    "uuid": "f120bb06-2fad-49fb-b8e8-e97be17cfa2c",
+    "uuid": "959c6f75-3886-4b68-9e88-096dae2af019",
     "flightNumber": "2463",
     "departureStation": "DFW",
     "outDateTime": "2017-08-28T17:43:00",
@@ -5070,7 +5070,7 @@
     "sequenceInfo": "8/26/2017 19773 LAX 320"
   },
   {
-    "uuid": "3c75708b-858b-4e46-84d4-4b5c519826a2",
+    "uuid": "662fcc84-fb30-4785-a8b6-3b65811bbd72",
     "flightNumber": "247",
     "departureStation": "LAX",
     "outDateTime": "2017-08-31T17:05:00",
@@ -5096,7 +5096,7 @@
     "sequenceInfo": "8/31/2017 3846 LAX 320"
   },
   {
-    "uuid": "f83debd1-ba6a-4068-850d-dc04db5249ac",
+    "uuid": "8813993d-97e2-46f5-b3a8-61cbfd1ef3c3",
     "flightNumber": "246",
     "departureStation": "KOA",
     "outDateTime": "2017-09-01T21:15:00",
@@ -5122,7 +5122,7 @@
     "sequenceInfo": "8/31/2017 3846 LAX 320"
   },
   {
-    "uuid": "019a5f0f-1d62-4d9f-b24c-c17a3b53af8d",
+    "uuid": "f0757d73-a5da-4355-a1a0-3fb54804d2cf",
     "flightNumber": "285",
     "departureStation": "LAX",
     "outDateTime": "2017-09-08T17:28:00",
@@ -5148,7 +5148,7 @@
     "sequenceInfo": "9/8/2017 3847 LAX 320"
   },
   {
-    "uuid": "34a34939-c254-4fda-a281-2e413d83be34",
+    "uuid": "d5b7aecd-2d3a-4a55-8972-74b386248fec",
     "flightNumber": "286",
     "departureStation": "LIH",
     "outDateTime": "2017-09-09T21:56:00",
@@ -5174,7 +5174,7 @@
     "sequenceInfo": "9/8/2017 3847 LAX 320"
   },
   {
-    "uuid": "61c1f481-91fd-46f7-a897-153e3b0f7a50",
+    "uuid": "c098123a-9c4b-49b8-8152-1cd61104d241",
     "flightNumber": "247",
     "departureStation": "LAX",
     "outDateTime": "2017-09-30T17:07:00",
@@ -5200,7 +5200,7 @@
     "sequenceInfo": "9/30/2017 3846 LAX 320"
   },
   {
-    "uuid": "000565ba-82b6-416a-bdeb-ca345888bbe6",
+    "uuid": "25a062f6-2adc-42f0-9866-fde5f0f5d757",
     "flightNumber": "246",
     "departureStation": "KOA",
     "outDateTime": "2017-10-01T21:23:00",
@@ -5226,7 +5226,7 @@
     "sequenceInfo": "9/30/2017 3846 LAX 320"
   },
   {
-    "uuid": "1164fd4e-d156-4d38-a3af-0f8444c8a4c8",
+    "uuid": "84418db7-08cd-456f-8c30-c4f77bd91b60",
     "flightNumber": "285",
     "departureStation": "LAX",
     "outDateTime": "2017-10-05T17:34:00",
@@ -5252,7 +5252,7 @@
     "sequenceInfo": "10/5/2017 18809 LAX 320"
   },
   {
-    "uuid": "482067be-d428-4f5f-abf0-c334c76f37d8",
+    "uuid": "21d92305-6793-487a-9166-68eab996958b",
     "flightNumber": "286",
     "departureStation": "LIH",
     "outDateTime": "2017-10-06T21:54:00",
@@ -5278,7 +5278,7 @@
     "sequenceInfo": "10/5/2017 18809 LAX 320"
   },
   {
-    "uuid": "874cc73f-082f-4d04-8ffa-077a9467dfea",
+    "uuid": "faa0a2c1-7662-45fd-a2cb-1e5ba1171505",
     "flightNumber": "285",
     "departureStation": "LAX",
     "outDateTime": "2017-10-14T17:47:00",
@@ -5304,7 +5304,7 @@
     "sequenceInfo": "10/14/2017 18809 LAX 320"
   },
   {
-    "uuid": "d1b825bb-d3c4-4843-9df6-fa97c67e69ed",
+    "uuid": "34db523e-f2d2-4b50-9119-060955aed448",
     "flightNumber": "286",
     "departureStation": "LIH",
     "outDateTime": "2017-10-15T21:59:00",
@@ -5330,7 +5330,7 @@
     "sequenceInfo": "10/14/2017 18809 LAX 320"
   },
   {
-    "uuid": "cbed1014-5c59-4744-9cd5-51e27c1814fd",
+    "uuid": "6b2abf37-c0d5-44ef-afa1-f7ab376382b8",
     "flightNumber": "362",
     "departureStation": "LAX",
     "outDateTime": "2017-10-21T07:58:00",
@@ -5356,7 +5356,7 @@
     "sequenceInfo": "10/21/2017 18742 LAX 320"
   },
   {
-    "uuid": "5541bc89-07ba-401c-853e-b552baf3608a",
+    "uuid": "71cd36bd-9a1b-41af-a467-156cf4453768",
     "flightNumber": "593",
     "departureStation": "ORD",
     "outDateTime": "2017-10-21T15:50:00",
@@ -5382,7 +5382,7 @@
     "sequenceInfo": "10/21/2017 18742 LAX 320"
   },
   {
-    "uuid": "dfadc367-a881-4bae-be28-737d2f056304",
+    "uuid": "cb8f0d30-a644-4d9e-b2a2-93606bf98d68",
     "flightNumber": "687",
     "departureStation": "CLT",
     "outDateTime": "2017-10-21T20:02:00",
@@ -5408,7 +5408,7 @@
     "sequenceInfo": "10/21/2017 18742 LAX 320"
   },
   {
-    "uuid": "075c0a55-ce8d-466f-acc7-31d9aa5f37a4",
+    "uuid": "ac65b437-cd94-493a-9216-03a650d32fbe",
     "flightNumber": "1249",
     "departureStation": "ATL",
     "outDateTime": "2017-10-22T19:43:00",
@@ -5434,7 +5434,7 @@
     "sequenceInfo": "10/21/2017 18742 LAX 320"
   },
   {
-    "uuid": "9dae0677-d065-4c88-80c3-13cd332fef41",
+    "uuid": "57f8abe1-6191-4a8b-854c-4e40132d861b",
     "flightNumber": "1135",
     "departureStation": "LAX",
     "outDateTime": "2017-11-01T11:18:00",
@@ -5460,7 +5460,7 @@
     "sequenceInfo": "11/1/2017 6118 LAX 320"
   },
   {
-    "uuid": "c6807c60-5844-4d72-81ae-a7487c08c614",
+    "uuid": "18a663f4-618c-43b5-bfa0-0c5fdaf42c7a",
     "flightNumber": "1136",
     "departureStation": "PVR",
     "outDateTime": "2017-11-01T16:32:00",
@@ -5486,7 +5486,7 @@
     "sequenceInfo": "11/1/2017 6118 LAX 320"
   },
   {
-    "uuid": "1ac153fe-f1ae-4e26-8bb7-8c666f3d81f6",
+    "uuid": "14dc5902-c09d-4ebd-b6c1-3d4afe75de84",
     "flightNumber": "1667",
     "departureStation": "LAX",
     "outDateTime": "2017-11-03T10:31:00",
@@ -5512,7 +5512,7 @@
     "sequenceInfo": "11/3/2017 6314 LAX 320"
   },
   {
-    "uuid": "da285198-2400-4ee3-8e80-592c65aa61b6",
+    "uuid": "ceb22945-5833-4549-91dd-4b56a832fb33",
     "flightNumber": "686",
     "departureStation": "DEN",
     "outDateTime": "2017-11-03T15:03:00",
@@ -5538,7 +5538,7 @@
     "sequenceInfo": "11/3/2017 6314 LAX 320"
   },
   {
-    "uuid": "c6ce9521-0b81-49f6-8fc7-2c7fbb0f7063",
+    "uuid": "20316274-d7fd-4fec-9fc7-e4ab3a442449",
     "flightNumber": "686",
     "departureStation": "PHX",
     "outDateTime": "2017-11-03T16:53:00",
@@ -5564,7 +5564,7 @@
     "sequenceInfo": "11/3/2017 6314 LAX 320"
   },
   {
-    "uuid": "aa536370-2cf0-44ae-9a18-86a84db3350b",
+    "uuid": "3deaa50d-3b50-4e87-88d6-b6db2993d9b6",
     "flightNumber": "686",
     "departureStation": "PHX",
     "outDateTime": "2017-11-03T18:00:00",
@@ -5590,7 +5590,7 @@
     "sequenceInfo": "11/3/2017 6314 LAX 320"
   },
   {
-    "uuid": "ccf0774a-3b95-4e65-88f3-e423f5ad91c7",
+    "uuid": "dcb01394-f3ef-4c35-abee-02f289e36d9a",
     "flightNumber": "486",
     "departureStation": "SFO",
     "outDateTime": "2017-11-04T15:42:00",
@@ -5616,7 +5616,7 @@
     "sequenceInfo": "11/3/2017 6314 LAX 320"
   },
   {
-    "uuid": "3d1d01ed-8b04-49cc-a4d3-8904609b4f65",
+    "uuid": "b6b0ecee-5459-46d2-b258-000c1905fe5d",
     "flightNumber": "486",
     "departureStation": "PHX",
     "outDateTime": "2017-11-04T18:47:00",
@@ -5642,7 +5642,7 @@
     "sequenceInfo": "11/3/2017 6314 LAX 320"
   },
   {
-    "uuid": "efb52517-b799-41c2-b7b9-de2769a6e8fb",
+    "uuid": "34f8fa24-2090-42c8-bf74-d227c51aaa68",
     "flightNumber": "2223",
     "departureStation": "ORD",
     "outDateTime": "2017-11-05T13:23:00",
@@ -5668,7 +5668,7 @@
     "sequenceInfo": "11/3/2017 6314 LAX 320"
   },
   {
-    "uuid": "0acfc2f8-21ee-44bb-92a8-fe2be6d949c6",
+    "uuid": "15d6db94-0635-46a3-b7a1-0244ae6adf0b",
     "flightNumber": "2420",
     "departureStation": "LAX",
     "outDateTime": "2017-11-12T05:59:00",
@@ -5694,7 +5694,7 @@
     "sequenceInfo": "11/12/2017 6061 LAX 320"
   },
   {
-    "uuid": "937c3072-603f-439d-bcff-f10459715d6d",
+    "uuid": "2ed00902-0917-425a-95cb-c1b6a9a2ca11",
     "flightNumber": "2425",
     "departureStation": "DFW",
     "outDateTime": "2017-11-12T11:55:00",
@@ -5720,7 +5720,7 @@
     "sequenceInfo": "11/12/2017 6061 LAX 320"
   },
   {
-    "uuid": "8ad5ae9b-ce30-4dfc-9a46-98c86b7b77d0",
+    "uuid": "1aa8ac33-3230-4695-bde6-04881510e28b",
     "flightNumber": "2420",
     "departureStation": "LAX",
     "outDateTime": "2017-11-18T06:13:00",
@@ -5746,7 +5746,7 @@
     "sequenceInfo": "11/18/2017 6062 LAX 320"
   },
   {
-    "uuid": "7fa43098-96a5-4ee3-a94c-e05f9bd02f8a",
+    "uuid": "c071943f-832b-47d4-8718-15d4c0de55d1",
     "flightNumber": "2425",
     "departureStation": "DFW",
     "outDateTime": "2017-11-18T12:10:00",
@@ -5772,7 +5772,7 @@
     "sequenceInfo": "11/18/2017 6062 LAX 320"
   },
   {
-    "uuid": "ca181452-3d2f-47e6-becc-23e42783ea7f",
+    "uuid": "0db30aa9-dfdb-45f7-8925-0622087bff5a",
     "flightNumber": "31",
     "departureStation": "LAX",
     "outDateTime": "2017-11-19T08:42:00",
@@ -5798,7 +5798,7 @@
     "sequenceInfo": "11/19/2017 6074 LAX 320"
   },
   {
-    "uuid": "9096d5a9-ed04-4d66-b024-0da8f59f8885",
+    "uuid": "9d2743f2-0689-462f-8dc3-514e83fae8fc",
     "flightNumber": "108",
     "departureStation": "HNL",
     "outDateTime": "2017-11-20T07:49:00",
@@ -5824,7 +5824,7 @@
     "sequenceInfo": "11/19/2017 6074 LAX 320"
   },
   {
-    "uuid": "ca6d43e4-bf6c-4304-815e-83e0cab33741",
+    "uuid": "d5e5768c-b1e6-4d7b-89ae-c1a8aeb38430",
     "flightNumber": "2600",
     "departureStation": "LAX",
     "outDateTime": "2017-11-26T08:15:00",
@@ -5850,7 +5850,7 @@
     "sequenceInfo": "11/26/2017 6629 LAX 320"
   },
   {
-    "uuid": "60e3fbc3-f188-4ced-8d0d-dcca3d4d7060",
+    "uuid": "dd9721a0-170e-4b52-968f-46ea0c3a6132",
     "flightNumber": "275",
     "departureStation": "MIA",
     "outDateTime": "2017-11-27T17:19:00",
@@ -5876,7 +5876,7 @@
     "sequenceInfo": "11/26/2017 6629 LAX 320"
   },
   {
-    "uuid": "b4132c29-118c-4f5b-bb25-925da08900b3",
+    "uuid": "5a19aa6a-041f-406e-9996-57d61f6dccee",
     "flightNumber": "110",
     "departureStation": "LAX",
     "outDateTime": "2017-12-15T09:46:00",
@@ -5902,7 +5902,7 @@
     "sequenceInfo": "12/15/2017 6446 LAX 320"
   },
   {
-    "uuid": "70774b97-1177-4b0d-a134-77031fea81c9",
+    "uuid": "2573ee92-9f04-48b9-ae87-17c048e537f3",
     "flightNumber": "2704",
     "departureStation": "ORD",
     "outDateTime": "2017-12-15T18:35:00",
@@ -5928,7 +5928,7 @@
     "sequenceInfo": "12/15/2017 6446 LAX 320"
   },
   {
-    "uuid": "1c62f42c-d24c-45d3-b0ac-bb9701e83f8e",
+    "uuid": "0f5b31ce-5fb5-44f8-b729-f19edde1d1c7",
     "flightNumber": "607",
     "departureStation": "ATL",
     "outDateTime": "2017-12-16T17:40:00",
@@ -5954,7 +5954,7 @@
     "sequenceInfo": "12/15/2017 6446 LAX 320"
   },
   {
-    "uuid": "21df595c-d2a1-4823-a30f-9a586c98ce9c",
+    "uuid": "fe24eafd-e3fa-4e35-bebf-a7038fed5450",
     "flightNumber": "409",
     "departureStation": "DFW",
     "outDateTime": "2017-12-16T20:28:00",
@@ -5980,7 +5980,7 @@
     "sequenceInfo": "12/15/2017 6446 LAX 320"
   },
   {
-    "uuid": "1fce8c2f-ee27-4d26-afbc-819b8ccfa8c4",
+    "uuid": "d011bde3-45a3-4aaf-a194-738cac87f082",
     "flightNumber": "725",
     "departureStation": "CLT",
     "outDateTime": "2017-12-17T15:05:00",
@@ -6006,7 +6006,7 @@
     "sequenceInfo": "12/15/2017 6446 LAX 320"
   },
   {
-    "uuid": "3f47bf07-f976-498c-bb1c-f4458e0bbaad",
+    "uuid": "342c4942-a5d7-439e-a089-30a8f14ed026",
     "flightNumber": "1360",
     "departureStation": "LAX",
     "outDateTime": "2017-12-29T15:34:00",
@@ -6032,7 +6032,7 @@
     "sequenceInfo": "12/29/2017 31028 LAX 320"
   },
   {
-    "uuid": "69a8c671-3957-45ac-9fa0-3c4bb8d3227f",
+    "uuid": "e16a6cf3-234b-4367-aaae-77ebfacbb8ce",
     "flightNumber": "452",
     "departureStation": "BOS",
     "outDateTime": "2017-12-30T16:40:00",
@@ -6058,7 +6058,7 @@
     "sequenceInfo": "12/29/2017 31028 LAX 320"
   },
   {
-    "uuid": "8137f993-00e6-40da-a973-03c80eb4a5d7",
+    "uuid": "f1be4ee2-b5a5-4530-ac8e-f8c67d769c10",
     "flightNumber": "813",
     "departureStation": "PHX",
     "outDateTime": "2017-12-30T23:47:00",
@@ -6084,7 +6084,7 @@
     "sequenceInfo": "12/29/2017 31028 LAX 320"
   },
   {
-    "uuid": "c9ba3954-d33f-4674-8aab-c2b59f3b0b60",
+    "uuid": "1e43ac39-87ca-4d5a-8601-c7f7e1ac78e5",
     "flightNumber": "231",
     "departureStation": "LAX",
     "outDateTime": "2017-12-31T18:45:00",
@@ -6110,7 +6110,7 @@
     "sequenceInfo": "12/31/2017 6191 LAX 320"
   },
   {
-    "uuid": "a3162081-5d69-4a18-b720-72050aef2240",
+    "uuid": "3c999995-f270-4679-98ad-bb765c075934",
     "flightNumber": "250",
     "departureStation": "OGG",
     "outDateTime": "2018-01-02T00:20:00",
@@ -6136,7 +6136,7 @@
     "sequenceInfo": "12/31/2017 6191 LAX 320"
   },
   {
-    "uuid": "101ca22e-95cb-4ba9-b535-bd50545416b2",
+    "uuid": "b7df3667-a6f4-4eda-beb4-b4267f3196a8",
     "flightNumber": "9655",
     "departureStation": "SFO",
     "outDateTime": "2018-01-12T11:37:00",
@@ -6162,7 +6162,7 @@
     "sequenceInfo": "1/12/2018 31109 LAX 320"
   },
   {
-    "uuid": "69e045ba-8673-491a-a7b3-7501d93eff39",
+    "uuid": "65b80ae3-c3b0-4e09-a516-97b4234115ce",
     "flightNumber": "2462",
     "departureStation": "LAX",
     "outDateTime": "2018-02-04T13:57:00",
@@ -6188,7 +6188,7 @@
     "sequenceInfo": "2/4/2018 6035 LAX 320"
   },
   {
-    "uuid": "4d207e4e-31ef-4066-8e37-1534008a8cd2",
+    "uuid": "c5a9e0d7-6128-4117-a1dd-bb0a5aa3a217",
     "flightNumber": "2649",
     "departureStation": "DFW",
     "outDateTime": "2018-02-04T20:23:00",
@@ -6214,7 +6214,7 @@
     "sequenceInfo": "2/4/2018 6035 LAX 320"
   },
   {
-    "uuid": "fe626453-5758-4a9d-a4b5-4346e22c3311",
+    "uuid": "857ff4cb-240a-44ca-82ea-735147717496",
     "flightNumber": "260",
     "departureStation": "LAX",
     "outDateTime": "2018-02-11T00:30:00",
@@ -6240,7 +6240,7 @@
     "sequenceInfo": "2/11/2018 5972 LAX 320"
   },
   {
-    "uuid": "8f85e0f5-8068-4b29-9bbb-fb09ed50849f",
+    "uuid": "87acef73-1f7a-493a-a188-17090a19b964",
     "flightNumber": "1147",
     "departureStation": "MIA",
     "outDateTime": "2018-02-11T21:22:00",
@@ -6266,7 +6266,7 @@
     "sequenceInfo": "2/11/2018 5972 LAX 320"
   },
   {
-    "uuid": "6c41a038-6cd7-46d8-bf96-af9d10d1f9e1",
+    "uuid": "6edb8332-b3f8-43e2-9f90-c7994cb40fbf",
     "flightNumber": "285",
     "departureStation": "LAX",
     "outDateTime": "2018-02-23T17:21:00",
@@ -6292,7 +6292,7 @@
     "sequenceInfo": "2/23/2018 6059 LAX 320"
   },
   {
-    "uuid": "37c33b06-2a02-4de9-a227-f26d50ca7f60",
+    "uuid": "63a17ad1-47c7-48ca-bd46-3ed6c8f6d350",
     "flightNumber": "286",
     "departureStation": "LIH",
     "outDateTime": "2018-02-25T00:12:00",
@@ -6318,7 +6318,7 @@
     "sequenceInfo": "2/23/2018 6059 LAX 320"
   },
   {
-    "uuid": "dd5c709c-4e89-4283-9432-f43f5927a6c2",
+    "uuid": "a215a626-df25-4a67-8474-fe88598eb650",
     "flightNumber": "2453",
     "departureStation": "LAX",
     "outDateTime": "2018-03-06T07:30:00",
@@ -6344,7 +6344,7 @@
     "sequenceInfo": "3/6/2018 5537 LAX 320"
   },
   {
-    "uuid": "4e32c348-b898-4abc-b38b-3c55706acb2d",
+    "uuid": "220ddf0a-e115-455d-8f10-3deda136bcc0",
     "flightNumber": "2460",
     "departureStation": "DFW",
     "outDateTime": "2018-03-06T14:37:00",
@@ -6370,7 +6370,7 @@
     "sequenceInfo": "3/6/2018 5537 LAX 320"
   },
   {
-    "uuid": "ab794507-3e3c-4368-9866-c5dcbd46a87e",
+    "uuid": "482c6da7-c954-4303-8868-6cb725956f6e",
     "flightNumber": "59",
     "departureStation": "LAX",
     "outDateTime": "2018-03-10T08:25:00",
@@ -6396,7 +6396,7 @@
     "sequenceInfo": "3/10/2018 5907 LAX 320"
   },
   {
-    "uuid": "1b37fc80-cf44-430c-9283-995c7b0173fe",
+    "uuid": "a3881a40-9f2f-4d04-bf81-448b56b10ac9",
     "flightNumber": "58",
     "departureStation": "KOA",
     "outDateTime": "2018-03-11T13:15:00",
@@ -6422,7 +6422,7 @@
     "sequenceInfo": "3/10/2018 5907 LAX 320"
   },
   {
-    "uuid": "b5fb64f1-e1d3-4547-9c17-80e1a234bfde",
+    "uuid": "5f16ed78-afcd-4305-9586-f9a14cd6763b",
     "flightNumber": "595",
     "departureStation": "LAX",
     "outDateTime": "2018-03-21T06:11:00",
@@ -6448,7 +6448,7 @@
     "sequenceInfo": "3/21/2018 7206 LAX 320"
   },
   {
-    "uuid": "f98736ad-aefd-4a35-8609-409ccf8a3528",
+    "uuid": "772bc0fc-8fc7-439a-b78b-c3ec32dfcd42",
     "flightNumber": "665",
     "departureStation": "PHX",
     "outDateTime": "2018-03-21T08:42:00",
@@ -6474,7 +6474,7 @@
     "sequenceInfo": "3/21/2018 7206 LAX 320"
   },
   {
-    "uuid": "b215d947-c5ea-489b-ab94-240c7eb4d86d",
+    "uuid": "573be3e5-c631-441c-b210-4cd8aebf0c6f",
     "flightNumber": "659",
     "departureStation": "CMH",
     "outDateTime": "2018-03-22T16:23:00",
@@ -6500,7 +6500,7 @@
     "sequenceInfo": "3/21/2018 7206 LAX 320"
   },
   {
-    "uuid": "a98d053f-dac5-44ac-b0df-d439ad0bbe13",
+    "uuid": "80d59add-7d74-4b25-a89e-71fe4d1022fc",
     "flightNumber": "1993",
     "departureStation": "LAX",
     "outDateTime": "2018-04-03T11:24:00",
@@ -6526,7 +6526,7 @@
     "sequenceInfo": "4/3/2018 5835 LAX 320"
   },
   {
-    "uuid": "9308096d-8b7c-4d69-b35b-defbb2975246",
+    "uuid": "e70eb19b-6831-4333-ae0b-cffb874fbfdf",
     "flightNumber": "2086",
     "departureStation": "CLT",
     "outDateTime": "2018-04-03T20:59:00",
@@ -6552,7 +6552,7 @@
     "sequenceInfo": "4/3/2018 5835 LAX 320"
   },
   {
-    "uuid": "46b532ac-527a-4734-87fb-762042d61179",
+    "uuid": "d583411b-2832-4006-9a1c-1a34c272580f",
     "flightNumber": "1835",
     "departureStation": "MSP",
     "outDateTime": "2018-04-04T17:49:00",
@@ -6578,7 +6578,7 @@
     "sequenceInfo": "4/3/2018 5835 LAX 320"
   },
   {
-    "uuid": "c6ac14e2-ca5d-463b-ad53-4e931bf87a6e",
+    "uuid": "a6019639-5d2b-4de9-8de8-a7e35e04c06d",
     "flightNumber": "1703",
     "departureStation": "CLT",
     "outDateTime": "2018-04-04T22:45:00",
@@ -6604,7 +6604,7 @@
     "sequenceInfo": "4/3/2018 5835 LAX 320"
   },
   {
-    "uuid": "aeb44774-5e87-4bf8-b0f8-908ffd104527",
+    "uuid": "37d2dfac-b845-4396-a2de-6fc6eb2a093e",
     "flightNumber": "829",
     "departureStation": "STL",
     "outDateTime": "2018-04-05T16:36:00",
@@ -6630,7 +6630,7 @@
     "sequenceInfo": "4/3/2018 5835 LAX 320"
   },
   {
-    "uuid": "494d69d1-eee8-4f89-aa72-e414746b536a",
+    "uuid": "3bbc6c90-1b96-426e-9693-d7f54dd520e2",
     "flightNumber": "2586",
     "departureStation": "LAX",
     "outDateTime": "2018-04-12T12:04:00",
@@ -6656,7 +6656,7 @@
     "sequenceInfo": "4/12/2018 5610 LAX 320"
   },
   {
-    "uuid": "30fa37a4-917a-44e4-bb0c-3afd30333168",
+    "uuid": "7e40153d-dd2a-45b7-b88b-3a1d320d35ff",
     "flightNumber": "2773",
     "departureStation": "MIA",
     "outDateTime": "2018-04-12T21:38:00",
@@ -6682,7 +6682,7 @@
     "sequenceInfo": "4/12/2018 5610 LAX 320"
   },
   {
-    "uuid": "7c62df00-5ac5-4710-85e7-6c9743147b0b",
+    "uuid": "9f10ff95-ad58-490e-9375-631eeca5cd24",
     "flightNumber": "661",
     "departureStation": "MSY",
     "outDateTime": "2018-04-13T20:04:00",
@@ -6708,7 +6708,7 @@
     "sequenceInfo": "4/12/2018 5610 LAX 320"
   },
   {
-    "uuid": "7a482d2f-7883-4a16-b169-7f9dcb278b0e",
+    "uuid": "d4c3247e-a47b-4125-a733-d3cb7b727383",
     "flightNumber": "829",
     "departureStation": "STL",
     "outDateTime": "2018-04-14T18:17:00",
@@ -6734,7 +6734,7 @@
     "sequenceInfo": "4/12/2018 5610 LAX 320"
   },
   {
-    "uuid": "397a1247-e82e-4a6f-b187-402d9cec0bee",
+    "uuid": "4b4b53d5-cfac-4852-8935-0ae1f7d70574",
     "flightNumber": "2489",
     "departureStation": "LAX",
     "outDateTime": "2018-04-19T11:47:00",
@@ -6760,7 +6760,7 @@
     "sequenceInfo": "4/19/2018 6059 LAX 320"
   },
   {
-    "uuid": "738cf8d8-417e-436e-b357-c7ad07ac310a",
+    "uuid": "4ccba3fa-f475-4725-b853-4ab723f410f1",
     "flightNumber": "1734",
     "departureStation": "DFW",
     "outDateTime": "2018-04-19T18:46:00",
@@ -6786,7 +6786,7 @@
     "sequenceInfo": "4/19/2018 6059 LAX 320"
   },
   {
-    "uuid": "a5fd5eca-4140-48c9-9370-100ac998f8bc",
+    "uuid": "9bd354fd-4112-4ca1-aba8-a00cd5e90c30",
     "flightNumber": "808",
     "departureStation": "MEM",
     "outDateTime": "2018-04-20T16:33:00",
@@ -6812,7 +6812,7 @@
     "sequenceInfo": "4/19/2018 6059 LAX 320"
   },
   {
-    "uuid": "fc163260-4d96-4710-90d2-52dabb30c661",
+    "uuid": "0d6c2365-9555-410b-8a3f-b0309f95868e",
     "flightNumber": "1717",
     "departureStation": "CLT",
     "outDateTime": "2018-04-20T22:05:00",
@@ -6838,7 +6838,7 @@
     "sequenceInfo": "4/19/2018 6059 LAX 320"
   },
   {
-    "uuid": "71b63c7a-00bb-4b4e-a008-9fb7a1369064",
+    "uuid": "f29283c6-2a92-4d92-9021-6d7a35469380",
     "flightNumber": "1937",
     "departureStation": "FLL",
     "outDateTime": "2018-04-21T12:05:00",
@@ -6864,7 +6864,7 @@
     "sequenceInfo": "4/19/2018 6059 LAX 320"
   },
   {
-    "uuid": "ae69b451-ae65-4de0-85f9-969616fe4107",
+    "uuid": "11aa13e8-64dc-42e9-8d66-b50166d16dc0",
     "flightNumber": "1773",
     "departureStation": "CLT",
     "outDateTime": "2018-04-21T16:57:00",
@@ -6890,7 +6890,7 @@
     "sequenceInfo": "4/19/2018 6059 LAX 320"
   },
   {
-    "uuid": "84bd42a9-489b-4bb6-89e9-a64977c43bda",
+    "uuid": "0ff73f0d-cf95-4d92-8540-e7901a34c5e0",
     "flightNumber": "1071",
     "departureStation": "LAX",
     "outDateTime": "2018-04-27T00:41:00",
@@ -6916,7 +6916,7 @@
     "sequenceInfo": "4/27/2018 5543 LAX 320"
   },
   {
-    "uuid": "7523f593-f29b-41c7-807e-1c88f043cab6",
+    "uuid": "4fc4d88c-53aa-475d-9d69-1960c57672d8",
     "flightNumber": "2083",
     "departureStation": "LAX",
     "outDateTime": "2018-05-07T11:27:00",
@@ -6942,7 +6942,7 @@
     "sequenceInfo": "5/7/2018 31150 LAX 320"
   },
   {
-    "uuid": "f58a7bf7-a5c5-4104-a250-d0f93647b6a5",
+    "uuid": "0555b13f-199d-414f-aebe-9fa21e538f49",
     "flightNumber": "781",
     "departureStation": "PHL",
     "outDateTime": "2018-05-08T08:02:00",
@@ -6968,7 +6968,7 @@
     "sequenceInfo": "5/7/2018 31150 LAX 320"
   },
   {
-    "uuid": "58c49c0f-a656-4800-badb-5bd67aefd922",
+    "uuid": "b36cd52d-1fae-4f9c-b5d5-285f6a8540e1",
     "flightNumber": "2654",
     "departureStation": "LAX",
     "outDateTime": "2018-05-11T14:23:00",
@@ -6994,7 +6994,7 @@
     "sequenceInfo": "5/11/2018 5594 LAX 320"
   },
   {
-    "uuid": "e3b3cb45-1ada-423a-9c4c-6002cb4b046c",
+    "uuid": "254c6bfe-fe49-46da-8288-cf0257a562b3",
     "flightNumber": "2671",
     "departureStation": "YYZ",
     "outDateTime": "2018-05-12T18:16:00",
@@ -7020,7 +7020,7 @@
     "sequenceInfo": "5/11/2018 5594 LAX 320"
   },
   {
-    "uuid": "626ca46f-73b2-4368-a050-5839d4b5102c",
+    "uuid": "261595fe-72bc-4a8f-942f-8166efaf53ec",
     "flightNumber": "2442",
     "departureStation": "LAX",
     "outDateTime": "2018-05-17T05:56:00",
@@ -7046,7 +7046,7 @@
     "sequenceInfo": "5/17/2018 31173 LAX 320"
   },
   {
-    "uuid": "96c37b37-e6c3-4031-9e4b-cf44a92bd3da",
+    "uuid": "c10c70b7-4577-4bf7-893a-452f3de635f8",
     "flightNumber": "2223",
     "departureStation": "ORD",
     "outDateTime": "2018-05-17T13:19:00",
@@ -7072,7 +7072,7 @@
     "sequenceInfo": "5/17/2018 31173 LAX 320"
   },
   {
-    "uuid": "95d39ea3-c78a-4519-b105-af83cf215b74",
+    "uuid": "3222fa82-4758-40cb-a18c-1de21428e94b",
     "flightNumber": "491",
     "departureStation": "LAX",
     "outDateTime": "2018-05-18T11:06:00",
@@ -7098,7 +7098,7 @@
     "sequenceInfo": "5/18/2018 5622 LAX 320"
   },
   {
-    "uuid": "41c6e3e7-31d1-41e8-8ee9-f1eeb5958b71",
+    "uuid": "1693141f-e635-4b80-9931-1fa49f7e12a8",
     "flightNumber": "2023",
     "departureStation": "PHX",
     "outDateTime": "2018-05-18T13:55:00",
@@ -7124,7 +7124,7 @@
     "sequenceInfo": "5/18/2018 5622 LAX 320"
   },
   {
-    "uuid": "96af5a56-6da1-46df-98ee-4372dd0533e5",
+    "uuid": "b57c4e30-dd72-45c2-a408-1282ba365571",
     "flightNumber": "421",
     "departureStation": "LAX",
     "outDateTime": "2018-05-18T16:57:00",
@@ -7150,7 +7150,7 @@
     "sequenceInfo": "5/18/2018 5622 LAX 320"
   },
   {
-    "uuid": "9d5e5f9e-62e1-458a-a9c3-685695619b58",
+    "uuid": "9142bbe3-1423-42e7-b2fe-7843fa28ca52",
     "flightNumber": "421",
     "departureStation": "LAS",
     "outDateTime": "2018-05-18T19:09:00",
@@ -7176,7 +7176,7 @@
     "sequenceInfo": "5/18/2018 5622 LAX 320"
   },
   {
-    "uuid": "bd5ac9bd-547b-4166-872f-af40a2430961",
+    "uuid": "bea20d44-0ecb-4916-8bf4-ddbe766acedd",
     "flightNumber": "283",
     "departureStation": "LAX",
     "outDateTime": "2018-05-23T09:50:00",
@@ -7202,7 +7202,7 @@
     "sequenceInfo": "5/23/2018 5610 LAX 320"
   },
   {
-    "uuid": "e75cd9ae-68e6-4a33-9e45-0a5a132f0b9b",
+    "uuid": "eccaf61a-809a-41e6-911a-b07f281f70c1",
     "flightNumber": "284",
     "departureStation": "HNL",
     "outDateTime": "2018-05-24T14:23:00",
@@ -7228,7 +7228,7 @@
     "sequenceInfo": "5/23/2018 5610 LAX 320"
   },
   {
-    "uuid": "b0d3fead-002a-4cdf-8354-62eeee471bb4",
+    "uuid": "6f80635b-13bd-48b7-91a2-4a6da7562a1a",
     "flightNumber": "2440",
     "departureStation": "LAX",
     "outDateTime": "2018-06-02T11:27:00",
@@ -7254,7 +7254,7 @@
     "sequenceInfo": "6/2/2018 5557 LAX 320"
   },
   {
-    "uuid": "d3108faf-fbae-4bb3-a3fc-3cd864fb1282",
+    "uuid": "2ab717de-d5f4-49a3-8ed4-d0545a3c048f",
     "flightNumber": "2433",
     "departureStation": "DFW",
     "outDateTime": "2018-06-03T13:03:00",
@@ -7280,7 +7280,7 @@
     "sequenceInfo": "6/2/2018 5557 LAX 320"
   },
   {
-    "uuid": "5ffa4093-9594-4a45-b693-12d92a4a78ff",
+    "uuid": "158c8a1d-777e-40da-95b5-94466cb6848a",
     "flightNumber": "2465",
     "departureStation": "MCO",
     "outDateTime": "2018-06-03T17:40:00",
@@ -7306,7 +7306,7 @@
     "sequenceInfo": "6/2/2018 5557 LAX 320"
   },
   {
-    "uuid": "d6f6b4d7-d543-4084-b490-471860bac4cd",
+    "uuid": "7a6788b9-e141-457e-bff3-81e958b53336",
     "flightNumber": "1142",
     "departureStation": "DFW",
     "outDateTime": "2018-06-03T23:24:00",
@@ -7332,7 +7332,7 @@
     "sequenceInfo": "6/2/2018 5557 LAX 320"
   },
   {
-    "uuid": "966f8f4e-6b21-463f-95d5-532525fb3dfc",
+    "uuid": "af8bcc7a-051d-4093-9122-2ab919bc4e2d",
     "flightNumber": "2223",
     "departureStation": "ORD",
     "outDateTime": "2018-06-04T13:24:00",
@@ -7358,7 +7358,7 @@
     "sequenceInfo": "6/2/2018 5557 LAX 320"
   },
   {
-    "uuid": "d385378a-d28d-4ef0-89f5-78f3bb523761",
+    "uuid": "1b79c1d5-b3bc-495d-a18d-cb9c3dc954f2",
     "flightNumber": "1628",
     "departureStation": "LAX",
     "outDateTime": "2018-06-08T15:37:00",
@@ -7384,7 +7384,7 @@
     "sequenceInfo": "6/8/2018 5713 LAX 320"
   },
   {
-    "uuid": "d877c58b-46f0-47a7-a742-aa18d908b9f6",
+    "uuid": "ce6dced2-8bba-45e2-86c0-15f76622b042",
     "flightNumber": "575",
     "departureStation": "BOS",
     "outDateTime": "2018-06-09T16:34:00",
@@ -7410,7 +7410,7 @@
     "sequenceInfo": "6/8/2018 5713 LAX 320"
   },
   {
-    "uuid": "33518504-575a-4c5f-9b3e-afa45f80b2b7",
+    "uuid": "ee1f3571-0a29-4e6d-b51f-81aa49e2bdd7",
     "flightNumber": "1892",
     "departureStation": "PHL",
     "outDateTime": "2018-06-09T22:22:00",
@@ -7436,7 +7436,7 @@
     "sequenceInfo": "6/8/2018 5713 LAX 320"
   },
   {
-    "uuid": "dc9949fc-f43c-440a-a73b-6192acfb6dba",
+    "uuid": "0426a982-de47-497e-b90b-d50bd35764b2",
     "flightNumber": "866",
     "departureStation": "IAH",
     "outDateTime": "2018-06-10T14:07:00",
@@ -7462,7 +7462,7 @@
     "sequenceInfo": "6/8/2018 5713 LAX 320"
   },
   {
-    "uuid": "4920d50b-9406-4a88-a222-d8d16209c47c",
+    "uuid": "8a016f8b-2ed8-419f-80ab-55587900cf10",
     "flightNumber": "147",
     "departureStation": "LAX",
     "outDateTime": "2018-06-17T15:48:00",
@@ -7488,7 +7488,7 @@
     "sequenceInfo": "6/17/2018 5823 LAX 320"
   },
   {
-    "uuid": "63df8ae1-b376-4cce-8c81-b6a06059dd54",
+    "uuid": "607171c6-a709-464b-8102-9123317205c4",
     "flightNumber": "2585",
     "departureStation": "DFW",
     "outDateTime": "2018-06-17T22:36:00",
@@ -7514,7 +7514,7 @@
     "sequenceInfo": "6/17/2018 5823 LAX 320"
   },
   {
-    "uuid": "15deb084-8d0f-4008-b70b-79a3366c5a42",
+    "uuid": "75b7efac-79f3-49a4-a44b-c78685c615ac",
     "flightNumber": "2364",
     "departureStation": "ORD",
     "outDateTime": "2018-06-18T18:24:00",
@@ -7540,7 +7540,7 @@
     "sequenceInfo": "6/17/2018 5823 LAX 320"
   },
   {
-    "uuid": "58a97150-5a75-4a7d-b51f-a42e7e711005",
+    "uuid": "b11d55ed-329f-4b7f-bbb7-2ff567800ce0",
     "flightNumber": "1366",
     "departureStation": "LAX",
     "outDateTime": "2018-06-20T08:37:00",
@@ -7566,7 +7566,7 @@
     "sequenceInfo": "6/20/2018 31089 LAX 320"
   },
   {
-    "uuid": "45cc63cf-ae5c-410e-97df-d10e847e6051",
+    "uuid": "06fd8443-219a-43d4-9458-41ea5e93bd61",
     "flightNumber": "1366",
     "departureStation": "LAS",
     "outDateTime": "2018-06-20T10:59:00",
@@ -7592,7 +7592,7 @@
     "sequenceInfo": "6/20/2018 31089 LAX 320"
   },
   {
-    "uuid": "22a2dbee-d2d2-4736-a477-5a2ca5f88e46",
+    "uuid": "d82e1a3a-526f-46c1-bab1-eb2bf5ac74ff",
     "flightNumber": "899",
     "departureStation": "LAX",
     "outDateTime": "2018-06-23T16:40:00",
@@ -7618,7 +7618,7 @@
     "sequenceInfo": "6/23/2018 31076 LAX 320"
   },
   {
-    "uuid": "332c8cb9-9bb0-44ba-b121-8a43ae1692b4",
+    "uuid": "1f35256f-1d31-4204-9636-a839156dfeb8",
     "flightNumber": "1681",
     "departureStation": "PHX",
     "outDateTime": "2018-06-23T20:32:00",
@@ -7644,7 +7644,7 @@
     "sequenceInfo": "6/23/2018 31076 LAX 320"
   },
   {
-    "uuid": "dd1140ab-2713-48b3-beef-11abe65befb0",
+    "uuid": "79133f96-e013-40c7-9a95-615aa9db5ed5",
     "flightNumber": "500",
     "departureStation": "SEA",
     "outDateTime": "2018-06-24T15:01:00",
@@ -7670,7 +7670,7 @@
     "sequenceInfo": "6/23/2018 31076 LAX 320"
   },
   {
-    "uuid": "004d9063-df7e-4a39-944a-1b69d5a0dbec",
+    "uuid": "1ae8d599-3578-4171-960b-206eac2d8eb5",
     "flightNumber": "1951",
     "departureStation": "PHX",
     "outDateTime": "2018-06-24T19:48:00",
@@ -7696,7 +7696,7 @@
     "sequenceInfo": "6/23/2018 31076 LAX 320"
   },
   {
-    "uuid": "1b1ef8a8-6b39-4769-ac62-313fec8fa39e",
+    "uuid": "9544b538-3c4d-4dcf-8c03-13629cd96da4",
     "flightNumber": "613",
     "departureStation": "OMA",
     "outDateTime": "2018-06-25T14:14:00",
@@ -7722,7 +7722,7 @@
     "sequenceInfo": "6/23/2018 31076 LAX 320"
   },
   {
-    "uuid": "26d366a3-2790-4711-8e3d-c6cf6d2ea847",
+    "uuid": "2d327ae2-0346-472a-a8f8-919b53dbc7d5",
     "flightNumber": "650",
     "departureStation": "PHX",
     "outDateTime": "2018-06-25T17:52:00",
@@ -7748,7 +7748,7 @@
     "sequenceInfo": "6/23/2018 31076 LAX 320"
   },
   {
-    "uuid": "052001fc-f0c1-4647-bce7-a90d016d9b8d",
+    "uuid": "00c1298a-6b7b-4126-808c-8f045a902fe6",
     "flightNumber": "445",
     "departureStation": "LAX",
     "outDateTime": "2018-06-26T10:22:00",
@@ -7774,7 +7774,7 @@
     "sequenceInfo": "6/26/2018 5391 LAX 320"
   },
   {
-    "uuid": "729eb8de-2a8c-4d4c-95d1-e6bc23b3d261",
+    "uuid": "9d1f49d8-362d-47f3-bd79-db9754ce1cbd",
     "flightNumber": "899",
     "departureStation": "PHX",
     "outDateTime": "2018-06-26T13:58:00",
@@ -7800,7 +7800,7 @@
     "sequenceInfo": "6/26/2018 5391 LAX 320"
   },
   {
-    "uuid": "2661164f-7d0d-4802-8b63-81e6343cc3ea",
+    "uuid": "30decde8-4d35-403f-8e44-7d0455f23b7e",
     "flightNumber": "2800",
     "departureStation": "LAX",
     "outDateTime": "2018-07-01T23:52:00",
@@ -7826,7 +7826,7 @@
     "sequenceInfo": "7/1/2018 5959 LAX 320"
   },
   {
-    "uuid": "ba1261de-84d3-4230-9b6e-4b0a83219139",
+    "uuid": "1bc304b7-3c4d-42a8-a64e-8e639c72ba9d",
     "flightNumber": "2800",
     "departureStation": "LAX",
     "outDateTime": "2018-07-02T02:41:00",
@@ -7852,7 +7852,7 @@
     "sequenceInfo": "7/1/2018 5959 LAX 320"
   },
   {
-    "uuid": "005e6e66-5306-4b54-934f-61bcfd175e73",
+    "uuid": "8cb66f08-e04b-405c-a5a2-076424fdc3cc",
     "flightNumber": "1354",
     "departureStation": "BOS",
     "outDateTime": "2018-07-03T13:32:00",
@@ -7878,7 +7878,7 @@
     "sequenceInfo": "7/1/2018 5959 LAX 320"
   },
   {
-    "uuid": "b1a8661b-a3b1-4031-b1f5-38f24891e761",
+    "uuid": "b1c431c1-ca7d-4222-b293-e73bf0a55997",
     "flightNumber": "2364",
     "departureStation": "ORD",
     "outDateTime": "2018-07-03T19:17:00",
@@ -7904,7 +7904,7 @@
     "sequenceInfo": "7/1/2018 5959 LAX 320"
   },
   {
-    "uuid": "e56ef794-eb74-4ea2-932b-bc4e2c347525",
+    "uuid": "406e8743-1d3c-492d-8a9e-14b0b097f691",
     "flightNumber": "147",
     "departureStation": "LAX",
     "outDateTime": "2018-07-07T15:58:00",
@@ -7930,7 +7930,7 @@
     "sequenceInfo": "7/7/2018 5389 LAX 320"
   },
   {
-    "uuid": "255ce23f-98ab-4a41-a2d0-26e16750d2d3",
+    "uuid": "7f016d2a-861f-4965-87a3-b7c0c253e55b",
     "flightNumber": "2224",
     "departureStation": "DFW",
     "outDateTime": "2018-07-07T22:34:00",
@@ -7956,7 +7956,7 @@
     "sequenceInfo": "7/7/2018 5389 LAX 320"
   },
   {
-    "uuid": "d0b6d799-80bd-4c63-92eb-89283f66465c",
+    "uuid": "a7de7b35-b806-40ce-b969-6a3aa41d31de",
     "flightNumber": "2577",
     "departureStation": "PDX",
     "outDateTime": "2018-07-09T07:35:00",
@@ -7982,7 +7982,7 @@
     "sequenceInfo": "7/7/2018 5389 LAX 320"
   },
   {
-    "uuid": "ee165351-226b-4c0c-8159-f086900c8be4",
+    "uuid": "734d9525-fc3f-43b4-b8d0-4114f4d1cccb",
     "flightNumber": "2459",
     "departureStation": "DFW",
     "outDateTime": "2018-07-09T16:30:00",
@@ -8008,7 +8008,7 @@
     "sequenceInfo": "7/7/2018 5389 LAX 320"
   },
   {
-    "uuid": "e3f4e23a-9164-4ece-aff9-1e3dc633e2e9",
+    "uuid": "37229649-838c-46c9-bc2a-26c7d03b9910",
     "flightNumber": "147",
     "departureStation": "LAX",
     "outDateTime": "2018-07-18T15:49:00",
@@ -8034,7 +8034,7 @@
     "sequenceInfo": "7/18/2018 5389 LAX 320"
   },
   {
-    "uuid": "e2ccc41b-190e-40a8-910d-dd76b6353a7a",
+    "uuid": "16f95b3d-08c9-4d38-8805-1f058c6e6d14",
     "flightNumber": "2224",
     "departureStation": "DFW",
     "outDateTime": "2018-07-18T23:22:00",
@@ -8060,7 +8060,7 @@
     "sequenceInfo": "7/18/2018 5389 LAX 320"
   },
   {
-    "uuid": "8e2f0eb3-cb05-42fb-a6a9-1708c206d3ab",
+    "uuid": "b9926c7f-f483-4366-a6fb-ec945bacced9",
     "flightNumber": "2577",
     "departureStation": "PDX",
     "outDateTime": "2018-07-20T07:42:00",
@@ -8086,7 +8086,7 @@
     "sequenceInfo": "7/18/2018 5389 LAX 320"
   },
   {
-    "uuid": "66f8e407-3e7d-4d31-8684-0c62a76832c8",
+    "uuid": "d21ca186-b013-4276-9cb8-c6b24a37bc99",
     "flightNumber": "2459",
     "departureStation": "DFW",
     "outDateTime": "2018-07-20T14:36:00",
@@ -8112,7 +8112,7 @@
     "sequenceInfo": "7/18/2018 5389 LAX 320"
   },
   {
-    "uuid": "c98523da-195f-441c-8ea6-95d90fb4388c",
+    "uuid": "b6bb2960-3964-4ae6-9f33-b63ea2342234",
     "flightNumber": "866",
     "departureStation": "LAX",
     "outDateTime": "2018-07-21T07:42:00",
@@ -8138,7 +8138,7 @@
     "sequenceInfo": "7/21/2018 5457 LAX 320"
   },
   {
-    "uuid": "30f93e4f-86cf-4902-a2fb-eb76c2deaaad",
+    "uuid": "33b67983-4b04-4401-b104-1fd2bbf5672a",
     "flightNumber": "1804",
     "departureStation": "IAH",
     "outDateTime": "2018-07-22T08:26:00",
@@ -8164,7 +8164,7 @@
     "sequenceInfo": "7/21/2018 5457 LAX 320"
   },
   {
-    "uuid": "d0370893-fede-4c7c-9ccb-8ca2f84295ed",
+    "uuid": "2dd01389-8f63-4efe-abbd-0405777a3780",
     "flightNumber": "776",
     "departureStation": "CLT",
     "outDateTime": "2018-07-22T15:01:00",
@@ -8190,7 +8190,7 @@
     "sequenceInfo": "7/21/2018 5457 LAX 320"
   },
   {
-    "uuid": "bbf4065c-2215-42b1-911c-0fa836000fab",
+    "uuid": "9a0ea0a4-6ce0-4bec-8417-3f5016559583",
     "flightNumber": "1131",
     "departureStation": "LAS",
     "outDateTime": "2018-07-23T06:01:00",
@@ -8216,7 +8216,7 @@
     "sequenceInfo": "7/21/2018 5457 LAX 320"
   },
   {
-    "uuid": "ad1e2ad5-a60f-4eec-ac76-c59cba3bc6cd",
+    "uuid": "edc08dcb-26f5-429a-901e-97f019d7928d",
     "flightNumber": "2811",
     "departureStation": "DFW",
     "outDateTime": "2018-07-23T11:46:00",
@@ -8242,7 +8242,7 @@
     "sequenceInfo": "7/21/2018 5457 LAX 320"
   },
   {
-    "uuid": "ac392e9a-55c7-49be-bac1-cd9e90a91dd8",
+    "uuid": "4cd489ef-7f34-49c0-9e9a-b1a1c1511f40",
     "flightNumber": "866",
     "departureStation": "LAX",
     "outDateTime": "2018-07-28T07:49:00",
@@ -8268,7 +8268,7 @@
     "sequenceInfo": "7/28/2018 5457 LAX 320"
   },
   {
-    "uuid": "336cd787-d689-4ab8-811b-459d144b91e5",
+    "uuid": "022f3dde-3e9d-4cf2-a5d4-4143ab1ed4f0",
     "flightNumber": "1804",
     "departureStation": "IAH",
     "outDateTime": "2018-07-29T08:29:00",
@@ -8294,7 +8294,7 @@
     "sequenceInfo": "7/28/2018 5457 LAX 320"
   },
   {
-    "uuid": "324b21f6-ee95-41f9-a2a1-eba702beb00e",
+    "uuid": "256ca6fc-c4bd-4b03-a9bd-dc6e7d7326b8",
     "flightNumber": "776",
     "departureStation": "CLT",
     "outDateTime": "2018-07-29T15:56:00",
@@ -8320,7 +8320,7 @@
     "sequenceInfo": "7/28/2018 5457 LAX 320"
   },
   {
-    "uuid": "81e290ed-6e89-4850-ba3f-6e86e069e111",
+    "uuid": "2fdc5136-fb51-4c84-8f95-b9e18c93b072",
     "flightNumber": "1131",
     "departureStation": "LAS",
     "outDateTime": "2018-07-30T06:09:00",
@@ -8346,7 +8346,7 @@
     "sequenceInfo": "7/28/2018 5457 LAX 320"
   },
   {
-    "uuid": "db977e19-ca25-4431-89ce-3f811d6be7a5",
+    "uuid": "962db79c-7160-4e6d-b556-ce50c0910559",
     "flightNumber": "2811",
     "departureStation": "DFW",
     "outDateTime": "2018-07-30T11:58:00",
@@ -8372,7 +8372,7 @@
     "sequenceInfo": "7/28/2018 5457 LAX 320"
   },
   {
-    "uuid": "1d86c091-2143-4a4c-a152-d67c9b9dfed6",
+    "uuid": "e68c0d60-e81f-4f95-b38d-ffd7c39f5cab",
     "flightNumber": "309",
     "departureStation": "LAX",
     "outDateTime": "2018-08-03T14:43:00",
@@ -8398,7 +8398,7 @@
     "sequenceInfo": "8/3/2018 5633 LAX 320"
   },
   {
-    "uuid": "6d5f14a6-9058-4bf6-b507-9bf3370e3a90",
+    "uuid": "15bc7475-0e88-44e0-bddb-b0820778253e",
     "flightNumber": "245",
     "departureStation": "ORD",
     "outDateTime": "2018-08-04T20:19:00",
@@ -8424,7 +8424,7 @@
     "sequenceInfo": "8/3/2018 5633 LAX 320"
   },
   {
-    "uuid": "f90b9403-1641-4bce-a2c5-7cd32d2ac541",
+    "uuid": "7cd1d3ad-9777-44c7-9d01-e2e2220acea4",
     "flightNumber": "501",
     "departureStation": "LAX",
     "outDateTime": "2018-08-06T16:54:00",
@@ -8450,7 +8450,7 @@
     "sequenceInfo": "8/6/2018 31147 LAX 320"
   },
   {
-    "uuid": "cc212b9f-90b6-4b20-b214-210270eb29af",
+    "uuid": "059ce8ed-4552-462d-8db2-e52b3eef8455",
     "flightNumber": "501",
     "departureStation": "LAS",
     "outDateTime": "2018-08-06T18:59:00",
@@ -8476,7 +8476,7 @@
     "sequenceInfo": "8/6/2018 31147 LAX 320"
   },
   {
-    "uuid": "6f6aeaa9-1788-45c5-b4d0-cb80e1c379df",
+    "uuid": "1415fdc2-b44e-4938-be24-ac995948fce9",
     "flightNumber": "205",
     "departureStation": "LAX",
     "outDateTime": "2018-08-09T14:18:00",
@@ -8502,7 +8502,7 @@
     "sequenceInfo": "8/9/2018 5670 LAX 320"
   },
   {
-    "uuid": "a7400c87-a32d-4e36-b99a-2f7b6521e3ba",
+    "uuid": "c3bdc383-0221-4f41-9088-6a8e501845ea",
     "flightNumber": "250",
     "departureStation": "OGG",
     "outDateTime": "2018-08-11T22:43:00",
@@ -8528,7 +8528,7 @@
     "sequenceInfo": "8/9/2018 5670 LAX 320"
   },
   {
-    "uuid": "5ea4eb6c-5fa4-4d8f-9209-7c3c8f55f757",
+    "uuid": "37b1b5f1-aef9-4d21-8caf-dd65a578e303",
     "flightNumber": "866",
     "departureStation": "LAX",
     "outDateTime": "2018-08-17T07:16:00",
@@ -8554,7 +8554,7 @@
     "sequenceInfo": "8/17/2018 5611 LAX 320"
   },
   {
-    "uuid": "d0dec426-aee6-4075-9fc3-319257c45a9a",
+    "uuid": "db7762d7-2367-4169-83b3-6efe25fe52d6",
     "flightNumber": "1804",
     "departureStation": "IAH",
     "outDateTime": "2018-08-18T08:25:00",
@@ -8580,7 +8580,7 @@
     "sequenceInfo": "8/17/2018 5611 LAX 320"
   },
   {
-    "uuid": "3440a395-7b71-4603-8061-51a6542f74c7",
+    "uuid": "2289f4f4-81a3-4c15-8773-3262d18ad573",
     "flightNumber": "776",
     "departureStation": "CLT",
     "outDateTime": "2018-08-18T14:55:00",
@@ -8606,7 +8606,7 @@
     "sequenceInfo": "8/17/2018 5611 LAX 320"
   },
   {
-    "uuid": "cc355d24-4d08-41a0-bc27-ab81a90bf61d",
+    "uuid": "909a30d5-8dcd-4334-b6a6-cca6ab807315",
     "flightNumber": "1131",
     "departureStation": "LAS",
     "outDateTime": "2018-08-19T05:54:00",
@@ -8632,7 +8632,7 @@
     "sequenceInfo": "8/17/2018 5611 LAX 320"
   },
   {
-    "uuid": "5cc3c079-185c-4061-9351-221cf61d7573",
+    "uuid": "267f5000-4704-4ccf-ab83-2f807fa765ab",
     "flightNumber": "2811",
     "departureStation": "DFW",
     "outDateTime": "2018-08-19T12:17:00",
@@ -8658,7 +8658,7 @@
     "sequenceInfo": "8/17/2018 5611 LAX 320"
   },
   {
-    "uuid": "f782a607-04c3-4e46-a6ac-ffd500c70952",
+    "uuid": "0870e6a9-2114-4665-b6fe-567161ef188d",
     "flightNumber": "184",
     "departureStation": "LAX",
     "outDateTime": "2018-08-23T16:27:00",
@@ -8684,7 +8684,7 @@
     "sequenceInfo": "8/23/2018 5690 LAX 320"
   },
   {
-    "uuid": "4d8a4a44-e087-4fed-9887-0e5292a69774",
+    "uuid": "72697195-8375-450d-8a76-ce19cba071dd",
     "flightNumber": "302",
     "departureStation": "JFK",
     "outDateTime": "2018-08-24T17:55:00",
@@ -8710,7 +8710,7 @@
     "sequenceInfo": "8/23/2018 5690 LAX 320"
   },
   {
-    "uuid": "11e86549-0fd3-405a-b46b-10bc5bcb45c0",
+    "uuid": "a9d1063b-8c5a-4861-9f26-ba6515a4b50f",
     "flightNumber": "31",
     "departureStation": "LAX",
     "outDateTime": "2018-08-30T08:16:00",
@@ -8736,7 +8736,7 @@
     "sequenceInfo": "8/30/2018 5619 LAX 320"
   },
   {
-    "uuid": "359b07d4-1778-49cb-a6ef-5d815b8d9746",
+    "uuid": "84d43fe3-f77b-44b9-870b-0cf9a4f52286",
     "flightNumber": "1480",
     "departureStation": "HNL",
     "outDateTime": "2018-08-31T06:52:00",
@@ -8762,7 +8762,7 @@
     "sequenceInfo": "8/30/2018 5619 LAX 320"
   },
   {
-    "uuid": "d369bdee-ce63-4922-a8ee-eb7bf7dd23cd",
+    "uuid": "08f4b580-2875-48ca-bdf3-5ea296ddad50",
     "flightNumber": "2459",
     "departureStation": "LAX",
     "outDateTime": "2018-09-01T08:03:00",
@@ -8788,7 +8788,7 @@
     "sequenceInfo": "9/1/2018 5675 LAX 320"
   },
   {
-    "uuid": "2d817bdc-ee96-4471-8c02-1c3ce2dadf3c",
+    "uuid": "d16b1af3-5c0c-445a-8bb3-9f991e901dae",
     "flightNumber": "249",
     "departureStation": "DFW",
     "outDateTime": "2018-09-01T14:50:00",
@@ -8814,7 +8814,7 @@
     "sequenceInfo": "9/1/2018 5675 LAX 320"
   },
   {
-    "uuid": "72061a4c-4a1d-43f8-bd35-9ff9261c99ef",
+    "uuid": "16c43a3a-cbdd-45c8-975e-8f595651d622",
     "flightNumber": "249",
     "departureStation": "SAT",
     "outDateTime": "2018-09-01T16:31:00",
@@ -8840,7 +8840,7 @@
     "sequenceInfo": "9/1/2018 5675 LAX 320"
   },
   {
-    "uuid": "a8057893-c8c9-41ae-b74c-c5dc8c6bb5de",
+    "uuid": "e0447583-8ac3-4975-beb9-0d610c712a6c",
     "flightNumber": "1564",
     "departureStation": "DFW",
     "outDateTime": "2018-09-01T18:46:00",
@@ -8866,7 +8866,7 @@
     "sequenceInfo": "9/1/2018 5675 LAX 320"
   },
   {
-    "uuid": "fd1c3ef3-ae20-4ac4-87bf-6cb87c9d3576",
+    "uuid": "d8d50144-67a1-46d4-9a06-457708802b04",
     "flightNumber": "249",
     "departureStation": "SAT",
     "outDateTime": "2018-09-02T16:55:00",
@@ -8892,7 +8892,7 @@
     "sequenceInfo": "9/1/2018 5675 LAX 320"
   },
   {
-    "uuid": "09766804-242e-4632-a3a1-6c95878e1f45",
+    "uuid": "9b60d36c-1292-4f16-960f-e208c1fba082",
     "flightNumber": "2697",
     "departureStation": "DFW",
     "outDateTime": "2018-09-02T20:26:00",
@@ -8918,7 +8918,7 @@
     "sequenceInfo": "9/1/2018 5675 LAX 320"
   },
   {
-    "uuid": "3dfec267-05cf-42d7-a220-072e7756e007",
+    "uuid": "8543e999-b497-4fbb-abd1-32a7489189de",
     "flightNumber": "2044",
     "departureStation": "LAX",
     "outDateTime": "2018-09-06T08:34:00",
@@ -8944,7 +8944,7 @@
     "sequenceInfo": "9/6/2018 5807 LAX 320"
   },
   {
-    "uuid": "3285ff83-7a1f-47ed-9ad0-e11b53f55ed7",
+    "uuid": "3a8a4813-f925-4d95-bfab-786a2f8eef18",
     "flightNumber": "817",
     "departureStation": "CLT",
     "outDateTime": "2018-09-06T18:53:00",
@@ -8970,7 +8970,7 @@
     "sequenceInfo": "9/6/2018 5807 LAX 320"
   },
   {
-    "uuid": "9339be32-a50e-45b0-b801-a92d231dcab9",
+    "uuid": "e6667d52-547e-4274-9568-65e45b33d7f5",
     "flightNumber": "1712",
     "departureStation": "SAT",
     "outDateTime": "2018-09-07T19:25:00",
@@ -8996,7 +8996,7 @@
     "sequenceInfo": "9/6/2018 5807 LAX 320"
   },
   {
-    "uuid": "e5305766-4eeb-4b02-b1ec-bf2aef8fa97c",
+    "uuid": "e40323da-c686-4b75-a54e-0b98da6f2627",
     "flightNumber": "1974",
     "departureStation": "CLT",
     "outDateTime": "2018-09-08T00:19:00",
@@ -9022,7 +9022,7 @@
     "sequenceInfo": "9/6/2018 5807 LAX 320"
   },
   {
-    "uuid": "8912526c-3c8c-47a3-b7d4-a1297e04734e",
+    "uuid": "cba3356a-430a-4aac-acd9-d0779d57fb0f",
     "flightNumber": "670",
     "departureStation": "STL",
     "outDateTime": "2018-09-08T18:11:00",
@@ -9048,7 +9048,7 @@
     "sequenceInfo": "9/6/2018 5807 LAX 320"
   },
   {
-    "uuid": "05ee9f2c-14c9-4b8f-8a8f-b8bc78888baa",
+    "uuid": "5eee9bad-acba-4e58-b5e8-1901975bcb19",
     "flightNumber": "539",
     "departureStation": "LAX",
     "outDateTime": "2018-09-27T08:19:00",
@@ -9074,7 +9074,7 @@
     "sequenceInfo": "9/27/2018 5478 LAX 320"
   },
   {
-    "uuid": "13e25615-c3fd-4334-9d7b-898bb5b93974",
+    "uuid": "42ed95ec-8c34-43e8-a108-8b9167b18490",
     "flightNumber": "539",
     "departureStation": "SJD",
     "outDateTime": "2018-09-27T12:48:00",
@@ -9100,7 +9100,7 @@
     "sequenceInfo": "9/27/2018 5478 LAX 320"
   },
   {
-    "uuid": "b3760ba3-d6ff-434f-801f-492078634a0e",
+    "uuid": "f15ab1f7-0fc4-48e8-bae8-4c523cede342",
     "flightNumber": "1628",
     "departureStation": "LAX",
     "outDateTime": "2018-10-06T17:54:00",
@@ -9126,7 +9126,7 @@
     "sequenceInfo": "10/6/2018 5880 LAX 320"
   },
   {
-    "uuid": "8af19574-0a07-4464-b9da-abe8eaa8154e",
+    "uuid": "4ba5b66f-fedf-4b31-8958-63d554f6ec82",
     "flightNumber": "2019",
     "departureStation": "BOS",
     "outDateTime": "2018-10-07T16:18:00",
@@ -9152,7 +9152,7 @@
     "sequenceInfo": "10/6/2018 5880 LAX 320"
   },
   {
-    "uuid": "7e5e7dbf-d5e2-4351-9113-537b9fcc4805",
+    "uuid": "77930037-2486-49af-99f0-93dcb09d5eda",
     "flightNumber": "631",
     "departureStation": "PHL",
     "outDateTime": "2018-10-07T19:11:00",
@@ -9178,7 +9178,7 @@
     "sequenceInfo": "10/6/2018 5880 LAX 320"
   },
   {
-    "uuid": "f31f9d3d-f969-476c-b2ba-4b0940f2f6d2",
+    "uuid": "2013f38c-2512-422b-8e55-e8a4b6ce30bd",
     "flightNumber": "862",
     "departureStation": "RSW",
     "outDateTime": "2018-10-08T16:53:00",
@@ -9204,7 +9204,7 @@
     "sequenceInfo": "10/6/2018 5880 LAX 320"
   },
   {
-    "uuid": "43510db9-97f4-4cc6-aca3-4a13e08a1817",
+    "uuid": "d6fdb538-59dc-49d9-9f95-f70f8c6f1611",
     "flightNumber": "2018",
     "departureStation": "PHL",
     "outDateTime": "2018-10-08T21:19:00",
@@ -9230,7 +9230,7 @@
     "sequenceInfo": "10/6/2018 5880 LAX 320"
   },
   {
-    "uuid": "924886df-b59e-418a-b538-ae5c11150538",
+    "uuid": "bbec4f0f-b48d-432b-8391-8bf619ac093e",
     "flightNumber": "265",
     "departureStation": "LAX",
     "outDateTime": "2018-10-13T09:50:00",
@@ -9256,7 +9256,7 @@
     "sequenceInfo": "10/13/2018 5573 LAX 320"
   },
   {
-    "uuid": "61257325-90b3-4109-9939-103d9314e037",
+    "uuid": "e86e5f9a-583d-4c16-b6a9-21dff4175362",
     "flightNumber": "266",
     "departureStation": "LIH",
     "outDateTime": "2018-10-14T14:31:00",
@@ -9282,7 +9282,7 @@
     "sequenceInfo": "10/13/2018 5573 LAX 320"
   },
   {
-    "uuid": "cf6e99d2-dc28-4469-99d3-5c166a81afa1",
+    "uuid": "253c3520-3142-4d8c-a735-cf9f0b98b12c",
     "flightNumber": "28",
     "departureStation": "LAX",
     "outDateTime": "2018-10-18T23:00:00",
@@ -9308,7 +9308,7 @@
     "sequenceInfo": "10/18/2018 5655 LAX 320"
   },
   {
-    "uuid": "f57a1298-5a1d-409e-968c-f6ee3cd84421",
+    "uuid": "cd15ea3a-a04a-454d-bf8e-70c8b06486e8",
     "flightNumber": "952",
     "departureStation": "JFK",
     "outDateTime": "2018-10-20T13:29:00",
@@ -9334,7 +9334,7 @@
     "sequenceInfo": "10/18/2018 5655 LAX 320"
   },
   {
-    "uuid": "e2016169-6ef4-46ba-9e7d-a53a80736137",
+    "uuid": "628a8783-1e29-4578-b0b1-61c42b591cfe",
     "flightNumber": "952",
     "departureStation": "DEN",
     "outDateTime": "2018-10-20T16:48:00",
@@ -9360,7 +9360,7 @@
     "sequenceInfo": "10/18/2018 5655 LAX 320"
   },
   {
-    "uuid": "826ff590-1cb5-4605-ae0a-d02c5dae4fb2",
+    "uuid": "e4210ed6-e350-4919-8170-77f70eadbf14",
     "flightNumber": "1951",
     "departureStation": "PHX",
     "outDateTime": "2018-10-20T18:54:00",
@@ -9386,7 +9386,7 @@
     "sequenceInfo": "10/18/2018 5655 LAX 320"
   },
   {
-    "uuid": "6811b740-8730-4175-aec5-f340ce9f7300",
+    "uuid": "b9bee873-349b-449e-9064-3b789345c675",
     "flightNumber": "613",
     "departureStation": "OMA",
     "outDateTime": "2018-10-21T14:24:00",
@@ -9412,7 +9412,7 @@
     "sequenceInfo": "10/18/2018 5655 LAX 320"
   },
   {
-    "uuid": "2a8bac23-68c4-41e2-8265-606d110cd397",
+    "uuid": "810b461d-f0f5-4c75-8e4b-cea7fd64f9c8",
     "flightNumber": "650",
     "departureStation": "PHX",
     "outDateTime": "2018-10-21T17:02:00",
@@ -9438,7 +9438,7 @@
     "sequenceInfo": "10/18/2018 5655 LAX 320"
   },
   {
-    "uuid": "1ee9b263-738e-43df-94a4-5f125c943cb9",
+    "uuid": "cb1bc461-d13d-4f0c-965a-113ebd8c0e71",
     "flightNumber": "167",
     "departureStation": "LAX",
     "outDateTime": "2018-11-03T08:31:00",
@@ -9464,7 +9464,7 @@
     "sequenceInfo": "11/3/2018 5789 LAX 320"
   },
   {
-    "uuid": "1e3ef5bd-241f-4cfc-a95d-5b2e939e8908",
+    "uuid": "6b068091-9df6-478b-8273-0656cb496d9a",
     "flightNumber": "653",
     "departureStation": "BOS",
     "outDateTime": "2018-11-04T09:12:00",
@@ -9490,7 +9490,7 @@
     "sequenceInfo": "11/3/2018 5789 LAX 320"
   },
   {
-    "uuid": "9cebf580-2433-4691-89a1-e81de573716e",
+    "uuid": "b4a448c7-edb3-4be5-bb6b-dc04508b83fb",
     "flightNumber": "2024",
     "departureStation": "CLT",
     "outDateTime": "2018-11-04T13:11:00",
@@ -9516,7 +9516,7 @@
     "sequenceInfo": "11/3/2018 5789 LAX 320"
   },
   {
-    "uuid": "9ab378c8-7747-4873-95ca-5fac97176e10",
+    "uuid": "cb172b81-d215-4692-bc8d-7473b282ea23",
     "flightNumber": "1845",
     "departureStation": "IAH",
     "outDateTime": "2018-11-05T08:11:00",
@@ -9542,7 +9542,7 @@
     "sequenceInfo": "11/3/2018 5789 LAX 320"
   },
   {
-    "uuid": "8ffd05e8-4ec9-4dfa-a40f-203871d76e2b",
+    "uuid": "6d57e645-477c-498f-845f-6467792eb45c",
     "flightNumber": "2546",
     "departureStation": "DFW",
     "outDateTime": "2018-11-05T11:38:00",
@@ -9568,7 +9568,7 @@
     "sequenceInfo": "11/3/2018 5789 LAX 320"
   },
   {
-    "uuid": "897dffbc-db85-4e6d-9b8d-be57d106e511",
+    "uuid": "56b318be-69a4-4458-b64d-d07031619674",
     "flightNumber": "313",
     "departureStation": "LAX",
     "outDateTime": "2018-11-07T07:58:00",
@@ -9594,7 +9594,7 @@
     "sequenceInfo": "11/7/2018 5879 LAX 320"
   },
   {
-    "uuid": "e54e5715-372b-46e1-a81a-af6c63d8045e",
+    "uuid": "b99f4a09-19ea-4d7e-97cc-03ae6acc6938",
     "flightNumber": "1620",
     "departureStation": "MIA",
     "outDateTime": "2018-11-08T15:18:00",
@@ -9620,7 +9620,7 @@
     "sequenceInfo": "11/7/2018 5879 LAX 320"
   },
   {
-    "uuid": "a3773852-8578-4c09-adbc-27a18871f2cf",
+    "uuid": "85b611a3-0610-4623-a1f0-09142adaa13b",
     "flightNumber": "1631",
     "departureStation": "CLT",
     "outDateTime": "2018-11-08T19:10:00",
@@ -9646,7 +9646,7 @@
     "sequenceInfo": "11/7/2018 5879 LAX 320"
   },
   {
-    "uuid": "cc80cefa-a290-4912-91f7-98f445aae094",
+    "uuid": "b214c755-7611-416e-a163-aaf9ca9a5d11",
     "flightNumber": "1930",
     "departureStation": "MSY",
     "outDateTime": "2018-11-09T09:27:00",
@@ -9672,7 +9672,7 @@
     "sequenceInfo": "11/7/2018 5879 LAX 320"
   },
   {
-    "uuid": "f192c441-4b2b-4dd5-b929-e03fcdf6b81b",
+    "uuid": "def3c9da-c2f1-430d-b3de-b179f1fb520c",
     "flightNumber": "1833",
     "departureStation": "CLT",
     "outDateTime": "2018-11-09T15:18:00",
@@ -9698,7 +9698,7 @@
     "sequenceInfo": "11/7/2018 5879 LAX 320"
   },
   {
-    "uuid": "caca4b2f-6034-47ff-b5b0-939e5376a136",
+    "uuid": "3dea3442-9965-4922-b7c9-87f299483083",
     "flightNumber": "2322",
     "departureStation": "LAX",
     "outDateTime": "2018-11-11T08:26:00",
@@ -9724,7 +9724,7 @@
     "sequenceInfo": "11/11/2018 5552 LAX 320"
   },
   {
-    "uuid": "6ef664c4-c6f4-49c6-a0a5-87592180d68d",
+    "uuid": "bf37d65d-9d9d-46bc-ab9d-949fc56029a6",
     "flightNumber": "2323",
     "departureStation": "YYZ",
     "outDateTime": "2018-11-12T21:05:00",
@@ -9750,7 +9750,7 @@
     "sequenceInfo": "11/11/2018 5552 LAX 320"
   },
   {
-    "uuid": "55ac9441-d64f-4b1f-8034-6044b3378ce9",
+    "uuid": "cfe5fd7f-c187-4015-be0f-b146add4733f",
     "flightNumber": "1966",
     "departureStation": "LAX",
     "outDateTime": "2018-11-16T12:53:00",
@@ -9776,7 +9776,7 @@
     "sequenceInfo": "11/16/2018 6049 LAX 320"
   },
   {
-    "uuid": "807c826a-8302-4dd2-87cd-1323cfbdf2e5",
+    "uuid": "56bb55dc-6d6e-40fc-b8d2-e1cc44208a5d",
     "flightNumber": "1938",
     "departureStation": "CLT",
     "outDateTime": "2018-11-16T22:19:00",
@@ -9802,7 +9802,7 @@
     "sequenceInfo": "11/16/2018 6049 LAX 320"
   },
   {
-    "uuid": "c3aa240e-02d7-40bd-aca6-66f19ece729c",
+    "uuid": "abab805a-f3c9-43a3-ad44-8d33dfa1262a",
     "flightNumber": "867",
     "departureStation": "ORF",
     "outDateTime": "2018-11-17T17:57:00",
@@ -9828,7 +9828,7 @@
     "sequenceInfo": "11/16/2018 6049 LAX 320"
   },
   {
-    "uuid": "2de52c59-98ea-4456-b9ea-07328725e41f",
+    "uuid": "e95b66f3-21b9-4f6d-8f51-d441a8dfcf10",
     "flightNumber": "2004",
     "departureStation": "CLT",
     "outDateTime": "2018-11-17T20:23:00",
@@ -9854,7 +9854,7 @@
     "sequenceInfo": "11/16/2018 6049 LAX 320"
   },
   {
-    "uuid": "36aca09b-17b8-4b76-8e76-ad36cf034e8a",
+    "uuid": "c9fb9874-2680-4b77-96cd-522bd3fa0edf",
     "flightNumber": "1944",
     "departureStation": "JAX",
     "outDateTime": "2018-11-18T12:03:00",
@@ -9880,7 +9880,7 @@
     "sequenceInfo": "11/16/2018 6049 LAX 320"
   },
   {
-    "uuid": "de64d6e8-b0a4-4930-9b6d-0890ec5bcc43",
+    "uuid": "5880af58-de6e-4d8d-b52d-19c1b4bc789d",
     "flightNumber": "1833",
     "departureStation": "CLT",
     "outDateTime": "2018-11-18T14:57:00",
@@ -9906,7 +9906,7 @@
     "sequenceInfo": "11/16/2018 6049 LAX 320"
   },
   {
-    "uuid": "b627a8e9-e73e-4dc7-99d0-143cd6a4b5cd",
+    "uuid": "f351071d-97f0-433c-ad51-d4a38de386ef",
     "flightNumber": "583",
     "departureStation": "LAX",
     "outDateTime": "2018-11-26T13:53:00",
@@ -9932,7 +9932,7 @@
     "sequenceInfo": "11/26/2018 6289 LAX 320"
   },
   {
-    "uuid": "f255e683-0bcb-41b6-8fe7-fe4b7d0edf72",
+    "uuid": "5ef3e592-dfb2-45ed-b6c5-a0a2c0f1b084",
     "flightNumber": "1336",
     "departureStation": "DFW",
     "outDateTime": "2018-11-26T20:37:00",
@@ -9958,7 +9958,7 @@
     "sequenceInfo": "11/26/2018 6289 LAX 320"
   },
   {
-    "uuid": "1097453c-9c49-4823-9764-155093ee786a",
+    "uuid": "d6f6c8c5-3e43-46c5-9a5e-694f56e50f1f",
     "flightNumber": "2314",
     "departureStation": "MCO",
     "outDateTime": "2018-11-27T18:00:00",
@@ -9984,7 +9984,7 @@
     "sequenceInfo": "11/26/2018 6289 LAX 320"
   },
   {
-    "uuid": "dde54247-0075-4b9f-97e9-3ac6af114d43",
+    "uuid": "16b274cb-c507-4715-b750-5aff617d73cc",
     "flightNumber": "1336",
     "departureStation": "DFW",
     "outDateTime": "2018-11-27T20:41:00",
@@ -10010,7 +10010,7 @@
     "sequenceInfo": "11/26/2018 6289 LAX 320"
   },
   {
-    "uuid": "825ec8b1-ab45-4ed6-b4c7-9d94871a790b",
+    "uuid": "ef8a2d12-1631-4e85-8af8-485a43b7e81b",
     "flightNumber": "2757",
     "departureStation": "MCO",
     "outDateTime": "2018-11-28T20:07:00",
@@ -10036,7 +10036,7 @@
     "sequenceInfo": "11/26/2018 6289 LAX 320"
   },
   {
-    "uuid": "c4bebc01-9cec-4329-b94f-16afff3cdcdf",
+    "uuid": "91bd030a-8088-4a7e-913d-65c0314f943f",
     "flightNumber": "296",
     "departureStation": "LAX",
     "outDateTime": "2018-12-02T23:53:00",
@@ -10062,7 +10062,7 @@
     "sequenceInfo": "12/2/2018 5704 LAX 320"
   },
   {
-    "uuid": "ad30133e-0902-4964-8a02-892ece40e028",
+    "uuid": "ff2f2700-2984-4300-b530-74191f8666e7",
     "flightNumber": "2007",
     "departureStation": "ORD",
     "outDateTime": "2018-12-03T18:54:00",
@@ -10088,7 +10088,7 @@
     "sequenceInfo": "12/2/2018 5704 LAX 320"
   },
   {
-    "uuid": "2a9952a0-3c90-43b3-a869-40d3cc56b91a",
+    "uuid": "f6305c76-409d-4425-ae81-6d874ddde244",
     "flightNumber": "422",
     "departureStation": "PHL",
     "outDateTime": "2018-12-04T18:32:00",
@@ -10114,7 +10114,7 @@
     "sequenceInfo": "12/2/2018 5704 LAX 320"
   },
   {
-    "uuid": "61003c00-3942-474d-bec2-fd9605576dc7",
+    "uuid": "a5cc6e6d-077f-4b07-b1e0-29ec5669fdbb",
     "flightNumber": "2757",
     "departureStation": "MCO",
     "outDateTime": "2018-12-04T22:25:00",
@@ -10140,7 +10140,7 @@
     "sequenceInfo": "12/2/2018 5704 LAX 320"
   },
   {
-    "uuid": "163e4430-43de-405a-82cb-7163c0bad66b",
+    "uuid": "caffa9b8-aa98-4ad8-9154-f07fbe18f519",
     "flightNumber": "2437",
     "departureStation": "LAX",
     "outDateTime": "2018-12-15T06:57:00",
@@ -10166,7 +10166,7 @@
     "sequenceInfo": "12/15/2018 5904 LAX 320"
   },
   {
-    "uuid": "d2a19537-3a0c-48b1-bd63-7d66a85c9a69",
+    "uuid": "bf2d6aec-1d6a-40a5-95fc-d7f3a6daf907",
     "flightNumber": "580",
     "departureStation": "DFW",
     "outDateTime": "2018-12-15T14:43:00",
@@ -10192,7 +10192,7 @@
     "sequenceInfo": "12/15/2018 5904 LAX 320"
   },
   {
-    "uuid": "d2635de7-3947-4bf9-b1f2-8803c72a4d97",
+    "uuid": "124588b8-a1d6-4682-b949-26d7912b25aa",
     "flightNumber": "1957",
     "departureStation": "DEN",
     "outDateTime": "2018-12-16T11:49:00",
@@ -10218,7 +10218,7 @@
     "sequenceInfo": "12/15/2018 5904 LAX 320"
   },
   {
-    "uuid": "64144964-e3c0-4dde-8384-c721e1aec6b5",
+    "uuid": "2c9da0d0-25e5-4d71-a09e-99d854d4b681",
     "flightNumber": "1842",
     "departureStation": "CLT",
     "outDateTime": "2018-12-16T18:07:00",
@@ -10244,7 +10244,7 @@
     "sequenceInfo": "12/15/2018 5904 LAX 320"
   },
   {
-    "uuid": "2b067351-7813-42d0-9a4e-b16ea8cad006",
+    "uuid": "57995247-3507-48d7-a875-fdc99623f2e6",
     "flightNumber": "260",
     "departureStation": "MCO",
     "outDateTime": "2018-12-17T11:13:00",
@@ -10270,7 +10270,7 @@
     "sequenceInfo": "12/15/2018 5904 LAX 320"
   },
   {
-    "uuid": "18b3b82f-7e0a-400d-a688-532a6f99d1ac",
+    "uuid": "2f41cf65-1a31-4d1b-a193-ac6c0db76187",
     "flightNumber": "2283",
     "departureStation": "MIA",
     "outDateTime": "2018-12-17T14:13:00",
@@ -10296,7 +10296,7 @@
     "sequenceInfo": "12/15/2018 5904 LAX 320"
   },
   {
-    "uuid": "c16bf8d5-feb5-4fa4-966a-094b963a5432",
+    "uuid": "609ed026-b2df-4dae-99d9-9a93b7798f11",
     "flightNumber": "445",
     "departureStation": "LAX",
     "outDateTime": "2018-12-24T09:58:00",
@@ -10322,7 +10322,7 @@
     "sequenceInfo": "12/24/2018 6181 LAX 320"
   },
   {
-    "uuid": "6320ab82-5526-41ec-b23d-45cdbc3c4676",
+    "uuid": "069f25ed-cb04-4296-90e5-f9cba561a00d",
     "flightNumber": "589",
     "departureStation": "PHX",
     "outDateTime": "2018-12-24T14:59:00",
@@ -10348,7 +10348,7 @@
     "sequenceInfo": "12/24/2018 6181 LAX 320"
   },
   {
-    "uuid": "0dbfcdd1-c808-448c-96c9-7af9c801453c",
+    "uuid": "9d21e897-656f-45fb-a02e-2922839d9e6e",
     "flightNumber": "2024",
     "departureStation": "SEA",
     "outDateTime": "2018-12-25T12:17:00",
@@ -10374,7 +10374,7 @@
     "sequenceInfo": "12/24/2018 6181 LAX 320"
   },
   {
-    "uuid": "4cf0395e-ea07-4a4f-ba2d-a545454427ae",
+    "uuid": "25337446-9951-4e3f-bcf2-a34f6638ede2",
     "flightNumber": "566",
     "departureStation": "PHL",
     "outDateTime": "2018-12-26T10:09:00",
@@ -10400,7 +10400,7 @@
     "sequenceInfo": "12/24/2018 6181 LAX 320"
   },
   {
-    "uuid": "a97c97a1-a3e7-4689-b172-2b6f05ce3064",
+    "uuid": "db6eaf54-dade-424c-912f-f2e60289a35d",
     "flightNumber": "247",
     "departureStation": "LAX",
     "outDateTime": "2018-12-30T17:33:00",
@@ -10426,7 +10426,7 @@
     "sequenceInfo": "12/30/2018 31148 LAX 320"
   },
   {
-    "uuid": "04218264-8ac5-4de9-b5ea-466ee4267435",
+    "uuid": "f149716f-75fd-40c7-b560-6f9f95ee5c97",
     "flightNumber": "246",
     "departureStation": "KOA",
     "outDateTime": "2018-12-31T23:18:00",
@@ -10452,7 +10452,7 @@
     "sequenceInfo": "12/30/2018 31148 LAX 320"
   },
   {
-    "uuid": "2650ef04-1f92-4031-8fd0-3c95348cb79a",
+    "uuid": "fcf3d2b3-9ab6-4309-ab81-fca65d2a3592",
     "flightNumber": "416",
     "departureStation": "LAX",
     "outDateTime": "2019-01-07T15:58:00",
@@ -10478,7 +10478,7 @@
     "sequenceInfo": "1/7/2019 5820 LAX 320"
   },
   {
-    "uuid": "e873419c-7a32-434d-8c87-bc093ff9b8ae",
+    "uuid": "1005cdfa-7f26-4935-9469-2137c45bb4b6",
     "flightNumber": "416",
     "departureStation": "DEN",
     "outDateTime": "2019-01-07T20:20:00",
@@ -10504,7 +10504,7 @@
     "sequenceInfo": "1/7/2019 5820 LAX 320"
   },
   {
-    "uuid": "c1f88de8-983b-42d8-9f1d-b06e1939643a",
+    "uuid": "a0e07014-def6-4bc2-b0c9-631474dca764",
     "flightNumber": "506",
     "departureStation": "LAX",
     "outDateTime": "2019-01-08T21:45:00",
@@ -10530,7 +10530,7 @@
     "sequenceInfo": "1/8/2019 5609 LAX 320"
   },
   {
-    "uuid": "4e65062f-3141-4178-84b8-83500ac2af56",
+    "uuid": "8b390286-c493-4ac1-9b2e-639cf9808fc6",
     "flightNumber": "1793",
     "departureStation": "PHL",
     "outDateTime": "2019-01-09T21:15:00",
@@ -10556,7 +10556,7 @@
     "sequenceInfo": "1/8/2019 5609 LAX 320"
   },
   {
-    "uuid": "875c22c8-f614-40c5-8bf9-134f6548b106",
+    "uuid": "0fbd0a25-570b-45a4-b9ad-33313ba60647",
     "flightNumber": "1793",
     "departureStation": "PHL",
     "outDateTime": "2019-01-10T01:41:00",
@@ -10582,7 +10582,7 @@
     "sequenceInfo": "1/8/2019 5609 LAX 320"
   },
   {
-    "uuid": "59c869c8-2d25-41b3-bee4-6670f15d4f4f",
+    "uuid": "7284036e-2225-47b5-a4c3-03630a902ff0",
     "flightNumber": "12",
     "departureStation": "JAX",
     "outDateTime": "2019-01-10T19:04:00",
@@ -10608,7 +10608,7 @@
     "sequenceInfo": "1/8/2019 5609 LAX 320"
   },
   {
-    "uuid": "c5c6365b-054d-43d8-900f-bf2baa115550",
+    "uuid": "42117e51-d3c1-4398-9e24-27d513f0964b",
     "flightNumber": "84",
     "departureStation": "DFW",
     "outDateTime": "2019-01-10T22:14:00",
