@@ -124,7 +124,9 @@ setup(
         'Programming Language :: Python',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: Implementation :: CPython',
-        'Programming Language :: Python :: Implementation :: PyPy'
+        'Programming Language :: Python :: Implementation :: PyPy',
+        'Development Status :: 4 - Beta',
+        'Environment :: Console'
     ],
     # # $ setup.py publish support.
     # cmdclass={
