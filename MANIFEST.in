@@ -1,0 +1,3 @@
+include src/*
+include src/airportsDB/data/airports/*
+include README.md

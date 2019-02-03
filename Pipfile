@@ -4,7 +4,6 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-xmltodict = "*"
 dataclasses-json = "*"
 arrow = "*"
 pytz = "*"
@@ -20,6 +19,7 @@ mypy = "*"
 pytest = "==4.0.2"
 sphinx = "*"
 aalogbook = {editable = true, path = "."}
+twine = "*"
 
 [requires]
 python_version = "3.7"
