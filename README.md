@@ -21,6 +21,14 @@ First, try the direct link to [Sabre](https://tasc.alliedpilots.org/Sabre/SabreL
 
 ### Usage Instructions
 
+To export in the default format (translated.csv):  
+
+`aaLogbookExport export <path to input file> <path to output file>`
+
+To export in one of the other supported formats:
+
+`aaLogbookExport export -e rawcsv <path to input file> <path to output file>`  
+
 ### Installing Python (>=3.7 required)
 
 ### Using pipenv and Virtual Environments
