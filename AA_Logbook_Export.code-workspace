@@ -13,6 +13,7 @@
 		"python.unitTest.pyTestEnabled": true,
 		"python.unitTest.nosetestsEnabled": false,
 		"python.unitTest.pyTestArgs": ["-l","-v","-s","--tb=native","-W ignore::DeprecationWarning","--log-cli-level=INFO"],
-		"python.linting.mypyEnabled": true
+		"python.linting.mypyEnabled": true,
+		"python.formatting.provider": "black"
 	}
 }

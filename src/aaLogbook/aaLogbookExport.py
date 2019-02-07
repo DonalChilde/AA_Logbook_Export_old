@@ -41,6 +41,7 @@ def main(verbose):
     pass
 
 
+
 def loadXML(fileIn: Path) -> LogbookElement:
     data = parseXML(fileIn)
     return data
@@ -125,5 +126,5 @@ def saveTranslatedLogbookAsCsv(ctx: dict, fileIn: Path, fileOut: Path):
     save_logbookCsv(data, fileOut)
 
 
-if __name__ == '__main__':
-    main()
+# if __name__ == '__main__':
+#     main()
