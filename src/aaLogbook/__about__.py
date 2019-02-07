@@ -35,7 +35,7 @@ __EMAIL__ = "pfmsoft@gmail.com"
 __AUTHOR__ = "Chad Lowe"
 __PYTHON_REQUIRES__ = ">=3.7.0"
 __KEYWORDS__ = "sample setuptools development"
-__VERSION__ = "0.1.0.dev"
+__VERSION__ = "0.1.0.dev0"
 # What packages are required for this module to be executed?
 __INSTALL_REQUIRES__: list = [
     "dataclasses-json",
