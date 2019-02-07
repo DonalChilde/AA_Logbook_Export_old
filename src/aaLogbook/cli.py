@@ -26,7 +26,9 @@ logger.setLevel(log_level)
 
 #### Log Handler ####
 log_formatter = logging.Formatter(
-    "%(asctime)s — %(name)s — %(levelname)s — %(funcName)s:%(lineno)d — %(message)s", datefmt='%d-%b-%y %H:%M:%S')
+    "%(asctime)s — %(name)s — %(levelname)s — %(funcName)s:%(lineno)d — %(message)s",
+    datefmt="%d-%b-%y %H:%M:%S",
+)
 # log_handler = logging.StreamHandler(stdout)
 log_handler = logging.StreamHandler()
 log_handler.setFormatter(log_formatter)
@@ -34,12 +36,16 @@ logger.addHandler(log_handler)
 
 
 @click.group()
-@click.option('-v', '--verbose', count=True,help='More verbose output, can be used more than once for even more output')
+@click.option(
+    "-v",
+    "--verbose",
+    count=True,
+    help="More verbose output, can be used more than once for even more output",
+)
 def main(verbose):
     """this is the main help
     """
     pass
-
 
 
 def loadXML(fileIn: Path) -> LogbookElement:
@@ -48,12 +54,18 @@ def loadXML(fileIn: Path) -> LogbookElement:
 
 
 @main.command()  # type: ignore
-@click.argument('filein', type=click.Path(exists=True, dir_okay=False, resolve_path=True))
-@click.argument('fileout', type=click.Path(resolve_path=True, writable=True))
-@click.option('-e', '--export-format',
-              type=click.Choice(
-                  ['rawflatjson', 'rawcsv', 'rawjson', 'translatedcsv', 'translatedjson']),
-              default='translatedcsv')
+@click.argument(
+    "filein", type=click.Path(exists=True, dir_okay=False, resolve_path=True)
+)
+@click.argument("fileout", type=click.Path(resolve_path=True, writable=True))
+@click.option(
+    "-e",
+    "--export-format",
+    type=click.Choice(
+        ["rawflatjson", "rawcsv", "rawjson", "translatedcsv", "translatedjson"]
+    ),
+    default="translatedcsv",
+)
 @click.pass_context
 def export(ctx, filein, fileout, export_format):
     """Export in one of the selected formats. The default format is translatedcsv.
@@ -92,11 +104,13 @@ def export(ctx, filein, fileout, export_format):
                         and duty period number.
 
     """
-    exportDispatch = {'rawflatjson': saveFlattenedRawLogbookAsJson,
-                      'rawcsv': saveFlattenedRawLogbookAsCsv,
-                      'rawjson': saveRawLogbookAsJson,
-                      'translatedcsv': saveTranslatedLogbookAsCsv,
-                      'translatedjson': saveTranslatedLogbookAsJson}
+    exportDispatch = {
+        "rawflatjson": saveFlattenedRawLogbookAsJson,
+        "rawcsv": saveFlattenedRawLogbookAsCsv,
+        "rawjson": saveRawLogbookAsJson,
+        "translatedcsv": saveTranslatedLogbookAsCsv,
+        "translatedjson": saveTranslatedLogbookAsJson,
+    }
     fileInPath = Path(filein)
     fileOutPath = Path(fileout)
     exportDispatch[export_format](ctx, fileInPath, fileOutPath)

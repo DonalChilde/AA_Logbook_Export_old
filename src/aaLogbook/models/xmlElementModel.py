@@ -2,6 +2,7 @@ from dataclasses import dataclass, field, asdict as dc_asdict
 from dataclasses_json import dataclass_json
 import uuid
 
+
 @dataclass
 class FlightRow:
     aaNumber: str

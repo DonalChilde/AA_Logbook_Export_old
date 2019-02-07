@@ -1,1 +1,3 @@
-airport database from https://github.com/mwgg/Airports
+# Project notes
+
+airport database from https://github.com/jpatokal/openflights  

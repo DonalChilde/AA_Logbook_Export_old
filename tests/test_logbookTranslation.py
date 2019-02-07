@@ -11,25 +11,25 @@ from time import perf_counter
 def test_Arrow():
     dt = arrow.get("2016-10-20T18:15:00")
     print("\n", dt)
-    dt2 = arrow.get(dt.datetime, tz.gettz('America/New_York'))
+    dt2 = arrow.get(dt.datetime, tz.gettz("America/New_York"))
     print(dt2)
     dt3 = dt.replace(tzinfo="America/New_York")
     print(dt3)
 
 
-def loadXml()->LogbookElement:
+def loadXml() -> LogbookElement:
     xmlPath = pathToXmlInput()
     parsedXML = xmlTranslation.parseXML(xmlPath)
     return parsedXML
 
 
-def pathToXmlInput()->Path:
-    xmlPath = pathToDataDirectory() / Path('myCrystalReportViewer.xml')
+def pathToXmlInput() -> Path:
+    xmlPath = pathToDataDirectory() / Path("myCrystalReportViewer.xml")
     return xmlPath
 
 
-def pathToDataDirectory()->Path:
-    with resources.path('tests', 'resources') as filePath:
+def pathToDataDirectory() -> Path:
+    with resources.path("tests", "resources") as filePath:
         return filePath
 
 
@@ -44,12 +44,13 @@ def test_translatedLogToStdOut():
 
 
 def test_saveLogbookJson():
-    savePath = pathToDataDirectory() / Path('translated_log.json')
+    savePath = pathToDataDirectory() / Path("translated_log.json")
     logbookElement = loadXml()
     logbookTranslation.save_logbookJson(logbookElement, savePath)
 
+
 def test_saveLogbookCsv():
-    savePath = pathToDataDirectory() / Path('translated_log.csv')
+    savePath = pathToDataDirectory() / Path("translated_log.csv")
     startTime = perf_counter()
     logbookElement = loadXml()
     xmlParseTime = perf_counter()

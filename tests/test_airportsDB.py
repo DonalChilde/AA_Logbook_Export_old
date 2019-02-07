@@ -15,7 +15,9 @@ logger.setLevel(log_level)
 
 #### Log Handler ####
 log_formatter = logging.Formatter(
-    "%(asctime)s — %(name)s — %(levelname)s — %(funcName)s:%(lineno)d — %(message)s", datefmt='%d-%b-%y %H:%M:%S')
+    "%(asctime)s — %(name)s — %(levelname)s — %(funcName)s:%(lineno)d — %(message)s",
+    datefmt="%d-%b-%y %H:%M:%S",
+)
 # log_handler = logging.StreamHandler(stdout)
 log_handler = logging.StreamHandler()
 log_handler.setFormatter(log_formatter)
@@ -60,7 +62,7 @@ def test_filterOpenFlights_iata():
 
 def test_load_airports_IATA_json():
     data = airportsDB.load_airports_IATA_json()
-    assert data['PHX']
+    assert data["PHX"]
 
 
 def test_load_airports_json():
@@ -83,8 +85,8 @@ def test_pathToDataDirectory():
 def test_loadandsaveairports():
     dbPath = Path("Python/resources/airportdb/iata_airports.json")
     airportDB = None
-    with open(dbPath, 'r') as inFile:
+    with open(dbPath, "r") as inFile:
         airportDB = json.load(inFile)
         print(f"{len(airportDB)} in iata airport db")
-    with open(dbPath, 'w') as outFile:
+    with open(dbPath, "w") as outFile:
         json.dump(airportDB, outFile, indent=2, sort_keys=True)

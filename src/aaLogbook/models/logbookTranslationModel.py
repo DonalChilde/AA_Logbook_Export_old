@@ -5,50 +5,51 @@ from datetime import timedelta
 from typing import List
 import uuid
 
+
 @dataclass
 class FlightRow:
-    aaNumber: str = ''
-    year: str = ''
-    monthYear: str = ''
-    sequenceNumber: str = ''
-    sequenceStartDate: str = ''
-    base: str = ''
-    sequenceEquipmentType: str = ''
-    uuid: str = ''
-    dutyPeriodNumber: str = ''
-    flightNumber: str = ''
-    departureStationIata: str = ''
-    departureStationIcao: str = ''
-    departureStationTz: str = ''
-    outDateTimeUTC: str = ''
-    outDateUTC: str=''
-    outTimeUTC: str=''
-    outDateTimeLCL: str = ''
-    outDateLCL: str=''
-    outTimeLCL: str=''
-    arrivalStationIata: str = ''
-    arrivalStationIcao: str = ''
-    arrivalStationTz: str = ''
-    inDateTimeUTC: str = ''
-    inDateUTC: str=''
-    inTimeUTC: str=''
-    inDateTimeLCL: str = ''
-    inDateLCL: str=''
-    inTimeLCL: str=''
-    fly: str = ''
-    legGreater: str = ''
-    actualBlock: str = ''
-    groundTime: str = ''
-    overnightDuration: str = ''
-    eqModel: str = ''
-    eqNumber: str = ''
-    eqType: str = ''
-    eqCode: str = ''
-    fuelPerformance: str = ''
-    departurePerformance: str = ''
-    arrivalPerformance: str = ''
-    position: str = ''
-    delayCode: str = ''
+    aaNumber: str = ""
+    year: str = ""
+    monthYear: str = ""
+    sequenceNumber: str = ""
+    sequenceStartDate: str = ""
+    base: str = ""
+    sequenceEquipmentType: str = ""
+    uuid: str = ""
+    dutyPeriodNumber: str = ""
+    flightNumber: str = ""
+    departureStationIata: str = ""
+    departureStationIcao: str = ""
+    departureStationTz: str = ""
+    outDateTimeUTC: str = ""
+    outDateUTC: str = ""
+    outTimeUTC: str = ""
+    outDateTimeLCL: str = ""
+    outDateLCL: str = ""
+    outTimeLCL: str = ""
+    arrivalStationIata: str = ""
+    arrivalStationIcao: str = ""
+    arrivalStationTz: str = ""
+    inDateTimeUTC: str = ""
+    inDateUTC: str = ""
+    inTimeUTC: str = ""
+    inDateTimeLCL: str = ""
+    inDateLCL: str = ""
+    inTimeLCL: str = ""
+    fly: str = ""
+    legGreater: str = ""
+    actualBlock: str = ""
+    groundTime: str = ""
+    overnightDuration: str = ""
+    eqModel: str = ""
+    eqNumber: str = ""
+    eqType: str = ""
+    eqCode: str = ""
+    fuelPerformance: str = ""
+    departurePerformance: str = ""
+    arrivalPerformance: str = ""
+    position: str = ""
+    delayCode: str = ""
 
 
 @dataclass_json
@@ -65,10 +66,10 @@ class Duration:
     hours: int = 0
     minutes: int = 0
     seconds: int = 0
-    decimalSeconds: str = ''
-    
-    def to_timedelta(self)-> timedelta:
-        return timedelta(hours=self.hours, minutes=self.minutes, seconds = self.seconds)
+    decimalSeconds: str = ""
+
+    def to_timedelta(self) -> timedelta:
+        return timedelta(hours=self.hours, minutes=self.minutes, seconds=self.seconds)
 
 
 # @dataclass_json
@@ -79,7 +80,7 @@ class Logbook(DataClassJsonMixin):
     sumOfActualBlock: Duration = field(default_factory=Duration)
     sumOfLegGreater: Duration = field(default_factory=Duration)
     sumOfFly: Duration = field(default_factory=Duration)
-    years: List['Year'] = field(default_factory=list)
+    years: List["Year"] = field(default_factory=list)
 
 
 @dataclass_json

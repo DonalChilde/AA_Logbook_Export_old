@@ -15,27 +15,30 @@ logger.setLevel(log_level)
 
 #### Log Handler ####
 log_formatter = logging.Formatter(
-    "%(asctime)s — %(name)s — %(levelname)s — %(funcName)s:%(lineno)d — %(message)s", datefmt='%d-%b-%y %H:%M:%S')
+    "%(asctime)s — %(name)s — %(levelname)s — %(funcName)s:%(lineno)d — %(message)s",
+    datefmt="%d-%b-%y %H:%M:%S",
+)
 # log_handler = logging.StreamHandler(stdout)
 log_handler = logging.StreamHandler()
 log_handler.setFormatter(log_formatter)
 # logger.addHandler(log_handler)
 
 
-def loadJson(path: Path)->Any:
+def loadJson(path: Path) -> Any:
     try:
-        with open(path, 'r') as jsonFile:
+        with open(path, "r") as jsonFile:
             data = json.load(jsonFile)
         return data
     except Exception as e:
         logger.exception(f"Error trying to load json file from {path}")
         raise e
 
-def saveJson(data:Any,path:Path,indent=2,sort_keys=False)->bool:
-    
+
+def saveJson(data: Any, path: Path, indent=2, sort_keys=False) -> bool:
+
     try:
-        with open(path,'w') as jsonFile:
-            json.dump(data,jsonFile,indent=indent,sort_keys=sort_keys)
+        with open(path, "w") as jsonFile:
+            json.dump(data, jsonFile, indent=indent, sort_keys=sort_keys)
         return True
     except Exception as e:
         logger.exception(f"Error trying to save json data to {path}")

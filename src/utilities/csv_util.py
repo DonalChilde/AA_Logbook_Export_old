@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-'''Utilities for handling csv files
+"""Utilities for handling csv files
 
 Todo:
     * Write some tests
@@ -8,10 +8,10 @@ Todo:
 Created on Nov 27, 2017
 
 @author: croaker
-'''
+"""
 from pathlib import Path
 from collections import namedtuple
-from typing import List, Iterable, NamedTuple, Sequence, Dict,Optional
+from typing import List, Iterable, NamedTuple, Sequence, Dict, Optional
 import csv
 import logging
 from sys import stdout
@@ -29,14 +29,21 @@ logger.setLevel(log_level)
 
 #### Log Handler ####
 log_formatter = logging.Formatter(
-    "%(asctime)s — %(name)s — %(levelname)s — %(funcName)s:%(lineno)d — %(message)s", datefmt='%d-%b-%y %H:%M:%S')
+    "%(asctime)s — %(name)s — %(levelname)s — %(funcName)s:%(lineno)d — %(message)s",
+    datefmt="%d-%b-%y %H:%M:%S",
+)
 # log_handler = logging.StreamHandler(stdout)
 log_handler = logging.StreamHandler()
 log_handler.setFormatter(log_formatter)
 logger.addHandler(log_handler)
 
 
-def writeNamedTuplesToCsv(outPath: Path, data: Sequence[NamedTuple], useColumnHeaders=True, customColumnHeaders: Sequence[str] = None)->bool:
+def writeNamedTuplesToCsv(
+    outPath: Path,
+    data: Sequence[NamedTuple],
+    useColumnHeaders=True,
+    customColumnHeaders: Sequence[str] = None,
+) -> bool:
     """Write a namedtuple out to a file in csv format.
 
     This function will write out a `namedtuple` to a file in CSV format.
@@ -81,7 +88,9 @@ def writeNamedTuplesToCsv(outPath: Path, data: Sequence[NamedTuple], useColumnHe
     #     raise e
 
 
-def writeListToCsv(outPath: Path, data: Sequence[Sequence], customColumnHeaders: Sequence[str] = None)->bool:
+def writeListToCsv(
+    outPath: Path, data: Sequence[Sequence], customColumnHeaders: Sequence[str] = None
+) -> bool:
     """Write a list of iterables out to a file in csv format.
 
     This function will write out a list of iterables to a file in CSV format.
@@ -100,7 +109,7 @@ def writeListToCsv(outPath: Path, data: Sequence[Sequence], customColumnHeaders:
 
     """
     try:
-        with open(outPath, 'w', newline='', encoding='utf-8') as csvFile:
+        with open(outPath, "w", newline="", encoding="utf-8") as csvFile:
             csvWriter = csv.writer(csvFile, quoting=csv.QUOTE_ALL)
             if customColumnHeaders:
                 csvWriter.writerow(customColumnHeaders)
@@ -112,15 +121,22 @@ def writeListToCsv(outPath: Path, data: Sequence[Sequence], customColumnHeaders:
         raise e
 
 
-def writeDictToCsv(outPath: Path, data: Sequence[Dict[str, str]], keyList: Optional[Sequence[str]] = None, useColumnHeaders=True)->bool:
+def writeDictToCsv(
+    outPath: Path,
+    data: Sequence[Dict[str, str]],
+    keyList: Optional[Sequence[str]] = None,
+    useColumnHeaders=True,
+) -> bool:
     if len(data) == 0:
         raise ValueError("data is empty. No file written to {outPath} ")
     try:
-        with open(outPath, 'w', newline='', encoding='utf-8') as csvFile:
+        with open(outPath, "w", newline="", encoding="utf-8") as csvFile:
             if keyList:
                 csvWriter = csv.DictWriter(csvFile, keyList, quoting=csv.QUOTE_ALL)
             else:
-                csvWriter = csv.DictWriter(csvFile, [y for y in data[0].keys()], quoting=csv.QUOTE_ALL)
+                csvWriter = csv.DictWriter(
+                    csvFile, [y for y in data[0].keys()], quoting=csv.QUOTE_ALL
+                )
             if useColumnHeaders:
                 csvWriter.writeheader()
             for row in data:
@@ -131,9 +147,9 @@ def writeDictToCsv(outPath: Path, data: Sequence[Dict[str, str]], keyList: Optio
         raise e
 
 
-def readCsv(inPath: Path, rowFactory=None)->list:
+def readCsv(inPath: Path, rowFactory=None) -> list:
     # TODO rewrite as generator
-    with open(inPath, newline='') as csvFile:
+    with open(inPath, newline="") as csvFile:
         reader = csv.reader(csvFile)
         data: list = []
         for row in reader:

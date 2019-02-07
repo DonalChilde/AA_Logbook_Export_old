@@ -31,20 +31,22 @@ logger.setLevel(log_level)
 
 #### Log Handler ####
 log_formatter = logging.Formatter(
-    "%(asctime)s — %(name)s — %(levelname)s — %(funcName)s:%(lineno)d — %(message)s", datefmt='%d-%b-%y %H:%M:%S')
+    "%(asctime)s — %(name)s — %(levelname)s — %(funcName)s:%(lineno)d — %(message)s",
+    datefmt="%d-%b-%y %H:%M:%S",
+)
 # log_handler = logging.StreamHandler(stdout)
 log_handler = logging.StreamHandler()
 log_handler.setFormatter(log_formatter)
 # logger.addHandler(log_handler)
 
 
-IATA_AIRPORTS_JSON = 'openflights_airports_IATA.json'
-AIRPORTS_JSON = 'openflights_airports.json'
-AIRPORTS_CSV = 'openflights_airports.csv'
+IATA_AIRPORTS_JSON = "openflights_airports_IATA.json"
+AIRPORTS_JSON = "openflights_airports.json"
+AIRPORTS_CSV = "openflights_airports.csv"
 
 
 @dataclass
-class Airport():
+class Airport:
     # TODO post init processing for \N to None
     airport_id: str
     name: str
@@ -77,42 +79,41 @@ class Airport():
         self.type_ = self.translateNULL(self.type_)
         self.source = self.translateNULL(self.source)
 
-    def translateNULL(self, value: str)->Optional[str]:
+    def translateNULL(self, value: str) -> Optional[str]:
         if value == "\\N":
             return None
         else:
             return value
 
 
-class AirportsDB():
-
+class AirportsDB:
     def __init__(self, pathToMainDB, pathToIATADB):
         self.pathToMainDB = pathToMainDB
         self.pathToIATADB = pathToIATADB
 
 
-def load_airports_json()->List[Dict[str, str]]:
+def load_airports_json() -> List[Dict[str, str]]:
     filePath = pathTo_airports_json()
     main_airportDB = loadJson(filePath)
     return main_airportDB
 
 
-def load_airports_IATA_json()->Dict[str, Dict[str, str]]:
+def load_airports_IATA_json() -> Dict[str, Dict[str, str]]:
     filePath = pathTo_airports_IATA_json()
     # TODO checks for existance, etc
     iata_airportDict = loadJson(filePath)
     return iata_airportDict
 
 
-def load_OpenFLightsCSV(filePath: Path)->List[Airport]:
+def load_OpenFLightsCSV(filePath: Path) -> List[Airport]:
     data = readCsv(filePath, Airport)
     return data
 
 
-def pathTo_airports_IATA_json()->Path:
+def pathTo_airports_IATA_json() -> Path:
     filePath: Optional[Path] = None
     try:
-        with resources.path('airportsDB.data.airports', IATA_AIRPORTS_JSON) as iataPath:
+        with resources.path("airportsDB.data.airports", IATA_AIRPORTS_JSON) as iataPath:
             filePath = iataPath
     except FileNotFoundError:
         filePath = pathToDataDirectory() / Path(IATA_AIRPORTS_JSON)
@@ -120,10 +121,10 @@ def pathTo_airports_IATA_json()->Path:
     return filePath
 
 
-def pathTo_airports_json()->Path:
+def pathTo_airports_json() -> Path:
     filePath: Optional[Path] = None
     try:
-        with resources.path('airportsDB.data.airports', AIRPORTS_JSON) as iataPath:
+        with resources.path("airportsDB.data.airports", AIRPORTS_JSON) as iataPath:
             filePath = iataPath
     except FileNotFoundError:
         filePath = pathToDataDirectory() / Path(AIRPORTS_JSON)
@@ -131,13 +132,13 @@ def pathTo_airports_json()->Path:
     return filePath
 
 
-def pathTo_OpenFlightsCSV()->Path:
-    with resources.path('airportsDB.data.airports', AIRPORTS_CSV) as filePath:
+def pathTo_OpenFlightsCSV() -> Path:
+    with resources.path("airportsDB.data.airports", AIRPORTS_CSV) as filePath:
         return filePath
 
 
-def pathToDataDirectory()->Path:
-    with resources.path('airportsDB.data', 'airports')as filePath:
+def pathToDataDirectory() -> Path:
+    with resources.path("airportsDB.data", "airports") as filePath:
         return filePath
 
 
@@ -163,26 +164,29 @@ def validateAirport(airports: List[Airport]):
     raise NotImplementedError
 
 
-def build_IATA_dict(airports: List[Airport])->Dict[str,Dict[str,str]]:
+def build_IATA_dict(airports: List[Airport]) -> Dict[str, Dict[str, str]]:
     data: dict = {}
     for airport in airports:
         iataCode = airport.iata
         airportDict = asdict(airport)
         if iataCode in data:
             logging.error(
-                f"found duplicate IATA values, {airportDict} overwrites {data[iataCode]}")
+                f"found duplicate IATA values, {airportDict} overwrites {data[iataCode]}"
+            )
         if not iataCode.isupper():
             logging.error(
-                f"IATA code {iataCode}  for entry {airportDict} was not uppercase. converting to uppercase.")
+                f"IATA code {iataCode}  for entry {airportDict} was not uppercase. converting to uppercase."
+            )
             iataCode = iataCode.upper()
         if iataCode in data:
             logging.error(
-                f"found duplicate IATA values, {airportDict} overwrites {data[iataCode]}")
+                f"found duplicate IATA values, {airportDict} overwrites {data[iataCode]}"
+            )
         data[iataCode] = airportDict
     return data
 
 
-def filter_Non_IATA_Airports(airports: List[Airport])->List[Airport]:
+def filter_Non_IATA_Airports(airports: List[Airport]) -> List[Airport]:
     filtered: List[Airport] = []
     for airport in airports:
         if validateIATA_Code(airport.iata):
@@ -190,10 +194,10 @@ def filter_Non_IATA_Airports(airports: List[Airport])->List[Airport]:
     return filtered
 
 
-def validateIATA_Code(iata: str)->bool:
+def validateIATA_Code(iata: str) -> bool:
     if not isinstance(iata, str):
         return False
-    iataRE = re.compile('[a-zA-Z]{3,3}')
+    iataRE = re.compile("[a-zA-Z]{3,3}")
     if iataRE.match(iata):
         return True
     else:
@@ -204,5 +208,5 @@ def maincli():
     pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     maincli()

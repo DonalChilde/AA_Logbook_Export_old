@@ -57,7 +57,7 @@ EXTRAS_REQUIRE: dict = about["__EXTRAS_REQUIRE__"]
 PACKAGE_DATA: dict = about["__PACKAGE_DATA__"]
 ENTRY_POINTS: dict = about["__ENTRY_POINTS__"]
 PROJECT_URLS: dict = about["__PROJECT_URLS__"]
-LICENSE = about['__LICENSE__']
+LICENSE = about["__LICENSE__"]
 CLASSIFIERS: list = about["__CLASSIFIERS__"]
 
 
@@ -130,7 +130,7 @@ setup(
     # Classifiers help users find your project by categorizing it.
     #
     # For a list of valid classifiers, see https://pypi.org/classifiers/
-    license = LICENSE,
+    license=LICENSE,
     classifiers=CLASSIFIERS,
     # [  # Optional
     # How mature is this project? Common values are
@@ -199,7 +199,7 @@ setup(
     #
     # If using Python 2.6 or earlier, then these have to be included in
     # MANIFEST.in as well.
-    include_package_data = True,
+    include_package_data=True,
     # package_data=PACKAGE_DATA,  # Optional
     # https://setuptools.readthedocs.io/en/latest/setuptools.html#including-data-files
     # Although 'package_data' is the preferred approach, in some case you may
