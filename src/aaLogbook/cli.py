@@ -1,5 +1,5 @@
 """
-TODO output ooptions for all save files
+TODO output options for all save files
 TODO more than one save format at a time
 TODO save/load output proflies to a file.
 TODO for csv, allow list of output fields to be loaded from file

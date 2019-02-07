@@ -58,7 +58,7 @@ __PACKAGE_DATA__: dict = {
     "airportsDB": ["data/airports/*"]
 }
 __ENTRY_POINTS__: dict = {
-    "console_scripts": ["aaLogbookExport=aaLogbook.aaLogbookExport:main"]
+    "console_scripts": ["aaLogbookExport=aaLogbook.cli:main"]
 }
 __PROJECT_URLS__: dict = {  # Optional
     "Bug Reports": "https://github.com/DonalChilde/AA_Logbook_Export/issues",
