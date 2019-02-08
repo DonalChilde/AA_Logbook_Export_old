@@ -21,6 +21,7 @@ from dataclasses_json import dataclass_json
 from typing import List, Dict, Sequence, NamedTuple, Optional, Any
 from datetime import timedelta
 from utilities import json_util, csv_util
+from utilities.str_util import safeStrip
 import aaLogbook.models.xmlElementModel as xem
 import uuid
 import xml.etree.ElementTree as ET
@@ -52,36 +53,36 @@ logger.addHandler(log_handler)
 ns = {"crystal_reports": "urn:crystal-reports:schemas:report-detail"}
 
 
-def safeStrip(value: Any) -> Any:
-    if type(value) is str:
-        value.strip()
-        return value
-    else:
-        return value
-
-
 def parseXML(path, parseContext):
     # print(path.resolve())
     with open(path, "r") as xmlFile:
         tree = ET.parse(xmlFile)
         root = tree.getroot()
         logbook = xem.LogbookElement()
-        logbook.aaNumber = root.find(
-            './crystal_reports:ReportHeader/crystal_reports:Section/crystal_reports:Field[@Name="EmpNum1"]/crystal_reports:Value',
-            ns,
-        ).text
-        logbook.sumOfActualBlock = root.find(
-            './crystal_reports:ReportFooter/crystal_reports:Section/crystal_reports:Field[@Name="SumofActualBlock4"]/crystal_reports:Value',
-            ns,
-        ).text
-        logbook.sumOfLegGreater = root.find(
-            './crystal_reports:ReportFooter/crystal_reports:Section/crystal_reports:Field[@Name="SumofLegGtr4"]/crystal_reports:Value',
-            ns,
-        ).text
-        logbook.sumOfFly = root.find(
-            './crystal_reports:ReportFooter/crystal_reports:Section/crystal_reports:Field[@Name="SumofFly4"]/crystal_reports:Value',
-            ns,
-        ).text
+        logbook.aaNumber = safeStrip(
+            root.find(
+                './crystal_reports:ReportHeader/crystal_reports:Section/crystal_reports:Field[@Name="EmpNum1"]/crystal_reports:Value',
+                ns,
+            ).text
+        )
+        logbook.sumOfActualBlock = safeStrip(
+            root.find(
+                './crystal_reports:ReportFooter/crystal_reports:Section/crystal_reports:Field[@Name="SumofActualBlock4"]/crystal_reports:Value',
+                ns,
+            ).text
+        )
+        logbook.sumOfLegGreater = safeStrip(
+            root.find(
+                './crystal_reports:ReportFooter/crystal_reports:Section/crystal_reports:Field[@Name="SumofLegGtr4"]/crystal_reports:Value',
+                ns,
+            ).text
+        )
+        logbook.sumOfFly = safeStrip(
+            root.find(
+                './crystal_reports:ReportFooter/crystal_reports:Section/crystal_reports:Field[@Name="SumofFly4"]/crystal_reports:Value',
+                ns,
+            ).text
+        )
         parseContext["xmlparse"] = {}
 
         for item in root.findall("crystal_reports:Group", ns):
@@ -93,22 +94,30 @@ def parseXML(path, parseContext):
 def handleYear(yearElement, parseContext):
     # print('made it to year')
     year = xem.YearElement()
-    year.year = yearElement.find(
-        './crystal_reports:GroupFooter/crystal_reports:Section/crystal_reports:Text[@Name="Text34"]/crystal_reports:TextValue',
-        ns,
-    ).text
-    year.sumOfActualBlock = yearElement.find(
-        './crystal_reports:GroupFooter/crystal_reports:Section/crystal_reports:Field[@Name="SumofActualBlock6"]/crystal_reports:Value',
-        ns,
-    ).text
-    year.sumOfLegGreater = yearElement.find(
-        './crystal_reports:GroupFooter/crystal_reports:Section/crystal_reports:Field[@Name="SumofLegGtr6"]/crystal_reports:Value',
-        ns,
-    ).text
-    year.sumOfFly = yearElement.find(
-        './crystal_reports:GroupFooter/crystal_reports:Section/crystal_reports:Field[@Name="SumofFly6"]/crystal_reports:Value',
-        ns,
-    ).text
+    year.year = safeStrip(
+        yearElement.find(
+            './crystal_reports:GroupFooter/crystal_reports:Section/crystal_reports:Text[@Name="Text34"]/crystal_reports:TextValue',
+            ns,
+        ).text
+    )
+    year.sumOfActualBlock = safeStrip(
+        yearElement.find(
+            './crystal_reports:GroupFooter/crystal_reports:Section/crystal_reports:Field[@Name="SumofActualBlock6"]/crystal_reports:Value',
+            ns,
+        ).text
+    )
+    year.sumOfLegGreater = safeStrip(
+        yearElement.find(
+            './crystal_reports:GroupFooter/crystal_reports:Section/crystal_reports:Field[@Name="SumofLegGtr6"]/crystal_reports:Value',
+            ns,
+        ).text
+    )
+    year.sumOfFly = safeStrip(
+        yearElement.find(
+            './crystal_reports:GroupFooter/crystal_reports:Section/crystal_reports:Field[@Name="SumofFly6"]/crystal_reports:Value',
+            ns,
+        ).text
+    )
 
     for item in yearElement.findall("crystal_reports:Group", ns):
         # pylint: disable=no-member
@@ -121,22 +130,30 @@ def handleYear(yearElement, parseContext):
 def handleMonth(monthElement, parseContext):
     # print('made it to month')
     month = xem.MonthElement()
-    month.monthYear = monthElement.find(
-        './crystal_reports:GroupFooter/crystal_reports:Section/crystal_reports:Text[@Name="Text35"]/crystal_reports:TextValue',
-        ns,
-    ).text
-    month.sumOfActualBlock = monthElement.find(
-        './crystal_reports:GroupFooter/crystal_reports:Section/crystal_reports:Field[@Name="SumofActualBlock2"]/crystal_reports:Value',
-        ns,
-    ).text
-    month.sumOfLegGreater = monthElement.find(
-        './crystal_reports:GroupFooter/crystal_reports:Section/crystal_reports:Field[@Name="SumofLegGtr2"]/crystal_reports:Value',
-        ns,
-    ).text
-    month.sumOfFly = monthElement.find(
-        './crystal_reports:GroupFooter/crystal_reports:Section/crystal_reports:Field[@Name="SumofFly2"]/crystal_reports:Value',
-        ns,
-    ).text
+    month.monthYear = safeStrip(
+        monthElement.find(
+            './crystal_reports:GroupFooter/crystal_reports:Section/crystal_reports:Text[@Name="Text35"]/crystal_reports:TextValue',
+            ns,
+        ).text
+    )
+    month.sumOfActualBlock = safeStrip(
+        monthElement.find(
+            './crystal_reports:GroupFooter/crystal_reports:Section/crystal_reports:Field[@Name="SumofActualBlock2"]/crystal_reports:Value',
+            ns,
+        ).text
+    )
+    month.sumOfLegGreater = safeStrip(
+        monthElement.find(
+            './crystal_reports:GroupFooter/crystal_reports:Section/crystal_reports:Field[@Name="SumofLegGtr2"]/crystal_reports:Value',
+            ns,
+        ).text
+    )
+    month.sumOfFly = safeStrip(
+        monthElement.find(
+            './crystal_reports:GroupFooter/crystal_reports:Section/crystal_reports:Field[@Name="SumofFly2"]/crystal_reports:Value',
+            ns,
+        ).text
+    )
 
     for item in monthElement.findall("crystal_reports:Group", ns):
         # pylint: disable=no-member
@@ -148,22 +165,30 @@ def handleMonth(monthElement, parseContext):
 def handleTrip(tripElement, parseContext):
     # print('made it to trip')
     trip = xem.TripElement()
-    trip.sequenceInfo = tripElement.find(
-        './crystal_reports:GroupHeader/crystal_reports:Section/crystal_reports:Text[@Name="Text10"]/crystal_reports:TextValue',
-        ns,
-    ).text
-    trip.sumOfActualBlock = tripElement.find(
-        './crystal_reports:GroupFooter/crystal_reports:Section/crystal_reports:Field[@Name="SumofActualBlock3"]/crystal_reports:Value',
-        ns,
-    ).text
-    trip.sumOfLegGreater = tripElement.find(
-        './crystal_reports:GroupFooter/crystal_reports:Section/crystal_reports:Field[@Name="SumofLegGtr3"]/crystal_reports:Value',
-        ns,
-    ).text
-    trip.sumOfFly = tripElement.find(
-        './crystal_reports:GroupFooter/crystal_reports:Section/crystal_reports:Field[@Name="SumofFly3"]/crystal_reports:Value',
-        ns,
-    ).text
+    trip.sequenceInfo = safeStrip(
+        tripElement.find(
+            './crystal_reports:GroupHeader/crystal_reports:Section/crystal_reports:Text[@Name="Text10"]/crystal_reports:TextValue',
+            ns,
+        ).text
+    )
+    trip.sumOfActualBlock = safeStrip(
+        tripElement.find(
+            './crystal_reports:GroupFooter/crystal_reports:Section/crystal_reports:Field[@Name="SumofActualBlock3"]/crystal_reports:Value',
+            ns,
+        ).text
+    )
+    trip.sumOfLegGreater = safeStrip(
+        tripElement.find(
+            './crystal_reports:GroupFooter/crystal_reports:Section/crystal_reports:Field[@Name="SumofLegGtr3"]/crystal_reports:Value',
+            ns,
+        ).text
+    )
+    trip.sumOfFly = safeStrip(
+        tripElement.find(
+            './crystal_reports:GroupFooter/crystal_reports:Section/crystal_reports:Field[@Name="SumofFly3"]/crystal_reports:Value',
+            ns,
+        ).text
+    )
 
     for item in tripElement.findall("crystal_reports:Group", ns):
         # pylint: disable=no-member
@@ -175,18 +200,24 @@ def handleTrip(tripElement, parseContext):
 def handleDutyPeriod(dutyPeriodElement, parseContext):
     # print('made it to dp')
     dutyPeriod = xem.DutyPeriodElement()
-    dutyPeriod.sumOfActualBlock = dutyPeriodElement.find(
-        './crystal_reports:GroupFooter/crystal_reports:Section/crystal_reports:Field[@Name="SumofActualBlock1"]/crystal_reports:Value',
-        ns,
-    ).text
-    dutyPeriod.sumOfLegGreater = dutyPeriodElement.find(
-        './crystal_reports:GroupFooter/crystal_reports:Section/crystal_reports:Field[@Name="SumofLegGtr1"]/crystal_reports:Value',
-        ns,
-    ).text
-    dutyPeriod.sumOfFly = dutyPeriodElement.find(
-        './crystal_reports:GroupFooter/crystal_reports:Section/crystal_reports:Field[@Name="SumofFly1"]/crystal_reports:Value',
-        ns,
-    ).text
+    dutyPeriod.sumOfActualBlock = safeStrip(
+        dutyPeriodElement.find(
+            './crystal_reports:GroupFooter/crystal_reports:Section/crystal_reports:Field[@Name="SumofActualBlock1"]/crystal_reports:Value',
+            ns,
+        ).text
+    )
+    dutyPeriod.sumOfLegGreater = safeStrip(
+        dutyPeriodElement.find(
+            './crystal_reports:GroupFooter/crystal_reports:Section/crystal_reports:Field[@Name="SumofLegGtr1"]/crystal_reports:Value',
+            ns,
+        ).text
+    )
+    dutyPeriod.sumOfFly = safeStrip(
+        dutyPeriodElement.find(
+            './crystal_reports:GroupFooter/crystal_reports:Section/crystal_reports:Field[@Name="SumofFly1"]/crystal_reports:Value',
+            ns,
+        ).text
+    )
 
     for item in dutyPeriodElement.findall("crystal_reports:Details", ns):
         # pylint: disable=no-member
@@ -200,83 +231,121 @@ def handleFlight(flightElement, parseContext):
     # print('made it to flight')
     # print(flightElement.findall('.'))
     flight = xem.FlightElement()
-    # flight.flightNumber = flightElement.find('./{urn:crystal-reports:schemas:report-detail}Section/{urn:crystal-reports:schemas:report-detail}Field/{urn:crystal-reports:schemas:report-detail}Value').text
-    flight.flightNumber = flightElement.find(
-        './crystal_reports:Section/crystal_reports:Field[@Name="Flt1"]/crystal_reports:Value',
-        ns,
-    ).text
-    flight.departureStation = flightElement.find(
-        './crystal_reports:Section/crystal_reports:Field[@Name="DepSta1"]/crystal_reports:Value',
-        ns,
-    ).text
-    flight.outDateTime = flightElement.find(
-        './crystal_reports:Section/crystal_reports:Field[@Name="OutDtTime1"]/crystal_reports:Value',
-        ns,
-    ).text
-    flight.arrivalStation = flightElement.find(
-        './crystal_reports:Section/crystal_reports:Field[@Name="ArrSta1"]/crystal_reports:Value',
-        ns,
-    ).text
-    flight.fly = flightElement.find(
-        './crystal_reports:Section/crystal_reports:Field[@Name="Fly1"]/crystal_reports:Value',
-        ns,
-    ).text
-    flight.legGreater = flightElement.find(
-        './crystal_reports:Section/crystal_reports:Field[@Name="LegGtr1"]/crystal_reports:Value',
-        ns,
-    ).text
-    flight.eqModel = flightElement.find(
-        './crystal_reports:Section/crystal_reports:Field[@Name="Model1"]/crystal_reports:Value',
-        ns,
-    ).text
-    flight.eqNumber = flightElement.find(
-        './crystal_reports:Section/crystal_reports:Field[@Name="AcNum1"]/crystal_reports:Value',
-        ns,
-    ).text
-    flight.eqType = flightElement.find(
-        './crystal_reports:Section/crystal_reports:Field[@Name="EQType1"]/crystal_reports:Value',
-        ns,
-    ).text
-    flight.eqCode = flightElement.find(
-        './crystal_reports:Section/crystal_reports:Field[@Name="LeqEq1"]/crystal_reports:Value',
-        ns,
-    ).text
-    flight.groundTime = flightElement.find(
-        './crystal_reports:Section/crystal_reports:Field[@Name="Grd1"]/crystal_reports:Value',
-        ns,
-    ).text
-    flight.overnightDuration = flightElement.find(
-        './crystal_reports:Section/crystal_reports:Field[@Name="DpActOdl1"]/crystal_reports:Value',
-        ns,
-    ).text
-    flight.fuelPerformance = flightElement.find(
-        './crystal_reports:Section/crystal_reports:Field[@Name="FuelPerf1"]/crystal_reports:Value',
-        ns,
-    ).text
-    flight.departurePerformance = flightElement.find(
-        './crystal_reports:Section/crystal_reports:Field[@Name="DepPerf1"]/crystal_reports:Value',
-        ns,
-    ).text
-    flight.arrivalPerformance = flightElement.find(
-        './crystal_reports:Section/crystal_reports:Field[@Name="ArrPerf1"]/crystal_reports:Value',
-        ns,
-    ).text
-    flight.actualBlock = flightElement.find(
-        './crystal_reports:Section/crystal_reports:Field[@Name="ActualBlock1"]/crystal_reports:Value',
-        ns,
-    ).text
-    flight.position = flightElement.find(
-        './crystal_reports:Section/crystal_reports:Field[@Name="ActulaPos1"]/crystal_reports:Value',
-        ns,
-    ).text
-    flight.delayCode = flightElement.find(
-        './crystal_reports:Section/crystal_reports:Field[@Name="DlyCode1"]/crystal_reports:Value',
-        ns,
-    ).text
-    flight.inDateTime = flightElement.find(
-        './crystal_reports:Section/crystal_reports:Field[@Name="InDateTimeOrMins1"]/crystal_reports:Value',
-        ns,
-    ).text
+    # flight.flightNumber = flightElement.find('./{urn:crystal-reports:schemas:report-detail}Section/{urn:crystal-reports:schemas:report-detail}Field/{urn:crystal-reports:schemas:report-detail}Value').text)
+    flight.flightNumber = safeStrip(
+        flightElement.find(
+            './crystal_reports:Section/crystal_reports:Field[@Name="Flt1"]/crystal_reports:Value',
+            ns,
+        ).text
+    )
+    flight.departureStation = safeStrip(
+        flightElement.find(
+            './crystal_reports:Section/crystal_reports:Field[@Name="DepSta1"]/crystal_reports:Value',
+            ns,
+        ).text
+    )
+    flight.outDateTime = safeStrip(
+        flightElement.find(
+            './crystal_reports:Section/crystal_reports:Field[@Name="OutDtTime1"]/crystal_reports:Value',
+            ns,
+        ).text
+    )
+    flight.arrivalStation = safeStrip(
+        flightElement.find(
+            './crystal_reports:Section/crystal_reports:Field[@Name="ArrSta1"]/crystal_reports:Value',
+            ns,
+        ).text
+    )
+    flight.fly = safeStrip(
+        flightElement.find(
+            './crystal_reports:Section/crystal_reports:Field[@Name="Fly1"]/crystal_reports:Value',
+            ns,
+        ).text
+    )
+    flight.legGreater = safeStrip(
+        flightElement.find(
+            './crystal_reports:Section/crystal_reports:Field[@Name="LegGtr1"]/crystal_reports:Value',
+            ns,
+        ).text
+    )
+    flight.eqModel = safeStrip(
+        flightElement.find(
+            './crystal_reports:Section/crystal_reports:Field[@Name="Model1"]/crystal_reports:Value',
+            ns,
+        ).text
+    )
+    flight.eqNumber = safeStrip(
+        flightElement.find(
+            './crystal_reports:Section/crystal_reports:Field[@Name="AcNum1"]/crystal_reports:Value',
+            ns,
+        ).text
+    )
+    flight.eqType = safeStrip(
+        flightElement.find(
+            './crystal_reports:Section/crystal_reports:Field[@Name="EQType1"]/crystal_reports:Value',
+            ns,
+        ).text
+    )
+    flight.eqCode = safeStrip(
+        flightElement.find(
+            './crystal_reports:Section/crystal_reports:Field[@Name="LeqEq1"]/crystal_reports:Value',
+            ns,
+        ).text
+    )
+    flight.groundTime = safeStrip(
+        flightElement.find(
+            './crystal_reports:Section/crystal_reports:Field[@Name="Grd1"]/crystal_reports:Value',
+            ns,
+        ).text
+    )
+    flight.overnightDuration = safeStrip(
+        flightElement.find(
+            './crystal_reports:Section/crystal_reports:Field[@Name="DpActOdl1"]/crystal_reports:Value',
+            ns,
+        ).text
+    )
+    flight.fuelPerformance = safeStrip(
+        flightElement.find(
+            './crystal_reports:Section/crystal_reports:Field[@Name="FuelPerf1"]/crystal_reports:Value',
+            ns,
+        ).text
+    )
+    flight.departurePerformance = safeStrip(
+        flightElement.find(
+            './crystal_reports:Section/crystal_reports:Field[@Name="DepPerf1"]/crystal_reports:Value',
+            ns,
+        ).text
+    )
+    flight.arrivalPerformance = safeStrip(
+        flightElement.find(
+            './crystal_reports:Section/crystal_reports:Field[@Name="ArrPerf1"]/crystal_reports:Value',
+            ns,
+        ).text
+    )
+    flight.actualBlock = safeStrip(
+        flightElement.find(
+            './crystal_reports:Section/crystal_reports:Field[@Name="ActualBlock1"]/crystal_reports:Value',
+            ns,
+        ).text
+    )
+    flight.position = safeStrip(
+        flightElement.find(
+            './crystal_reports:Section/crystal_reports:Field[@Name="ActulaPos1"]/crystal_reports:Value',
+            ns,
+        ).text
+    )
+    flight.delayCode = safeStrip(
+        flightElement.find(
+            './crystal_reports:Section/crystal_reports:Field[@Name="DlyCode1"]/crystal_reports:Value',
+            ns,
+        ).text
+    )
+    flight.inDateTime = safeStrip(
+        flightElement.find(
+            './crystal_reports:Section/crystal_reports:Field[@Name="InDateTimeOrMins1"]/crystal_reports:Value',
+            ns,
+        ).text
+    )
     validateFlight(flight, flightElement)
     return flight
 
