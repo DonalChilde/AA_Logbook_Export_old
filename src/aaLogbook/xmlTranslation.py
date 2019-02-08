@@ -18,7 +18,7 @@ import logging
 from pathlib import Path
 from dataclasses import dataclass, field, asdict as dc_asdict
 from dataclasses_json import dataclass_json
-from typing import List, Dict, Sequence, NamedTuple, Optional
+from typing import List, Dict, Sequence, NamedTuple, Optional, Any
 from datetime import timedelta
 from utilities import json_util, csv_util
 import aaLogbook.models.xmlElementModel as xem
@@ -52,7 +52,15 @@ logger.addHandler(log_handler)
 ns = {"crystal_reports": "urn:crystal-reports:schemas:report-detail"}
 
 
-def parseXML(path):
+def safeStrip(value: Any) -> Any:
+    if type(value) is str:
+        value.strip()
+        return value
+    else:
+        return value
+
+
+def parseXML(path, parseContext):
     # print(path.resolve())
     with open(path, "r") as xmlFile:
         tree = ET.parse(xmlFile)
@@ -74,14 +82,15 @@ def parseXML(path):
             './crystal_reports:ReportFooter/crystal_reports:Section/crystal_reports:Field[@Name="SumofFly4"]/crystal_reports:Value',
             ns,
         ).text
+        parseContext["xmlparse"] = {}
 
         for item in root.findall("crystal_reports:Group", ns):
-            # pylint: disable=E1101
-            logbook.years.append(handleYear(item))
+            # pylint: disable=no-member
+            logbook.years.append(handleYear(item, parseContext))
         return logbook
 
 
-def handleYear(yearElement):
+def handleYear(yearElement, parseContext):
     # print('made it to year')
     year = xem.YearElement()
     year.year = yearElement.find(
@@ -102,14 +111,14 @@ def handleYear(yearElement):
     ).text
 
     for item in yearElement.findall("crystal_reports:Group", ns):
-        # pylint: disable=E1101
-        year.months.append(handleMonth(item))
+        # pylint: disable=no-member
+        year.months.append(handleMonth(item, parseContext))
     validateYear(year, yearElement)
 
     return year
 
 
-def handleMonth(monthElement):
+def handleMonth(monthElement, parseContext):
     # print('made it to month')
     month = xem.MonthElement()
     month.monthYear = monthElement.find(
@@ -130,13 +139,13 @@ def handleMonth(monthElement):
     ).text
 
     for item in monthElement.findall("crystal_reports:Group", ns):
-        # pylint: disable=E1101
-        month.trips.append(handleTrip(item))
+        # pylint: disable=no-member
+        month.trips.append(handleTrip(item, parseContext))
     validateMonth(month, monthElement)
     return month
 
 
-def handleTrip(tripElement):
+def handleTrip(tripElement, parseContext):
     # print('made it to trip')
     trip = xem.TripElement()
     trip.sequenceInfo = tripElement.find(
@@ -157,13 +166,13 @@ def handleTrip(tripElement):
     ).text
 
     for item in tripElement.findall("crystal_reports:Group", ns):
-        # pylint: disable=E1101
-        trip.dutyPeriods.append(handleDutyPeriod(item))
+        # pylint: disable=no-member
+        trip.dutyPeriods.append(handleDutyPeriod(item, parseContext))
     validateTrip(trip, tripElement)
     return trip
 
 
-def handleDutyPeriod(dutyPeriodElement):
+def handleDutyPeriod(dutyPeriodElement, parseContext):
     # print('made it to dp')
     dutyPeriod = xem.DutyPeriodElement()
     dutyPeriod.sumOfActualBlock = dutyPeriodElement.find(
@@ -180,14 +189,14 @@ def handleDutyPeriod(dutyPeriodElement):
     ).text
 
     for item in dutyPeriodElement.findall("crystal_reports:Details", ns):
-        # pylint: disable=E1101
-        dutyPeriod.flights.append(handleFlight(item))
+        # pylint: disable=no-member
+        dutyPeriod.flights.append(handleFlight(item, parseContext))
     # print(dutyPeriod)
     validateDutyPeriod(dutyPeriod, dutyPeriodElement)
     return dutyPeriod
 
 
-def handleFlight(flightElement):
+def handleFlight(flightElement, parseContext):
     # print('made it to flight')
     # print(flightElement.findall('.'))
     flight = xem.FlightElement()
@@ -313,22 +322,23 @@ def buildFlightRows(logbook: xem.LogbookElement) -> List[Dict[str, str]]:
     return flightRows
 
 
-def saveRawJson(xmlPath: Path, savePath: Path):
-    logbook = parseXML(xmlPath)
-    data = logbook.to_json()  # pylint: disable=E1101
+def saveRawJson(xmlPath: Path, savePath: Path, parseContext: dict):
+
+    logbook = parseXML(xmlPath, parseContext)
+    data = logbook.to_json()  # pylint: disable=no-member
     data = json.loads(data)
     json_util.saveJson(data, savePath)
 
 
-def saveRawFlatJson(xmlPath: Path, savePath: Path):
-    logbook = parseXML(xmlPath)
+def saveRawFlatJson(xmlPath: Path, savePath: Path, parseContext: dict):
+    logbook = parseXML(xmlPath, parseContext)
     flightRows = buildFlightRows(logbook)
     json_util.saveJson(flightRows, savePath)
 
 
-def saveRawCsv(xmlPath: Path, savePath: Path):
+def saveRawCsv(xmlPath: Path, savePath: Path, parseContext: dict):
     # TODO selectable save fields
-    logbook = parseXML(xmlPath)
+    logbook = parseXML(xmlPath, parseContext)
     flightRows = buildFlightRows(logbook)
     fieldList = (
         "aaNumber",

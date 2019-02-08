@@ -1,4 +1,8 @@
-#OSX Cruft
+# Project level ignores
+tests/resources/*.csv
+tests/resources/*.json
+
+# OSX Cruft
 .DS_Store
 
 # VSCode

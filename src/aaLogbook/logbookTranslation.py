@@ -56,7 +56,7 @@ def buildLogbook(logbookElement: LogbookElement) -> ltm.Logbook:
     log = ltm.Logbook(uuid=logbookElement.uuid, aaNumber=logbookElement.aaNumber)
     for yearElement in logbookElement.years:
         year = buildYear(yearElement, context)
-        # pylint: disable=E1101
+        # pylint: disable=no-member
         log.years.append(year)
 
     return log
@@ -66,7 +66,7 @@ def buildYear(yearElement: YearElement, context: Dict[str, Any]) -> ltm.Year:
     year = ltm.Year(uuid=yearElement.uuid, year=yearElement.year)
     for monthElement in yearElement.months:
         month = buildMonth(monthElement, context)
-        # pylint: disable=E1101
+        # pylint: disable=no-member
         year.months.append(month)
     return year
 
@@ -75,7 +75,7 @@ def buildMonth(monthElement: MonthElement, context: Dict[str, Any]) -> ltm.Month
     month = ltm.Month(uuid=monthElement.uuid, monthYear=monthElement.monthYear)
     for tripElement in monthElement.trips:
         trip = buildTrip(tripElement, context)
-        # pylint: disable=E1101
+        # pylint: disable=no-member
         month.trips.append(trip)
     return month
 
@@ -93,7 +93,7 @@ def buildTrip(tripElement: TripElement, context: Dict[str, Any]) -> ltm.Trip:
     )
     for dutyPeriodElement in tripElement.dutyPeriods:
         dutyPeriod = buildDutyPeriod(dutyPeriodElement, context)
-        # pylint: disable=E1101
+        # pylint: disable=no-member
         trip.dutyPeriods.append(dutyPeriod)
 
     return trip
@@ -105,7 +105,7 @@ def buildDutyPeriod(
     dutyPeriod = ltm.DutyPeriod(uuid=dutyPeriodElement.uuid)
     for flightElement in dutyPeriodElement.flights:
         flight = buildFlight(flightElement, context)
-        # pylint: disable=E1101
+        # pylint: disable=no-member
         dutyPeriod.flights.append(flight)
     return dutyPeriod
 
@@ -281,14 +281,17 @@ def splitTripInfo(sequenceInfo: str):
     return sequenceInfo.split()
 
 
-def save_logbookJson(logbook: ltm.Logbook, savePath: Path):
+def save_logbookJson(logbook: ltm.Logbook, savePath: Path, parseContext: dict):
     data = logbook.to_json()
     data = json.loads(data)
     json_util.saveJson(data, savePath)
 
 
 def save_logbookCsv(
-    logbook: ltm.Logbook, savePath: Path, fieldList: Optional[Sequence[str]] = None
+    logbook: ltm.Logbook,
+    savePath: Path,
+    parseContext: dict,
+    fieldList: Optional[Sequence[str]] = None,
 ):
     flightRows = buildFlightRowDict(logbook)
     csv_util.writeDictToCsv(savePath, flightRows, fieldList)

@@ -42,15 +42,16 @@ logger.addHandler(log_handler)
     count=True,
     help="More verbose output, can be used more than once for even more output",
 )
-def main(verbose):
+@click.pass_context
+def main(ctx, verbose):
     """this is the main help
     """
     pass
 
 
-def loadXML(fileIn: Path) -> LogbookElement:
-    data = parseXML(fileIn)
-    return data
+# def loadXML(fileIn: Path, parseContext: dict) -> LogbookElement:
+#     data = parseXML(fileIn, parseContext)
+#     return data
 
 
 @main.command()  # type: ignore
@@ -117,27 +118,32 @@ def export(ctx, filein, fileout, export_format):
 
 
 def saveRawLogbookAsJson(ctx: dict, fileIn: Path, fileOut: Path):
-    saveRawJson(fileIn, fileOut)
+    parseContext: dict = {}
+    saveRawJson(fileIn, fileOut, parseContext)
 
 
 def saveFlattenedRawLogbookAsJson(ctx: dict, fileIn: Path, fileOut: Path):
-    saveRawFlatJson(fileIn, fileOut)
+    parseContext: dict = {}
+    saveRawFlatJson(fileIn, fileOut, parseContext)
 
 
 def saveFlattenedRawLogbookAsCsv(ctx: dict, fileIn: Path, fileOut: Path):
-    saveRawCsv(fileIn, fileOut)
+    parseContext: dict = {}
+    saveRawCsv(fileIn, fileOut, parseContext)
 
 
 def saveTranslatedLogbookAsJson(ctx: dict, fileIn: Path, fileOut: Path):
-    data = loadXML(fileIn)
+    parseContext: dict = {}
+    data = parseXML(fileIn, parseContext)
     data = buildLogbook(data)
-    save_logbookJson(data, fileOut)
+    save_logbookJson(data, fileOut, parseContext)
 
 
 def saveTranslatedLogbookAsCsv(ctx: dict, fileIn: Path, fileOut: Path):
-    data = loadXML(fileIn)
+    parseContext: dict = {}
+    data = parseXML(fileIn, parseContext)
     data = buildLogbook(data)
-    save_logbookCsv(data, fileOut)
+    save_logbookCsv(data, fileOut, parseContext)
 
 
 # if __name__ == '__main__':

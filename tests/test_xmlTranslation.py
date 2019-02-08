@@ -14,7 +14,8 @@ from utilities import csv_util
 
 def loadXml() -> LogbookElement:
     xmlPath = pathToXmlInput()
-    parsedXML = xmlTranslation.parseXML(xmlPath)
+    parseContext: dict = {}
+    parsedXML = xmlTranslation.parseXML(xmlPath, parseContext)
     return parsedXML
 
 
@@ -29,28 +30,32 @@ def pathToXmlInput() -> Path:
 
 
 def test_saveRawJson():
+    parseContext: dict = {}
     xmlPath = pathToXmlInput()
     savePath = pathToDataDirectory() / Path("raw.json")
-    xmlTranslation.saveRawJson(xmlPath, savePath)
+    xmlTranslation.saveRawJson(xmlPath, savePath, parseContext)
 
 
 def test_saveRawFlatJson():
+    parseContext: dict = {}
     xmlPath = pathToXmlInput()
     savePath = pathToDataDirectory() / Path("raw_flat.json")
-    xmlTranslation.saveRawFlatJson(xmlPath, savePath)
+    xmlTranslation.saveRawFlatJson(xmlPath, savePath, parseContext)
 
 
 def test_saveRawCsv():
+    parseContext: dict = {}
     xmlPath = pathToXmlInput()
     savePath = pathToDataDirectory() / Path("raw.csv")
-    xmlTranslation.saveRawCsv(xmlPath, savePath)
+    xmlTranslation.saveRawCsv(xmlPath, savePath, parseContext)
 
 
 def test_rawFlat():
+    parseContext: dict = {}
     xmlPath = pathToXmlInput()
-    logbookElement = xmlTranslation.parseXML(xmlPath)
+    logbookElement = xmlTranslation.parseXML(xmlPath, parseContext)
     print(logbookElement.uuid, type(logbookElement.uuid))
 
 
 def test_printParsedXmlToStdOut():
-    print(loadXml().to_json(indent=2))  # pylint: disable=E1101
+    print(loadXml().to_json(indent=2))  # pylint: disable=no-member
