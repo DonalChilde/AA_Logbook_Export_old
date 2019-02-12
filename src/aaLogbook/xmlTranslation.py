@@ -91,6 +91,18 @@ def parseXML(path, parseContext):
         return logbook
 
 
+def logbookStats(logbook: xem.LogbookElement, parseContext: dict):
+    """
+    Logbook: total times in the 3 duration fields, total months, total dutyperiods
+        total flights, total dh flights,total overnights, nights at each station.
+    year:
+    month:
+    dutyperiod:
+    flight:
+    """
+    pass
+
+
 def handleYear(yearElement, parseContext):
     # print('made it to year')
     year = xem.YearElement()
