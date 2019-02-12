@@ -46,7 +46,7 @@ PYTHON_REQUIRES = about["__PYTHON_REQUIRES__"]
 KEYWORDS = about["__KEYWORDS__"]
 VERSION = about["__VERSION__"]
 LONG_DESCRIPTION = None
-PACKAGES = find_packages(include="src", exclude=["contrib", "docs", "tests"])
+PACKAGES = find_packages(where="src", exclude=["contrib", "docs", "tests"])
 # tell distutils packages are under src
 PACKAGE_DIR: dict = {"": "src"}
 # What packages are required for this module to be executed?
