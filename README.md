@@ -8,6 +8,8 @@ Requires python >= 3.7
 
 [Example output](https://github.com/DonalChilde/AA_Logbook_Export/tree/master/example_data)
 
+translated_log.csv is the default output, and the one most people would use.
+
 ### To download your logbook in XML format
 
 First, try the direct link to [Sabre](https://tasc.alliedpilots.org/Sabre/SabreLogin.aspx) and go to step 5. If that doesn't work, follow all the steps below.
