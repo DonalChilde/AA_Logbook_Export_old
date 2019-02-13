@@ -12,7 +12,7 @@ translated_log.csv is the default output, and the one most people would use.
 
 ### To download your logbook in XML format
 
-First, try the direct link to [Sabre](https://tasc.alliedpilots.org/Sabre/SabreLogin.aspx) and go to step 5. If that doesn't work, follow all the steps below.
+First, try this [direct link to Sabre](https://tasc.alliedpilots.org/Sabre/SabreLogin.aspx) and go to step 5. If that doesn't work, follow all the steps below.
 
 1. Go to the [APA website](https://www.alliedpilots.org) and log in.
 1. Click `3XP / PBS Awards / Scheduling` under Quick Links
