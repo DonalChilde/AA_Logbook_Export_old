@@ -6,11 +6,11 @@ Exports American Airlines logbook data to a more useable format. The XSLT versio
 
 Requires python >= 3.7
 
-[Example output](https://github.com/DonalChilde/AA_Logbook_Export/tree/master/Python/tests/resources)
+[Example output](https://github.com/DonalChilde/AA_Logbook_Export/tree/master/example_data)
 
 ### To download your logbook in XML format
 
-First, try the direct link to [Sabre](https://tasc.alliedpilots.org/Sabre/SabreLogin.aspx). If that doesn't work, follow all the steps below.
+First, try the direct link to [Sabre](https://tasc.alliedpilots.org/Sabre/SabreLogin.aspx) and go to step 5. If that doesn't work, follow all the steps below.
 
 1. Go to the [APA website](https://www.alliedpilots.org) and log in.
 1. Click `3XP / PBS Awards / Scheduling` under Quick Links
@@ -29,11 +29,11 @@ To export in one of the other supported formats:
 
 `aaLogbookExport export -e rawcsv <path to input file> <path to output file>`  
 
-### Installing Python (>=3.7 required)
+Get help:
 
-### Using pipenv and Virtual Environments
+`aaLogbookExport export --help`
 
-### Downloading or updating aaLogbookExport
+Note: Instructions on how to install a python source package are outside the scope of this guide. But it is not hard, Google is your friend ;). Make sure you have Python 3.7 or better installed, and consider using pipenv and a virtual environment.
 
 ## XSLT Instructions
 
